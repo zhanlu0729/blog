@@ -2,7 +2,7 @@
 1. **URL Prefix** http://master-ip:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
 2. **Demo** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/dev/pods/openerp-quartz-3387384183-s4lwk/metrics/network/rx
 
-## Heapster各项含义
+## Heapster度量各项含义
 01. **cpu/limit**	CPU硬限制,以m为单位.
 02. **cpu/node_capacity**	一个节点的CPU容量.
 03. **cpu/node_allocatable**	Cpu可分配的节点.
@@ -46,3 +46,19 @@
 41. **network/tx_errors_rate**	通过网络发送时的错误数(Number of errors while sending over the network)
 42. **network/tx_rate**	每秒通过网络发送的字节数(Number of bytes sent over the network per second)
 43. **uptime** 自从容器启动以来的毫秒数
+
+## Heapster标签含义
+01. **pod_id**	Unique ID of a Pod
+02. **pod_name**	User-provided name of a Pod
+03. **container_base_image**	Base image for the container
+04. **container_name**	User-provided name of the container or full cgroup name for system containers
+05. **host_id	Cloud-provider** specified or user specified Identifier of a node
+06. **hostname**	Hostname where the container ran
+07. **nodename**	Nodename where the container ran
+08. **labels**	Comma-separated(Default) list of user-provided labels. Format is 'key:value'
+09. **namespace_id**	UID of the namespace of a Pod
+10. **namespace_name**	User-provided name of a Namespace
+11. **resource_id**	A unique identifier used to differentiate multiple metrics of the same type. e.x. Fs partitions under filesystem/usage, 01. **disk device name under disk/io_read_bytes
+12. **make**	Make of the accelerator (nvidia, amd, google etc.)
+13. **model**	Model of the accelerator (tesla-p100, tesla-k80 etc.)
+14. **accelerator_id**	ID of the accelerator
