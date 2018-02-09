@@ -1,11 +1,11 @@
 **URL Prefix** http://master-ip:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
-**Demo**http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/dev/pods/openerp-quartz-3387384183-s4lwk/metrics/network/rx
+**Demo** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/dev/pods/openerp-quartz-3387384183-s4lwk/metrics/network/rx
 
 **cpu/limit**	CPU hard limit in millicores.
-**cpu/node_capacity**	Cpu capacity of a node.
-**cpu/node_allocatable**	Cpu allocatable of a node.
-**cpu/node_reservation**	Share of cpu that is reserved on the node allocatable.
-**cpu/node_utilization**	CPU utilization as a share of node allocatable.
+**cpu/node_capacity**	一个节点的CPU容量.
+**cpu/node_allocatable**	Cpu可分配的节点.
+**cpu/node_reservation**	在可分配节点上保留的cpu份额.
+**cpu/node_utilization**	CPU利用率作为节点可分配份额.
 **cpu/request**	CPU request (the guaranteed amount of resources) in millicores.
 **cpu/usage**	Cumulative CPU usage on all cores.
 **cpu/usage_rate**	CPU usage on all cores in millicores.
