@@ -1,4 +1,4 @@
-## Cluster
+## Cluster-level Metrics
 1. **所有项** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/metrics
 - CPU
   - cpu/limit
@@ -9,7 +9,7 @@
   - memory/request
   - memory/usage
  
-## Node
+## Node-level Metrics
 1. **所有节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes
 2. **单个节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes/vm-9f-k8s-node04/metrics
 - CPU
@@ -46,7 +46,7 @@
 - OS
   - uptime
   
-## Namespace
+## Namespace-level Metrics
 1. **所有命名空间** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
 2. **单个命名空间** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/metrics
 - CPU
@@ -58,9 +58,9 @@
   - memory/request
   - memory/usage
   
-## Pod
+## Pod-level Metrics
 1. **命名空间下的所有Pod** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods
-2. **单个Pod** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/metrics/
+2. **单个Pod** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/metrics
 - CPU
   - cpu/limit
   - cpu/request
@@ -86,3 +86,13 @@
   - network/rx_errors_rate
 - OS
   - uptime
+
+## Container-level Metrics
+1. **Pod下的所有容器** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/containers
+2. **单个容器** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/{container-name}/metrics
+- CPU
+  - cpu/limit
+  - cpu/request
+- Memory
+  - memory/limit
+  - memory/request
