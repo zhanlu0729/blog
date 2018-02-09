@@ -4,7 +4,7 @@
 
 ## 度量(Metrics)
 01. **cpu/limit**	CPU硬限制,以m为单位(CPU hard limit in millicores)
-02. **cpu/node_capacity**	一个节点的CPU容量(Cpu capacity of a node)
+02. **cpu/node_capacity**	节点的CPU容量(Cpu capacity of a node)
 03. **cpu/node_allocatable**	Cpu可分配的节点(Cpu allocatable of a node)
 04. **cpu/node_reservation**	在可分配节点上保留的cpu份额(Share of cpu that is reserved on the node allocatable)
 05. **cpu/node_utilization**	CPU利用率作为节点可分配份额(CPU utilization as a share of node allocatable)
@@ -48,7 +48,7 @@
 43. **uptime** 自从容器启动以来的毫秒数
 
 ## 标签(Labels)
-01. **pod_id**	(Pod的唯一IDUnique ID of a Pod)
+01. **pod_id**	Pod的唯一ID(Unique ID of a Pod)
 02. **pod_name**	用户提供的Pod的名称(User-provided name of a Pod)
 03. **container_base_image**	容器的基础映像(Base image for the container)
 04. **container_name**	用户提供的容器名称或系统容器的完整cgroup名称(User-provided name of the container or full cgroup name for system containers)
