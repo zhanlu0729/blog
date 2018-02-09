@@ -75,7 +75,7 @@
  
 ## Node-level Metrics
 1. **所有节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes
-2. **单个节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes/vm-9f-k8s-node04/metrics
+2. **单个节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes/{node-name}/metrics
 - CPU
   - cpu/limit
   - cpu/request
