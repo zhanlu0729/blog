@@ -62,6 +62,10 @@
 13. **model**	加速器型号（tesla-p100，tesla-k80等）(Model of the accelerator (tesla-p100, tesla-k80 etc.))
 14. **accelerator_id**	加速器的ID(ID of the accelerator)
 
+## K8s Darshboard
+1. **所有节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/api/v1/node
+2. **单个节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/api/v1/node/{node-name}
+
 ## Cluster-level Metrics
 1. **整个集群** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/metrics
 - CPU
