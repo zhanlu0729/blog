@@ -63,7 +63,7 @@
 14. **accelerator_id**	加速器的ID(ID of the accelerator)
 
 ## Cluster-level Metrics
-1. **所有项** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/metrics
+1. **整个集群** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/metrics
 - CPU
   - cpu/limit
   - cpu/request
