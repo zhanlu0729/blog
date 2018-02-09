@@ -47,8 +47,8 @@
   - uptime
   
 ## Namespace
-**所有命名空间** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
-**单个命名空间** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/dev/metrics
+1. **所有命名空间** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
+2. **单个命名空间** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/metrics
 - CPU
   - cpu/limit
   - cpu/request
@@ -59,3 +59,30 @@
   - memory/usage
   
 ## Pod
+1. **命名空间下的所有Pod** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods
+2. **单个Pod** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/metrics/
+- CPU
+  - cpu/limit
+  - cpu/request
+  - cpu/usage
+  - cpu/usage_rate
+- Memory
+  - memory/limit
+  - memory/request
+  - memory/usage
+  - memory/page_faults
+  - memory/page_faults_rate
+  - memory/major_page_faults_rate
+  - memory/major_page_faults
+  - memory/working_set
+- Network
+  - network/tx
+  - network/tx_rate
+  - network/tx_errors
+  - network/tx_errors_rate
+  - network/rx
+  - network/rx_rate
+  - network/rx_errors
+  - network/rx_errors_rate
+- OS
+  - uptime
