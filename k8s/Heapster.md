@@ -1,7 +1,8 @@
 **URL Prefix** http://master-ip:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
 **Demo** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/dev/pods/openerp-quartz-3387384183-s4lwk/metrics/network/rx
 
-**cpu/limit**	CPU hard limit in millicores.
+## Heapster各项含义
+1. **cpu/limit**	CPU hard limit in millicores.
 **cpu/node_capacity**	一个节点的CPU容量.
 **cpu/node_allocatable**	Cpu可分配的节点.
 **cpu/node_reservation**	在可分配节点上保留的cpu份额.
