@@ -45,3 +45,17 @@
   - network/rx_errors_rate
 - OS
   - uptime
+  
+## Namespace
+**所有命名空间** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
+**单个命名空间** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/dev/metrics
+- CPU
+  - cpu/limit
+  - cpu/request
+  - cpu/usage_rate
+- Memory
+  - memory/limit
+  - memory/request
+  - memory/usage
+  
+## Pod
