@@ -8,7 +8,7 @@
 03. **cpu/usage**	所有内核上的累积CPU使用率(Cumulative CPU usage on all cores)
 04. **cpu/usage_rate**	所有内核的CPU使用率均以m为单位(CPU usage on all cores in millicores)
 05. **cpu/node_capacity**	节点的CPU容量(Cpu capacity of a node)
-06. **cpu/node_allocatable**	Cpu可分配的节点(Cpu allocatable of a node)
+06. **cpu/node_allocatable**	节点的CPU可分配容量(Cpu allocatable of a node)
 07. **cpu/node_reservation**	在可分配节点上保留的cpu份额(Share of cpu that is reserved on the node allocatable)
 08. **cpu/node_utilization**	CPU利用率作为节点可分配份额(CPU utilization as a share of node allocatable)
 
@@ -16,7 +16,7 @@
 10. **memory/request**	内存请求（保证的资源量）以字节为单位(Memory request (the guaranteed amount of resources) in bytes)
 11. **memory/usage**	内存使用总量(Total memory usage)
 12. **memory/node_capacity**	节点的内存容量(Memory capacity of a node)
-13. **memory/node_allocatable**	内存可分配的节点(Memory allocatable of a node)
+13. **memory/node_allocatable**	节点的内存可分配容量(Memory allocatable of a node)
 14. **memory/node_reservation**	在可分配节点上保留的内存份额(Share of memory that is reserved on the node allocatable)
 15. **memory/node_utilization**	内存利用率作为可分配内存的一部分(Memory utilization as a share of memory allocatable)
 16. **memory/page_faults**	页面错误的数量(Number of page faults)
