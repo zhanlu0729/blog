@@ -1,7 +1,3 @@
-## URL Doc
-1. **URL Prefix** http://master-ip:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
-2. **Demo** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/dev/pods/openerp-quartz-3387384183-s4lwk/metrics/network/rx
-
 ## 度量(Metrics)
 01. **cpu/limit**	CPU硬限制,以m为单位(CPU hard limit in millicores)
 02. **cpu/request**	CPU请求（保证的资源量）以m为单位(CPU request (the guaranteed amount of resources) in millicores)
@@ -65,3 +61,102 @@
 12. **make**	使加速器（NVIDIA，AMD，谷歌等）(Make of the accelerator (nvidia, amd, google etc.))
 13. **model**	加速器型号（tesla-p100，tesla-k80等）(Model of the accelerator (tesla-p100, tesla-k80 etc.))
 14. **accelerator_id**	加速器的ID(ID of the accelerator)
+
+## Cluster-level Metrics
+1. **所有项** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/metrics
+- CPU
+  - cpu/limit
+  - cpu/request
+  - cpu/usage_rate
+- Memory
+  - memory/limit
+  - memory/request
+  - memory/usage
+ 
+## Node-level Metrics
+1. **所有节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes
+2. **单个节点** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes/vm-9f-k8s-node04/metrics
+- CPU
+  - cpu/limit
+  - cpu/request
+  - cpu/usage
+  - cpu/usage_rate
+  - cpu/node_utilization
+  - cpu/node_allocatable
+  - cpu/node_capacity
+  - cpu/node_reservation
+- Memory
+  - memory/limit
+  - memory/request
+  - memory/usage
+  - memory/node_utilization
+  - memory/node_capacity
+  - memory/node_reservation
+  - memory/node_allocatable
+  - memory/page_faults
+  - memory/page_faults_rate
+  - memory/major_page_faults_rate
+  - memory/major_page_faults
+  - memory/working_set
+- Network
+  - network/tx
+  - network/tx_rate
+  - network/tx_errors
+  - network/tx_errors_rate
+  - network/rx
+  - network/rx_rate
+  - network/rx_errors
+  - network/rx_errors_rate
+- OS
+  - uptime
+  
+## Namespace-level Metrics
+1. **所有命名空间** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
+2. **单个命名空间** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/metrics
+- CPU
+  - cpu/limit
+  - cpu/request
+  - cpu/usage_rate
+- Memory
+  - memory/limit
+  - memory/request
+  - memory/usage
+  
+## Pod-level Metrics
+1. **命名空间下的所有Pod** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods
+2. **单个Pod** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/metrics
+- CPU
+  - cpu/limit
+  - cpu/request
+  - cpu/usage
+  - cpu/usage_rate
+- Memory
+  - memory/limit
+  - memory/request
+  - memory/usage
+  - memory/page_faults
+  - memory/page_faults_rate
+  - memory/major_page_faults_rate
+  - memory/major_page_faults
+  - memory/working_set
+- Network
+  - network/tx
+  - network/tx_rate
+  - network/tx_errors
+  - network/tx_errors_rate
+  - network/rx
+  - network/rx_rate
+  - network/rx_errors
+  - network/rx_errors_rate
+- OS
+  - uptime
+
+## Container-level Metrics
+1. **Pod下的所有容器** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/containers
+2. **单个容器** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces/{namespace-name}/pods/{pod-name}/{container-name}/metrics
+- CPU
+  - cpu/limit
+  - cpu/request
+- Memory
+  - memory/limit
+  - memory/request
