@@ -43,5 +43,5 @@
   - "network/rx_rate"
   - "network/rx_errors"
   - "network/rx_errors_rate"
- - OS
+- OS
   - "uptime"
