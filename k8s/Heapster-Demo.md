@@ -1,6 +1,5 @@
 ## Cluster
 1. **所有项** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/metrics
-- 
   - "cpu/limit"
   - "cpu/request"
   - "cpu/usage_rate"
@@ -11,7 +10,6 @@
 ## Node
 1. **所有节点** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes
 2. **单个节点** http://192.168.204.10:8080/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/nodes/vm-9f-k8s-node04/metrics
-- 
   - "cpu/limit"
   - "cpu/request"
   - "cpu/usage"
