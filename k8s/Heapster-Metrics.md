@@ -51,7 +51,7 @@
 02. **pod_name**	用户提供的Pod的名称(User-provided name of a Pod)
 03. **container_base_image**	容器的基础映像(Base image for the container)
 04. **container_name**	用户提供的容器名称或系统容器的完整cgroup名称(User-provided name of the container or full cgroup name for system containers)
-05. **host_id	Cloud-provider** 云提供商指定或用户指定节点的标识符(specified or user specified Identifier of a node)
+05. **host_id**	Cloud-provider云提供商指定或用户指定节点的标识符(specified or user specified Identifier of a node)
 06. **hostname**	容器运行的主机名(Hostname where the container ran))
 07. **nodename**	容器运行的节点名称(Nodename where the container ran)
 08. **labels**	用户提供的标签的逗号分隔（默认）列表。格式是“键：值”(Comma-separated(Default) list of user-provided labels. Format is 'key:value')
