@@ -113,7 +113,7 @@
   - network/rx_errors_rate
 - OS
   - uptime
-- Disk
+- DiskAndFileSystem
   - http://nodeIP:4194/api/v1.1/subcontainers/
   
 ## Namespace-level Metrics
