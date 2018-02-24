@@ -113,6 +113,8 @@
   - network/rx_errors_rate
 - OS
   - uptime
+- Disk
+  - http://nodeIP:4194/api/v1.1/subcontainers/
   
 ## Namespace-level Metrics
 1. **所有命名空间** http://masterIP:port/api/v1/proxy/namespaces/kube-system/services/heapster/api/v1/model/namespaces
