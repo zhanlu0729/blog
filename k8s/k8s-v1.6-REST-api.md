@@ -24,6 +24,13 @@
 05. **DELETE Collection** /api/v1/namespaces/{namespace}/pods
 06. **GET** /api/v1/namespaces/{namespace}/pods/{name}
 07. **GET List** /api/v1/namespaces/{namespace}/pods
+08. **GET All Namespaces** /api/v1/pods
+09. **GET Watch** /api/v1/watch/namespaces/{namespace}/pods/{name}
+10. **GET Watch List** /api/v1/watch/namespaces/{namespace}/pods
+11. **GET Watch List All Namespaces** /api/v1/watch/pods
+12. **PUT Status** /api/v1/namespaces/{namespace}/pods/{name}/status
+13. **PATCH Status** /api/v1/namespaces/{namespace}/pods/{name}/status
+14. **GET Status** /api/v1/namespaces/{namespace}/pods/{name}/status
 
 ## CronJob
 01. **POST** /apis/batch/v2alpha1/namespaces/{namespace}/cronjobs
