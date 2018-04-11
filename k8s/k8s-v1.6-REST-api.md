@@ -1,3 +1,21 @@
+## ReplicationController
+01. **POST** /api/v1/namespaces/{namespace}/replicationcontrollers
+02. **PUT** /api/v1/namespaces/{namespace}/replicationcontrollers/{name}
+03. **PATCH** /api/v1/namespaces/{namespace}/replicationcontrollers/{name}
+04. **DELETE** /api/v1/namespaces/{namespace}/replicationcontrollers/{name}
+05. **DELETE Collection** /api/v1/namespaces/{namespace}/replicationcontrollers
+06. **GET** /api/v1/namespaces/{namespace}/replicationcontrollers/{name}
+07. **GET List** /api/v1/namespaces/{namespace}/replicationcontrollers
+
+## StatefulSet
+01. **POST** /apis/apps/v1beta1/namespaces/{namespace}/statefulsets
+02. **PUT** /apis/apps/v1beta1/namespaces/{namespace}/statefulsets/{name}
+03. **PATCH** /apis/apps/v1beta1/namespaces/{namespace}/statefulsets/{name}
+04. **DELETE** /apis/apps/v1beta1/namespaces/{namespace}/statefulsets/{name}
+05. **DELETE Collection** /apis/apps/v1beta1/namespaces/{namespace}/statefulsets
+06. **GET** /apis/apps/v1beta1/namespaces/{namespace}/statefulsets/{name}
+07. **GET List** /apis/apps/v1beta1/namespaces/{namespace}/statefulsets
+
 ## Deployment
 01. **POST** /apis/apps/v1beta1/namespaces/{namespace}/deployments
 02. **PUT** /apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}
