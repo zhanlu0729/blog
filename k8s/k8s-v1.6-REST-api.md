@@ -1,3 +1,11 @@
+## Deployment
+01. **POST** /apis/apps/v1beta1/namespaces/{namespace}/deployments
+02. **PUT** /apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}
+03. **PATCH** /apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}
+04. **DELETE** /apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}
+05. **DELETE** /apis/apps/v1beta1/namespaces/{namespace}/deployments
+06. **GET** /apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}
+07. **GET** /apis/apps/v1beta1/namespaces/{namespace}/deployments
 ## CronJob
 01. **POST** /apis/batch/v2alpha1/namespaces/{namespace}/cronjobs
 02. **PUT** /apis/batch/v2alpha1/namespaces/{namespace}/cronjobs/{name}
