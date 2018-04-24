@@ -3,6 +3,8 @@
 02. **删除标签** kubectl label no/nodeName labelKey-
 
 ## Deployment
+01. **创建对象** kubectl create -f yamlFile
+02. **删除对象** kubectl delete -f yamlFile | kubectl delete deploy/deployName
 
 ## Pod
 
