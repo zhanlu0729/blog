@@ -8,4 +8,4 @@
 
 # 全局配置
 01. **/etc/gitconfig** 系统中所有用户的git配置文件路径
-02. **~/.gitconfig或~/.config/git/config** 当前用户的git配置文件路径
+02. **\~/.gitconfig或~/.config/git/config** 当前用户的git配置文件路径
