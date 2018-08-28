@@ -1,4 +1,5 @@
 ## 安装JDK
+
  > vim /etc/profile
  > export JAVA_HOME=/usr/local/jdk1.8
  > export PATH=$JAVA_HOME/bin:$PATH
