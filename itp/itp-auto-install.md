@@ -9,9 +9,13 @@
 
 ## 安装Chrome
 01. yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-02. download与chrome兼容的chromedriver http://npm.taobao.org/mirrors/chromedriver/
-03. 将下载好的chromedriver复制到 /apply/selenium/
-04. chmod +x /apply/selenium/chromedriver
+02. vi /usr/bin/google-chrome
+03. exec -a "$0" "$HERE/chrome" "$@" **--no-sandbox --headless**
+
+## ChromeDriver
+01. download与chrome兼容的chromedriver http://npm.taobao.org/mirrors/chromedriver/
+02. 将下载好的chromedriver复制到 /apply/selenium/
+03. chmod +x /apply/selenium/chromedriver
 
 ## 安装Xorg
 01. yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
