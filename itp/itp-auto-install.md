@@ -6,6 +6,7 @@
 01. vim /etc/profile
 02. export JAVA_HOME=jdk1.8的路径
 03. export PATH=$JAVA_HOME/bin:$PATH
+04. source /etc/profile
 
 ## 安装Chrome
 01. yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
