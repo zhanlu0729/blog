@@ -19,3 +19,5 @@
 
 ## 安装Xorg
 01. yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
+
+## 部署bone-itp.jar应用
