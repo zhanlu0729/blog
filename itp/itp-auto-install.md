@@ -1,4 +1,5 @@
-1. ** 更新yum源 ** wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+1. *** 安装JDK *** 
+1. *更新yum源* wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 yum clean all && yum makecache
 ======================
 
