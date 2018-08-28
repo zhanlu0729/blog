@@ -1,9 +1,7 @@
 ## 安装JDK
- > vim /etc/profile
- 
- > export JAVA_HOME=/usr/local/jdk1.8
- 
- > export PATH=$JAVA_HOME/bin:$PATH
+> vim /etc/profile
+export JAVA_HOME=/usr/local/jdk1.8
+export PATH=$JAVA_HOME/bin:$PATH
 
 1. *更新yum源* wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 yum clean all && yum makecache
