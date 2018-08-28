@@ -10,7 +10,7 @@
 ## 安装Chrome
 01. yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 02. vi /usr/bin/google-chrome
-03. exec -a "$0" "$HERE/chrome" "$@" **--no-sandbox --headless**
+03. exec -a "$0" "$HERE/chrome" "$@" **--no-sandbox --headless --disable-gpu**
 
 ## 安装ChromeDriver
 01. 下载与chrome对应版本的chromedriver http://npm.taobao.org/mirrors/chromedriver/
