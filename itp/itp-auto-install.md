@@ -1,15 +1,15 @@
 ## 安装JDK
- > vim /etc/profile
- > export JAVA_HOME=/usr/local/jdk1.8
- > export PATH=$JAVA_HOME/bin:$PATH
+01. vim /etc/profile
+02. export JAVA_HOME=/usr/local/jdk1.8
+03 export PATH=$JAVA_HOME/bin:$PATH
 
 ## 更新yum源
-> wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-> yum clean all && yum makecache
+01. wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+02. yum clean all && yum makecache
 
 ## 安装Chrome
-> yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-> download与chrome兼容的chromedriver http://npm.taobao.org/mirrors/chromedriver/
+01. yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+02. download与chrome兼容的chromedriver http://npm.taobao.org/mirrors/chromedriver/
 
 ## 安装Xorg
-> yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
+01. yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
