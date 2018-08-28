@@ -13,7 +13,7 @@
 03. exec -a "$0" "$HERE/chrome" "$@" **--no-sandbox --headless**
 
 ## 安装ChromeDriver
-01. download与chrome兼容的chromedriver http://npm.taobao.org/mirrors/chromedriver/
+01. 下载与chrome对应版本的chromedriver http://npm.taobao.org/mirrors/chromedriver/
 02. 将下载好的chromedriver复制到 /apply/selenium/
 03. chmod +x /apply/selenium/chromedriver
 
