@@ -19,4 +19,8 @@
 02. 复制chromedriver到/apply/selenium/
 03. chmod +x /apply/selenium/chromedriver
 
+## 安装Selenium集群
+01. **Install Master** nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
+02. **Install Node** nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
+
 ## 部署bone-itp.jar应用
