@@ -1,6 +1,6 @@
 ## 更新yum源
-01. wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-02. yum clean all && yum makecache
+01. **wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo**
+02. **yum clean all && yum makecache**
 
 ## 安装中文字体
 01. **yum -y install fontconfig**
@@ -9,16 +9,15 @@
 04. **vi /etc/fonts/fonts.conf** 在<dir>/usr/local/share/fonts</dir>行后添加**<dir>/usr/share/fonts/chinese</dir>**
 
 ## 安装JDK
-01. vim /etc/profile
-02. export JAVA_HOME=jdk1.8的路径
-03. export PATH=$JAVA_HOME/bin:$PATH
-04. source /etc/profile
+01. **vim /etc/profile**
+02. **export JAVA_HOME=jdk1.8的路径**
+03. **export PATH=$JAVA_HOME/bin:$PATH**
+04. **source /etc/profile**
 
 ## 安装Chrome
-01. yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-02. vi /usr/bin/google-chrome
-03. **补加黑色字体** exec -a "$0" "$HERE/chrome" "$@" **--no-sandbox --headless --disable-gpu**
-04. yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
+01. **yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm**
+02. **vi /usr/bin/google-chrome** 在exec -a "$0" "$HERE/chrome" "$@"后添加 **--no-sandbox --headless --disable-gpu --window-size=1920,1080**
+03. **yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y**
 
 ## 安装chromedriver
 01. 下载与chrome对应版本的chromedriver http://npm.taobao.org/mirrors/chromedriver/
