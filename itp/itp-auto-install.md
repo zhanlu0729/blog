@@ -4,9 +4,8 @@
 
 ## 安装中文字体
 01. **yum -y install fontconfig**
-02. 复制中文字体到 **/usr/share/fonts/chinese**
-03. **chmod -R 755 /usr/share/fonts/chinese**
-04. **vi /etc/fonts/fonts.conf** 在<dir>/usr/local/share/fonts</dir>行后添加**<dir>/usr/share/fonts/chinese</dir>**
+02. 复制中文字体到 **/usr/share/fonts/chinese** 并且 **chmod -R 755 /usr/share/fonts/chinese**
+03. **vi /etc/fonts/fonts.conf** 在<dir>/usr/local/share/fonts</dir>行后添加 **<dir>/usr/share/fonts/chinese</dir>**
 
 ## 安装JDK
 01. **vim /etc/profile**
@@ -19,14 +18,10 @@
 02. **vi /usr/bin/google-chrome** 在exec -a "$0" "$HERE/chrome" "$@"后添加 **--no-sandbox --headless --disable-gpu --window-size=1920,1080**
 03. **yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y**
 
-## 安装chromedriver
-01. 下载与chrome对应版本的chromedriver http://npm.taobao.org/mirrors/chromedriver/
-02. 复制chromedriver到/apply/selenium/
-03. chmod +x /apply/selenium/chromedriver
-
 ## 安装Selenium集群
-01. **Install Master** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
-02. **Install Node** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
+01. 复制**chromedriver**到 **/apply/selenium/** 并且 **chmod +x /apply/selenium/chromedriver**
+02. **Master** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
+03. **Node** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
 
 ## 部署bone-itp.jar应用
 
