@@ -3,10 +3,10 @@
 02. yum clean all && yum makecache
 
 ## 安装中文字体
-01. yum -y install fontconfig
-02. 复制中文字体到 /usr/share/fonts/chinese
-03. chmod -R 755 /usr/share/fonts/chinese
-04. vi /etc/fonts/fonts.conf 在<dir>/usr/local/share/fonts</dir>行后添加<dir>/usr/share/fonts/chinese</dir>
+01. **yum -y install fontconfig**
+02. 复制中文字体到 **/usr/share/fonts/chinese**
+03. **chmod -R 755 /usr/share/fonts/chinese**
+04. **vi /etc/fonts/fonts.conf** 在<dir>/usr/local/share/fonts</dir>行后添加**<dir>/usr/share/fonts/chinese</dir>**
 
 ## 安装JDK
 01. vim /etc/profile
