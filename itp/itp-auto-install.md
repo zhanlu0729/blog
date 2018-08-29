@@ -8,13 +8,14 @@
 02. 复制中文字体到 **/usr/share/fonts/chinese** 并且 **chmod -R 755 /usr/share/fonts/chinese**
 03. **vi /etc/fonts/fonts.conf** 在<dir>/usr/local/share/fonts</dir>行后添加 **<dir>/usr/share/fonts/chinese</dir>**
 04. 刷新缓存 **fc-cache**
-05. 查看字体列表 **fc-list**
+05. 查看安装结果 **fc-list**
 
 ## 安装JDK
 01. **vim /etc/profile**
 02. **export JAVA_HOME=jdk1.8的路径**
 03. **export PATH=$JAVA_HOME/bin:$PATH**
 04. **source /etc/profile**
+05. 查看安装结果 **java -version**
 
 ## 安装Chrome
 01. **yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm**
