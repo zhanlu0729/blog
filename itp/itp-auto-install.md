@@ -2,6 +2,12 @@
 01. wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 02. yum clean all && yum makecache
 
+## 安装中文字体
+01. yum -y install fontconfig
+02. 复制中文字体到 /usr/share/fonts/chinese
+03. chmod -R 755 /usr/share/fonts/chinese
+04. vi /etc/fonts/fonts.conf 在<dir>/usr/local/share/fonts</dir>行后添加<dir>/usr/share/fonts/chinese</dir>
+
 ## 安装JDK
 01. vim /etc/profile
 02. export JAVA_HOME=jdk1.8的路径
@@ -20,8 +26,8 @@
 03. chmod +x /apply/selenium/chromedriver
 
 ## 安装Selenium集群
-01. **Install Master** nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
-02. **Install Node** nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
+01. **Install Master** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
+02. **Install Node** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
 
 ## 部署bone-itp.jar应用
 
@@ -98,13 +104,9 @@
 70. --disable-javascript：禁用Javascript
 71. --omnibox-popup-count="数字" :指出多功能地址栏的弹出菜单数量
 72. --user-agent="abcd"：强行执行http请求头中的UserAgent为abcd
-73. --disable-plugins ：禁止加载所有插件
-74. --disable-java：禁用java 
-75. --start-maximized：浏览器启动后，窗口默认为最大化
-76. --no-sandbox ： 关闭沙盒
-77. --single-process ：浏览器只能以单进程运行，通常用于调试，定位bug
-78. --process-per-tab：一个标签一个进程
-79. --process-per-site ：一个站点，一个进程
-80. --in-process-plugins ：插件不以独立的进程运行，插件的异常崩溃，可能会导致整个页面挂掉
-81. --disable-popup-blocking ：关闭弹窗拦截
-82. --proxy-pac-url ： 指定使用PAC代理时，所需要的脚本url地址
+73. --start-maximized：浏览器启动后，窗口默认为最大化
+74. --single-process ：浏览器只能以单进程运行，通常用于调试，定位bug
+75. --process-per-tab：一个标签一个进程
+76. --process-per-site ：一个站点，一个进程
+77. --in-process-plugins ：插件不以独立的进程运行，插件的异常崩溃，可能会导致整个页面挂掉
+78. --proxy-pac-url ： 指定使用PAC代理时，所需要的脚本url地址
