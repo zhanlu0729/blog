@@ -24,3 +24,69 @@
 02. **Install Node** nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
 
 ## 部署bone-itp.jar应用
+
+## Chrome命令行参数
+disable-accelerated-compositing 禁用加速
+disable-winsta 禁用渲染备用窗口
+disable-application-cache 禁用应用程序缓存
+disable-apps  禁用应用程序
+disable-audio    禁用音频
+disable-auth-negotiate-cname-lookup
+disable-background-networking  禁用后台联网
+disable-backing-store-limit    禁用存储数量限制，可以防止在打开大量的标签窗口时，页面出现闪烁的现象。
+disable-byte-range-support    禁用缓存的支持字节范围
+disable-click-to-play    禁用点击播放
+disable-connect-backup-jobs    如果超过指定的时间，则禁用建立备份的TCP连接
+disable-content-prefetch    禁用内容预取
+disable-custom-jumplist    禁用Windows 7的JumpList自定义功能
+disable-databases    禁用HTML5的数据库支持
+disable-desktop-notifications    禁用桌面通知（默认窗口启用）
+disable-dev-tools    禁用所有页面的渲染检测
+disable-device-orientation    禁用设备向导
+disable-webgl    禁用WebGL实验功能
+disable-extensions    禁用扩展
+disable-extensions-file-access-check    禁用扩展文件访问检查
+disable-geolocation    禁用地理位置的JavaScript API
+disable-glsl-translator    禁用GLSL翻译
+disable-hang-monitor    禁止任务管理器监视功能
+disable-internal-flash    禁用内部的Flash Player
+disable-ipv6    禁用IPv6
+disable-preconnect    禁用TCP/IP协议
+disable-javascript    禁用JS
+disable-java    禁用Java
+disable-local-storage     禁用本地存储
+disable-logging    禁用调试记录
+disable-new-tab-first-run  禁用新标签显示的通知
+disable-outdated-plugins    禁用过时的插件
+disable-plugins    禁止插件
+disable-popup-blocking    禁用阻止弹出窗口
+disable-prompt-on-repost
+disable-remote-fonts    禁用远程字体
+disable-renderer-accessibility    禁用渲染辅助功能
+disable-restore-background-contents    当浏览器重新启动后之前的网址被记录
+disable-session-storage    禁用会话存储
+disable-shared-workers    禁用共享，功能尚未完成
+disable-site-specific-quirks    禁用指定站点设置的WebKit兼容性问题。
+disable-speech-input    禁用语音输入
+disable-ssl-false-start    禁用SSL的虚假启动
+disable-sync    禁用同步
+disable-sync-apps    禁用同步应用程序
+disable-sync-autofill    禁用同步自动填表
+disable-sync-bookmarks    禁用同步书签
+disable-sync-extensions    禁用同步扩展
+disable-sync-passwords    禁用同步密码
+disable-sync-preferences    禁用同步偏好设置
+disable-sync-sessions    禁用同步会话
+disable-sync-themes    禁用同步主题（皮肤）
+disable-sync-typed-urls    禁用同步输入网址
+disable-tab-closeable-state-watcher    
+disable-translate    禁用翻译
+disable-web-resources    禁用网络资源后台加载服务
+disable-web-security    禁用网络安全提示?
+disable-web-sockets    禁用网络接口
+safebrowsing-disable-auto-update  禁用自动升级(安全浏览)
+disable-tls    禁用设置XMPP协议的客户端同步控制
+disable-flash-core-animation    禁用Flash核心动画
+disable-hole-punching    禁用Punching
+disable-seccomp-sandbox    禁用沙盒
+no-sandbox      启动无沙盒模式运行
