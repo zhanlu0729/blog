@@ -26,27 +26,27 @@
 ## 部署bone-itp.jar应用
 
 ## Chrome命令行参数
-disable-accelerated-compositing 禁用加速
-disable-winsta 禁用渲染备用窗口
-disable-application-cache 禁用应用程序缓存
-disable-apps  禁用应用程序
-disable-audio    禁用音频
-disable-auth-negotiate-cname-lookup
-disable-background-networking  禁用后台联网
-disable-backing-store-limit    禁用存储数量限制，可以防止在打开大量的标签窗口时，页面出现闪烁的现象。
-disable-byte-range-support    禁用缓存的支持字节范围
-disable-click-to-play    禁用点击播放
-disable-connect-backup-jobs    如果超过指定的时间，则禁用建立备份的TCP连接
-disable-content-prefetch    禁用内容预取
-disable-custom-jumplist    禁用Windows 7的JumpList自定义功能
-disable-databases    禁用HTML5的数据库支持
-disable-desktop-notifications    禁用桌面通知（默认窗口启用）
-disable-dev-tools    禁用所有页面的渲染检测
-disable-device-orientation    禁用设备向导
-disable-webgl    禁用WebGL实验功能
-disable-extensions    禁用扩展
-disable-extensions-file-access-check    禁用扩展文件访问检查
-disable-geolocation    禁用地理位置的JavaScript API
+01. disable-accelerated-compositing 禁用加速
+02. disable-winsta 禁用渲染备用窗口
+03. disable-application-cache 禁用应用程序缓存
+04. disable-apps  禁用应用程序
+05. disable-audio    禁用音频
+06. disable-auth-negotiate-cname-lookup
+07. disable-background-networking  禁用后台联网
+08. disable-backing-store-limit    禁用存储数量限制，可以防止在打开大量的标签窗口时，页面出现闪烁的现象。
+09. disable-byte-range-support    禁用缓存的支持字节范围
+10. disable-click-to-play    禁用点击播放
+11. disable-connect-backup-jobs    如果超过指定的时间，则禁用建立备份的TCP连接
+12. disable-content-prefetch    禁用内容预取
+13. disable-custom-jumplist    禁用Windows 7的JumpList自定义功能
+14. disable-databases    禁用HTML5的数据库支持
+15. disable-desktop-notifications    禁用桌面通知（默认窗口启用）
+16. disable-dev-tools    禁用所有页面的渲染检测
+17. disable-device-orientation    禁用设备向导
+18. disable-webgl    禁用WebGL实验功能
+19. disable-extensions    禁用扩展
+20. disable-extensions-file-access-check    禁用扩展文件访问检查
+21. disable-geolocation    禁用地理位置的JavaScript API
 disable-glsl-translator    禁用GLSL翻译
 disable-hang-monitor    禁止任务管理器监视功能
 disable-internal-flash    禁用内部的Flash Player
