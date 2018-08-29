@@ -1,6 +1,7 @@
 ## 更新yum源
-01. **wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo**
-02. **yum clean all && yum makecache**
+01. **mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak**
+02. **wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo**
+03. **yum clean all && yum makecache**
 
 ## 安装中文字体
 01. **yum -y install fontconfig**
@@ -20,8 +21,8 @@
 
 ## 安装Selenium集群
 01. 复制**chromedriver**到 **/apply/selenium/** 并且 **chmod +x /apply/selenium/chromedriver**
-02. **Master** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
-03. **Node** cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
+02. 主节点 **cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &**
+03. 从节点 **cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &**
 
 ## 部署bone-itp.jar应用
 
