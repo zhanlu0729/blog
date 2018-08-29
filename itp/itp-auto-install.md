@@ -47,35 +47,35 @@
 19. disable-extensions    禁用扩展
 20. disable-extensions-file-access-check    禁用扩展文件访问检查
 21. disable-geolocation    禁用地理位置的JavaScript API
-disable-glsl-translator    禁用GLSL翻译
-disable-hang-monitor    禁止任务管理器监视功能
-disable-internal-flash    禁用内部的Flash Player
-disable-ipv6    禁用IPv6
-disable-preconnect    禁用TCP/IP协议
-disable-javascript    禁用JS
-disable-java    禁用Java
-disable-local-storage     禁用本地存储
-disable-logging    禁用调试记录
-disable-new-tab-first-run  禁用新标签显示的通知
-disable-outdated-plugins    禁用过时的插件
-disable-plugins    禁止插件
-disable-popup-blocking    禁用阻止弹出窗口
-disable-prompt-on-repost
-disable-remote-fonts    禁用远程字体
-disable-renderer-accessibility    禁用渲染辅助功能
-disable-restore-background-contents    当浏览器重新启动后之前的网址被记录
-disable-session-storage    禁用会话存储
-disable-shared-workers    禁用共享，功能尚未完成
-disable-site-specific-quirks    禁用指定站点设置的WebKit兼容性问题。
-disable-speech-input    禁用语音输入
-disable-ssl-false-start    禁用SSL的虚假启动
-disable-sync    禁用同步
-disable-sync-apps    禁用同步应用程序
-disable-sync-autofill    禁用同步自动填表
-disable-sync-bookmarks    禁用同步书签
-disable-sync-extensions    禁用同步扩展
-disable-sync-passwords    禁用同步密码
-disable-sync-preferences    禁用同步偏好设置
+22. disable-glsl-translator    禁用GLSL翻译
+23. disable-hang-monitor    禁止任务管理器监视功能
+24. disable-internal-flash    禁用内部的Flash Player
+25. disable-ipv6    禁用IPv6
+26. disable-preconnect    禁用TCP/IP协议
+27. disable-javascript    禁用JS
+28. disable-java    禁用Java
+29. disable-local-storage     禁用本地存储
+30. disable-logging    禁用调试记录
+31. disable-new-tab-first-run  禁用新标签显示的通知
+32. disable-outdated-plugins    禁用过时的插件
+33. disable-plugins    禁止插件
+34. disable-popup-blocking    禁用阻止弹出窗口
+35. disable-prompt-on-repost
+36. disable-remote-fonts    禁用远程字体
+37. disable-renderer-accessibility    禁用渲染辅助功能
+38. disable-restore-background-contents    当浏览器重新启动后之前的网址被记录
+39. disable-session-storage    禁用会话存储
+40. disable-shared-workers    禁用共享，功能尚未完成
+41. disable-site-specific-quirks    禁用指定站点设置的WebKit兼容性问题。
+42. disable-speech-input    禁用语音输入
+43. disable-ssl-false-start    禁用SSL的虚假启动
+44. disable-sync    禁用同步
+45. disable-sync-apps    禁用同步应用程序
+46. disable-sync-autofill    禁用同步自动填表
+47. disable-sync-bookmarks    禁用同步书签
+48. disable-sync-extensions    禁用同步扩展
+49. disable-sync-passwords    禁用同步密码
+50. disable-sync-preferences    禁用同步偏好设置
 disable-sync-sessions    禁用同步会话
 disable-sync-themes    禁用同步主题（皮肤）
 disable-sync-typed-urls    禁用同步输入网址
