@@ -6,9 +6,11 @@
 ```
 
 ## 安装中文字体
-```yum -y install fontconfig
-02. 复制中文字体到 `/usr/share/fonts/chinese` 并且 `chmod -R 755 /usr/share/fonts/chinese`
-vi /etc/fonts/fonts.conf 在\<dir>/usr/local/share/fonts\</dir>行后添加 **\<dir>/usr/share/fonts/chinese\</dir>
+```
+[root@vm-bone-ITP01 yum.repos.d]# yum -y install fontconfig
+[root@vm-bone-ITP01 yum.repos.d]# cp 复制中文字体到 /usr/share/fonts/chinese
+[root@vm-bone-ITP01 yum.repos.d]# chmod -R 755 /usr/share/fonts/chinese
+vi /etc/fonts/fonts.conf 在<dir>/usr/local/share/fonts</dir>行后添加 <dir>/usr/share/fonts/chinese</dir>
 fc-cache
 fc-list
 ```
