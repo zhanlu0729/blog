@@ -35,7 +35,7 @@
 
 ## 部署bone-itp.jar应用
 
-## Chrome命令行参数
+## Chrome命令行参数列表
 01. --disable-accelerated-compositing 禁用加速
 02. --disable-winsta 禁用渲染备用窗口
 03. --disable-application-cache 禁用应用程序缓存
