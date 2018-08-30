@@ -1,12 +1,12 @@
-## maven 命令的格式为 mvn [plugin-name]:[goal-name]，可以接受的参数如下。
-01. -D 指定参数，如 -Dmaven.test.skip=true 跳过单元测试；
-02. -P 指定 Profile 配置，可以用于区分环境；
-03. -e 显示maven运行出错的信息；
-04. -o 离线执行命令,即不去远程仓库更新包；
-05. -X 显示maven允许的debug信息；
-06. -U 强制去远程更新snapshot的插件或依赖，默认每天只更新一次。
+### Maven命令的格式为 mvn [plugin-name]:[goal-name]，可以接受的参数如下。
+01. **-D** 指定参数，如 `-Dmaven.test.skip=true` 跳过单元测试；
+02. **-P** 指定 Profile 配置，可以用于区分环境；
+03. **-e** 显示maven运行出错的信息；
+04. **-o** 离线执行命令,即不去远程仓库更新包；
+05. **-X** 显示maven允许的debug信息；
+06. **-U** 强制去远程更新snapshot的插件或依赖，默认每天只更新一次。
 
-### 常用maven命令
+### 常用Maven命令
 01. 创建maven项目：`mvn archetype:create `
 02. 指定group： `-DgroupId=packageName `
 03. 指定artifact：`-DartifactId=projectName`
