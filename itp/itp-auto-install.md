@@ -27,14 +27,14 @@ export PATH=$JAVA_HOME/bin:$PATH
 ## 安装Chrome
 ```
 [root@vm-bone-ITP01 yum.repos.d]# yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-[root@vm-bone-ITP01 yum.repos.d]# vi /usr/bin/google-chrome 在exec -a "$0" "$HERE/chrome" "$@"后添加 **--no-sandbox --headless --disable-gpu --window-size=1920,1080**
+[root@vm-bone-ITP01 yum.repos.d]# vim /usr/bin/google-chrome 在exec -a "$0" "$HERE/chrome" "$@"后添加 --no-sandbox --headless --disable-gpu --window-size=1920,1080
 [root@vm-bone-ITP01 yum.repos.d]# yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
 ```
 
 ## 安装Selenium集群
-01. 复制**chromedriver**到 **/apply/selenium/** 并且 **chmod +x /apply/selenium/chromedriver**
-02. 主节点 **cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &**
-03. 从节点 **cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &**
+01. 复制**chromedriver**到 `/apply/selenium/` 并且 `chmod +x /apply/selenium/chromedriver`
+02. 主节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &`
+03. 从节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &`
 
 ## 部署bone-itp.jar应用
 
