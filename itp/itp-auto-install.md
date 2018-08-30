@@ -35,9 +35,9 @@ export PATH=$JAVA_HOME/bin:$PATH
 ``` 
 [root@vm-bone-ITP01 yum.repos.d]# cp chromedriver /apply/selenium/
 [root@vm-bone-ITP01 yum.repos.d]# chmod +x /apply/selenium/chromedriver
+[root@vm-bone-ITP01 yum.repos.d]# cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
+[root@vm-bone-ITP01 yum.repos.d]# cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
 ```
-01. 主节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &`
-02. 从节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &`
 
 ## 部署bone-itp.jar应用
 
