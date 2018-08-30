@@ -93,9 +93,10 @@
 61. --disable-flash-core-animation 禁用Flash核心动画
 62. --disable-hole-punching 禁用Punching
 63. --disable-seccomp-sandbox 禁用沙盒
-64. --no-sandbox 启动无沙盒模式运行
-65. --headless 无桌面模式启动
-66. --window-size=width,height 窗口尺寸
+64. **--no-sandbox** 启动无沙盒模式运行
+65. **--headless** 无桌面模式启动
+66. **--window-size=width,height** 窗口尺寸
+67. **--screenshot 页面地址** 截图存放在本地
 67. --incognito ：进入隐身模式——保证浏览网页时，不留下任何痕迹。
 68. --user-data-dir=“绝对路径”：指定UserData路径，默认路径位于系统盘，通过该命令，可以重定向为其它分区
 69. --disk-cache-dir=”绝对路径“ ：指定Cache路径
