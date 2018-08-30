@@ -5,7 +5,7 @@
 
 ## 安装中文字体
 01. **yum -y install fontconfig**
-02. 复制中文字体到 **/usr/share/fonts/chinese** 并且 **chmod -R 755 /usr/share/fonts/chinese**
+02. 复制中文字体到 `/usr/share/fonts/chinese` 并且 `chmod -R 755 /usr/share/fonts/chinese`
 03. **vi /etc/fonts/fonts.conf** 在\<dir>/usr/local/share/fonts\</dir>行后添加 **\<dir>/usr/share/fonts/chinese\</dir>**
 04. 刷新缓存 **fc-cache**
 05. 查看安装结果 **fc-list**
