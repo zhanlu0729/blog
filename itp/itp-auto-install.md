@@ -10,17 +10,18 @@
 [root@vm-bone-ITP01 yum.repos.d]# yum -y install fontconfig
 [root@vm-bone-ITP01 yum.repos.d]# cp 复制中文字体到 /usr/share/fonts/chinese
 [root@vm-bone-ITP01 yum.repos.d]# chmod -R 755 /usr/share/fonts/chinese
-vi /etc/fonts/fonts.conf 在<dir>/usr/local/share/fonts</dir>行后添加 <dir>/usr/share/fonts/chinese</dir>
-fc-cache
-fc-list
+[root@vm-bone-ITP01 yum.repos.d]# vi /etc/fonts/fonts.conf 在<dir>/usr/local/share/fonts</dir>行后添加 <dir>/usr/share/fonts/chinese</dir>
+[root@vm-bone-ITP01 yum.repos.d]# fc-cache
+[root@vm-bone-ITP01 yum.repos.d]# fc-list
 ```
 
 ## 安装JDK
-01. **vim /etc/profile**
-02. **export JAVA_HOME=jdk1.8的路径**
-03. **export PATH=$JAVA_HOME/bin:$PATH**
-04. **source /etc/profile**
-05. 查看安装结果 **java -version**
+```
+[root@vm-bone-ITP01 yum.repos.d]# vim /etc/profile
+export JAVA_HOME=jdk1.8的路径
+export PATH=$JAVA_HOME/bin:$PATH
+[root@vm-bone-ITP01 yum.repos.d]# source /etc/profile
+[root@vm-bone-ITP01 yum.repos.d]# java -version
 
 ## 安装Chrome
 01. **yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm**
