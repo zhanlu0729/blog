@@ -32,9 +32,12 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 ## 安装Selenium集群
-01. ` cp chromedriver到 `/apply/selenium/` 并且 `chmod +x /apply/selenium/chromedriver`
-02. 主节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &`
-03. 从节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &`
+``` 
+[root@vm-bone-ITP01 yum.repos.d]# cp chromedriver /apply/selenium/
+[root@vm-bone-ITP01 yum.repos.d]# chmod +x /apply/selenium/chromedriver
+```
+01. 主节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &`
+02. 从节点 `cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &`
 
 ## 部署bone-itp.jar应用
 
