@@ -2,7 +2,8 @@
 ```
 [root@vm-bone-ITP01 yum.repos.d]# mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
 [root@vm-bone-ITP01 yum.repos.d]# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-[root@vm-bone-ITP01 yum.repos.d]# yum clean all && yum makecache
+[root@vm-bone-ITP01 yum.repos.d]# yum clean all
+[root@vm-bone-ITP01 yum.repos.d]# yum makecache
 ```
 
 ## 安装中文字体
