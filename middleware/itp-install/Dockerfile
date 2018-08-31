@@ -1,4 +1,4 @@
-FROM k8s-registry.banksteel.com/base/jdk8:v1
+FROM baseImage:jdk8
 
 #Install fonts
 RUN yum -y install fontconfig
