@@ -25,6 +25,7 @@
 13. 查看容器内进程：`docker top containerId|name`
 14. 查看容器配置：`docker inspect containerId|name`
 15. 查看容器端口映射： `docker port containerId|name 容器中端口`
+16. 从容器中导出文件：`docker cp containerId:/filePath .`
 	
 ### Dockerfile脚本
 01. 基础镜像：FROM baseImage
