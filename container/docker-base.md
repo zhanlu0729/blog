@@ -10,24 +10,24 @@
 09. 查看镜像构建过程 `docker history imageId|name`
 	
 ### 容器常用操作
-01. 列出容器：docker ps {-a：所有容器, -l：最近创建的容器, -n：列出最近创建的n个容器, -s：列出容器大小}
-02. 创建并启动容器：docker run -i -t imageId|name /bin/bash {--restart:always/on-failure:5, --name:容器名, -d:守护进程, -i:标准输入, -t:模拟终端, -p:宿主机port:容器port}
-03. 执行命令：docker exec -i -t containerId|name linux命令
-04. 停止容器：docker stop containerId|name
-05. 终止容器：docker kill containerId|name
-06. 启动容器：docker start containerId|name
-07. 重启容器：docker restart containerId|name
-08. 删除容器：docker rm containerId|name {-f：强止删除运行的容器}
-09. 导出容器为文件：docker export containerId|name > xxx.tar
-10. 导入文件为镜像 docker import xxx.tar usename/imageId|name:latest
-11. 提交镜像：docker commit containerId|name usename/imageId|name:latest
-12. 显示日志：docker logs containerId|name {-f:实时显示日志, --tail=n：显示最后n行日志, -t：日志产生的时刻}
-13. 查看容器内进程：docker top containerId|name
-14. 查看容器配置：docker inspect containerId|name
-15. 查看容器端口映射： docker port containerId|name 容器中端口
+01. 列出容器：`docker ps` {-a：所有容器, -l：最近创建的容器, -n：列出最近创建的n个容器, -s：列出容器大小}
+02. 创建并启动容器：`docker run -i -t imageId|name /bin/bash` {--restart:always/on-failure:5, --name:容器名, -d:守护进程, -i:标准输入, -t:模拟终端, -p:宿主机port:容器port}
+03. 执行命令：`docker exec -i -t containerId|name linux命令`
+04. 停止容器：`docker stop containerId|name`
+05. 终止容器：`docker kill containerId|name`
+06. 启动容器：`docker start containerId|name`
+07. 重启容器：`docker restart containerId|name`
+08. 删除容器：`docker rm containerId|name` {-f：强止删除运行的容器}
+09. 导出容器为文件：`docker export containerId|name > xxx.tar`
+10. 导入文件为镜像 `docker import xxx.tar usename/imageId|name:latest`
+11. 提交镜像：`docker commit containerId|name usename/imageId|name:latest`
+12. 显示日志：`docker logs containerId|name` {-f:实时显示日志, --tail=n：显示最后n行日志, -t：日志产生的时刻}
+13. 查看容器内进程：`docker top containerId|name`
+14. 查看容器配置：`docker inspect containerId|name`
+15. 查看容器端口映射： `docker port containerId|name 容器中端口`
 	
 ### Dockerfile脚本
-01. 基础镜像：FROM centos:latest
+01. 基础镜像：FROM baseImage
 02. 维护者信息：MAINTAINER username "email"
 03. 镜像构建时设置环境变量：ENV 变量键值 {run时可用-e覆盖}
 04. 容器工作目录：WORKDIR xxx/xxx {run时可用-w覆盖}
