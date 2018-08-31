@@ -1,13 +1,13 @@
 ### 镜像常用操作
-01. 列出镜像：docker images
-02. 提取镜像：docker pull imageName
-03. 推送镜像：docker push imageName
-04. 删除镜像：docker rmi imageId|name {-f：强止删除有产生的容器}
-05. 构建镜像：docker build -t usename/imageId|name:latest Dockerfile路径 {-t：指定镜像名, --no-cache:不使用缓存}
-06. 镜像标签：docker tag imageId|name usename/imageId|name:latest
-07. 导出镜像：docker save imageId|name > xxx.tar
-08. 导入镜像：docker load < xxx.tar
-09. 查看镜像构建过程 docker history imageId|name
+01. 列出镜像：`docker images`
+02. 提取镜像：`docker pull imageName:tag`
+03. 推送镜像：`docker push imageName:tag`
+04. 删除镜像：`docker rmi imageId|name` {-f：强止删除有产生的容器}
+05. 构建镜像：`docker build -t usename/imageId|name:tag Dockerfile路径` {-t：指定镜像名, --no-cache:不使用缓存}
+06. 镜像打标签：`docker tag imageId|name usename/imageId|name:tag`
+07. 导出镜像：`docker save imageId|name > fileName.tar`
+08. 导入镜像：`docker load < fileName.tar`
+09. 查看镜像构建过程 `docker history imageId|name`
 	
 ### 容器常用操作
 01. 列出容器：docker ps {-a：所有容器, -l：最近创建的容器, -n：列出最近创建的n个容器, -s：列出容器大小}
