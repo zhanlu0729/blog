@@ -2,25 +2,25 @@
 
 **异常：** selenium.common.exceptions.ElementNotSelectableException(msg=None, screen=None, stacktrace=None)
 **依据：** selenium.common.exceptions.InvalidElementStateException 当尝试选择一个未能选中的元素时，异常会抛出
-
-异常：      selenium.common.exceptions.ElementNotVisibleException(msg=None, screen=None, stacktrace=None)
-依据:        selenium.common.exceptions.InvalidElementStateException 虽然当一个元素呈现在DOM，但它是不可见的，因此不能够以进行交互，异常将抛出
-
-异常： 　    selenium.common.exceptions.ErrorInResponseException(response, msg)
-依据:　　    selenium.common.exceptions.WebDriverException 服务器端有错误时，异常将抛出（这个原因可能是因为Firefox插件或者远程server）
-      
-异常： 　　selenium.common.exceptions.ImeActivationFailedException(msg=None, screen=None, stacktrace=None)
-依据:　　   selenium.common.exceptions.WebDriverException 激活输入法失败时异常会抛出。
-                
-异常：　　 selenium.common.exceptions.ImeNotAvailableException(msg=None, screen=None, stacktrace=None)
-依据:         selenium.common.exceptions.WebDriverException 当输入法不支持的时候异常将抛出。
+---------------------
+异常：selenium.common.exceptions.ElementNotVisibleException(msg=None, screen=None, stacktrace=None)
+依据: selenium.common.exceptions.InvalidElementStateException 虽然当一个元素呈现在DOM，但它是不可见的，因此不能够以进行交互，异常将抛出
+---------------------
+异常：selenium.common.exceptions.ErrorInResponseException(response, msg)
+依据:selenium.common.exceptions.WebDriverException 服务器端有错误时，异常将抛出（这个原因可能是因为Firefox插件或者远程server）
+---------------------
+异常：selenium.common.exceptions.ImeActivationFailedException(msg=None, screen=None, stacktrace=None)
+依据:selenium.common.exceptions.WebDriverException 激活输入法失败时异常会抛出。
+---------------------          
+异常：selenium.common.exceptions.ImeNotAvailableException(msg=None, screen=None, stacktrace=None)
+依据: selenium.common.exceptions.WebDriverException 当输入法不支持的时候异常将抛出。
                  
 异常：　　 selenium.common.exceptions.InvalidCookieDomainException(msg=None, screen=None, stacktrace=None)
 依据:　　   selenium.common.exceptions.WebDriverException 试图在不同的domain而不是目前的URL中添加一个cookie时抛出异常
                 
 异常：　　 selenium.common.exceptions.InvalidElementStateException(msg=None, screen=None, stacktrace=None)
 依据: 　　  selenium.common.exceptions.WebDriverException无效的元素状态
-                
+---------------------         
 异常：　　 selenium.common.exceptions.InvalidSelectorException(msg=None, screen=None, stacktrace=None)
 依据:         selenium.common.exceptions.NoSuchElementException当选择器没有返回一个web元素时，异常抛出。
                 
