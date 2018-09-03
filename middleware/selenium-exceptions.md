@@ -1,7 +1,7 @@
-Exceptions（异常）:异常可能发生在所有的WebDriver中的代码。
+1. Exceptions（异常）:异常可能发生在所有的WebDriver中的代码。
 
-异常：　 selenium.common.exceptions.ElementNotSelectableException(msg=None, screen=None, stacktrace=None)
-依据：     selenium.common.exceptions.InvalidElementStateException 当尝试选择一个未能选中的元素时，异常会抛出
+**异常：** selenium.common.exceptions.ElementNotSelectableException(msg=None, screen=None, stacktrace=None)
+**依据：** selenium.common.exceptions.InvalidElementStateException 当尝试选择一个未能选中的元素时，异常会抛出
 
 异常：      selenium.common.exceptions.ElementNotVisibleException(msg=None, screen=None, stacktrace=None)
 依据:        selenium.common.exceptions.InvalidElementStateException 虽然当一个元素呈现在DOM，但它是不可见的，因此不能够以进行交互，异常将抛出
