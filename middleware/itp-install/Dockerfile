@@ -14,3 +14,4 @@ COPY google-chrome /usr/bin/google-chrome
 #Install chromedriver
 COPY chromedriver /apply/selenium/
 RUN chmod +x /apply/selenium/chromedriver
+RUN mkdir -p /apply/attach/ && chmod -R 755 /apply/attach/
