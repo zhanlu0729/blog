@@ -12,5 +12,6 @@ RUN yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg
 COPY google-chrome /usr/bin/google-chrome
 
 #Install chromedriver
+RUN mkdir -p /apply/attach && chmod -R 755 /apply/attach/
 COPY chromedriver /apply/selenium/
-RUN chmod +x /apply/selenium/chromedriver && mkdir -p /apply/attach/ && chmod -R 755 /apply/attach/
+RUN chmod +x /apply/selenium/chromedriver
