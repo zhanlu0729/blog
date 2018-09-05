@@ -38,7 +38,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 [root@vm-bone-ITP01 yum.repos.d]# chmod +x /apply/selenium/chromedriver
 [root@vm-bone-ITP01 yum.repos.d]# cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role hub &
 [root@vm-bone-ITP01 yum.repos.d]# cd /apply/selenium && nohup java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://masterIP:4444/grid/register &
-脚本解析服务连接地址：selenium.hub.addr=http://192.168.200.212:4444/wd/hub
+脚本解析服务连接地址：selenium.hub.addr=http://masterIP:4444/wd/hub
 ```
 
 ## 部署bone-itp.jar应用
