@@ -11,10 +11,10 @@ COPY fonts.conf /etc/fonts/fonts.conf
 #Install Chrome
 ```
 RUN yum install -y google-chrome-stable
-RUN yum install ipa-gothic-fonts \
+RUN yum install xorg-x11-utils \
+  ipa-gothic-fonts \
   xorg-x11-fonts-100dpi \
   xorg-x11-fonts-75dpi \
-  xorg-x11-utils \
   xorg-x11-fonts-cyrillic \
   xorg-x11-fonts-Type1 \
   xorg-x11-fonts-misc -y
