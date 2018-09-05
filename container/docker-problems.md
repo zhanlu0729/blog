@@ -3,6 +3,8 @@
 2. 原因分析：
 3. 解决方案：
 ```
-a. vi /usr/lib/systemd/system/docker.service
-b. ExecStart=/usr/bin/dockerd --insecure-registry k8s-registry.banksteel.local
+$ vi /usr/lib/systemd/system/docker.service
+$ ExecStart=/usr/bin/dockerd --insecure-registry k8s-registry.banksteel.local
+$ systemctl daemon-reload
+$ systemctl restart docker
 ```
