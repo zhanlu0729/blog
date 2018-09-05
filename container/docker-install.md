@@ -9,9 +9,8 @@ sudo yum remove docker \
                   docker-logrotate \
                   docker-selinux \
                   docker-engine-selinux \
-                  docker-engine
-``
-                 
+                  docker-engine```
+     
 ### Install Docker
 ```
 sudo yum install -y yum-utils \
@@ -27,3 +26,4 @@ sudo yum install -y yum-utils \
     sudo yum-config-manager --enable docker-ce-test
 ```
                  
+### 
