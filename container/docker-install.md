@@ -28,6 +28,8 @@ $ sudo yum-config-manager \
 03. `Optional`: Enable the `edge` and `test` repositories. These repositories are included in the docker.repo file above but are disabled by default. You can enable them alongside the stable repository.
 ```
 $ sudo yum-config-manager --enable docker-ce-edge
+```
+```
 $ sudo yum-config-manager --enable docker-ce-test
 ```
 04. You can disable the `edge` or `test` repository by running the `yum-config-manager` command with the `--disable` flag. To re-enable it, use the `--enable` flag. The following command disables the `edge` repository.
