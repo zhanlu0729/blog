@@ -1,14 +1,9 @@
-例如错误代码10061， 说明服务器已经找到，但连接被服务器拒绝，
+### Socket常见错误
+1. 错误代码10061， 说明服务器已经找到，但连接被服务器拒绝，连接失败原因可能是：端口号设置错误；
+2. 服务器没有处于监听状态 （即ServerSocket –>Active=true）；
+3. 数据包被服务器端的防火墙过滤掉。
 
-连接失败原因可能是：
-
-端口号设置错误；
-2.服务器没有处于监听状态 （即ServerSocket –>Active=true）；
-
-3.数据包被服务器端的防火墙过滤掉。
-
-附：Socket常见错误代码与描述
-
+### Socket常见错误代码与描述
 Socket error 0 – Directly send error 
 Socket error 10004 – Interrupted function //call 操作被终止 
 Socket error 10013 – Permission denied //c访问被拒绝 
