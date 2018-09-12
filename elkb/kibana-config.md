@@ -4,44 +4,36 @@ Kibana服务器kibana.yml在启动时从文件中读取属性。此文件的位�
 默认设置配置Kibana运行localhost:5601。要更改主机或端口号，或连接到在其他计算机上运行的Elasticsearch，您需要更新kibana.yml文件。您还可以启用SSL并设置各种其他选项。最后，可以使用${MY_ENV_VAR}语法将环境变量注入配置。
 
 ### Kibana配置设置
-**console.enabled** 默认值：true设置为false以禁用控制台。切换这将导致服务器在下次启动时重新生成资产，这可能会导致页面开始服务之前的延迟。
-**cpu.cgroup.path.override:**
-以与不一致的方式安装时覆盖cgroup cpu路径 /proc/self/cgroup
-**cpuacct.cgroup.path.override:**
-以与不一致的方式安装时覆盖cgroup cpuacct路径 /proc/self/cgroup
-**elasticsearch.customHeaders:**
-默认值：{}要发送到Elasticsearch的标头名称和值。无论elasticsearch.requestHeadersWhitelist配置如何，客户端标头都不能覆盖任何自定义标头。
-**elasticsearch.logQueries:**
-默认值：false记录发送到Elasticsearch的查询。需要logging.verbose设置为true。这对于查看当前没有间谍面板的应用程序生成的查询DSL非常有用，例如Timelion和Monitoring。
-**elasticsearch.pingTimeout:**
-默认值：elasticsearch.requestTimeout等待Elasticsearch响应ping的设置时间（以毫秒为单位）。
-**elasticsearch.preserveHost:**
-默认值：true当此设置的值为true时，Kibana使用server.host设置中指定的主机名。当此设置的值为时false，Kibana使用连接到此Kibana实例的主机的主机名。
-**elasticsearch.requestHeadersWhitelist:**
-默认值：[ 'authorization' ]要发送到Elasticsearch的Kibana客户端标头列表。发送无客户端的标头，将该值设置为[]（空列表）。
-**elasticsearch.requestTimeout:**
-默认值：30000等待来自后端或Elasticsearch的响应的时间（以毫秒为单位）。该值必须是正整数。
-**elasticsearch.shardTimeout:**
+1. **console.enabled** 默认值：true设置为false以禁用控制台。切换这将导致服务器在下次启动时重新生成资产，这可能会导致页面开始服务之前的延迟。
+2. **cpu.cgroup.path.override:** 以与不一致的方式安装时覆盖cgroup cpu路径 /proc/self/cgroup
+3. **cpuacct.cgroup.path.override:** 以与不一致的方式安装时覆盖cgroup cpuacct路径 /proc/self/cgroup
+4. **elasticsearch.customHeaders:** 默认值：{}要发送到Elasticsearch的标头名称和值。无论elasticsearch.requestHeadersWhitelist配置如何，客户端标头都不能覆盖任何自定义标头。
+5. **elasticsearch.logQueries:** 默认值：false记录发送到Elasticsearch的查询。需要logging.verbose设置为true。这对于查看当前没有间谍面板的应用程序生成的查询DSL非常有用，例如Timelion和Monitoring。
+6. **elasticsearch.pingTimeout:** 默认值：elasticsearch.requestTimeout等待Elasticsearch响应ping的设置时间（以毫秒为单位）。
+7. **elasticsearch.preserveHost:** 默认值：true当此设置的值为true时，Kibana使用server.host设置中指定的主机名。当此设置的值为时false，Kibana使用连接到此Kibana实例的主机的主机名。
+8. **elasticsearch.requestHeadersWhitelist:** 默认值：[ 'authorization' ]要发送到Elasticsearch的Kibana客户端标头列表。发送无客户端的标头，将该值设置为[]（空列表）。
+9. **elasticsearch.requestTimeout:** 默认值：30000等待来自后端或Elasticsearch的响应的时间（以毫秒为单位）。该值必须是正整数。
+10. **elasticsearch.shardTimeout:**
 默认值：30000 Elasticsearch等待分片响应的时间（以毫秒为单位）。设置为0以禁用。
-**elasticsearch.ssl.certificate: 和 elasticsearch.ssl.key:**
+11. **elasticsearch.ssl.certificate: 和 elasticsearch.ssl.key:**
 可选设置，提供PEM格式SSL证书和密钥文件的路径。这些文件被用来验证Kibana到Elasticsearch身份和当需要 xpack.ssl.verification_mode在Elasticsearch被设置为certificate或full。
-**elasticsearch.ssl.certificateAuthorities:**
+12. **elasticsearch.ssl.certificateAuthorities:**
 可选设置，使您可以为Elasticsearch实例的证书颁发机构指定PEM文件的路径列表。
-**elasticsearch.ssl.keyPassphrase:**
+13. **elasticsearch.ssl.keyPassphrase:**
 用于解密私钥的密码。此值是可选的，因为密钥可能未加密。
-**elasticsearch.ssl.verificationMode:**
+14. **elasticsearch.ssl.verificationMode:**
 默认值：完全控制Elasticsearch提供的证书验证。有效值是none，certificate和full。 full执行主机名验证，certificate但没有。
-**elasticsearch.startupTimeout:**
+15. **elasticsearch.startupTimeout:**
 默认值：5000在重试之前在Kibana启动时等待Elasticsearch的时间（以毫秒为单位）。
-**elasticsearch.url:**
+16. **elasticsearch.url:**
 默认值：“http：// localhost：9200”用于所有查询的Elasticsearch实例的URL。
-**elasticsearch.username: 和 elasticsearch.password:**
+17. **elasticsearch.username: 和 elasticsearch.password:**
 如果您的Elasticsearch受基本身份验证保护，则这些设置提供Kibana服务器用于在启动时对Kibana索引执行维护的用户名和密码。您的Kibana用户仍需要使用通过Kibana服务器代理的Elasticsearch进行身份验证。
-**elasticsearch.tribe.customHeaders:**
+18. **elasticsearch.tribe.customHeaders:**
 默认值：{}要发送到Elasticsearch的标头名称和值。无论elasticsearch.tribe.requestHeadersWhitelist配置如何，客户端标头都不能覆盖任何自定义标头。
-**elasticsearch.tribe.pingTimeout:**
+19. **elasticsearch.tribe.pingTimeout:**
 默认值：elasticsearch.tribe.requestTimeout等待Elasticsearch响应ping的设置时间（以毫秒为单位）。
-**elasticsearch.tribe.requestHeadersWhitelist:**
+20. **elasticsearch.tribe.requestHeadersWhitelist:**
 默认值：[ 'authorization' ]要发送到Elasticsearch的Kibana客户端标头列表。发送无客户端的标头，将该值设置为[]（空列表）。
 **elasticsearch.tribe.requestTimeout:**
 默认值：30000等待来自后端或Elasticsearch的响应的时间（以毫秒为单位）。该值必须是正整数。
