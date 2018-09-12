@@ -65,40 +65,23 @@ regionmap：
 46. **regionmap.includeElasticMapsService** 打开或关闭Elastic Maps Service中的图层是否应包含在矢量图层选项列表中。在Elastic Cloud Enterprise上受支持。通过关闭此选项，将仅包括此处配置的图层。默认值为true。
 47. **server.basePath** 如果您在代理后面运行，则可以指定安装Kibana的路径。使用该server.rewriteBasePath设置告诉Kibana是否应从其收到的请求中删除basePath，并防止在启动时发生弃用警告。此设置不能以斜杠（/）结尾。
 48. **server.rewriteBasePath** 默认值：false指定Kibana是否应重写带有前缀的请求server.basePath或要求它们由反向代理重写。此设置实际上始终false在Kibana 6.3之前，并且默认true在Kibana 7.0中启动。
-49. **server.customResponseHeaders**
-默认值：{}从Kibana服务器发送到客户端的所有响应的头名称和值。
-50. **server.defaultRoute**
-默认值：“/ app / kibana”此设置指定打开Kibana时的默认路径。您可以使用此设置在打开Kibana时修改登录页面。
-51. **server.host**
-默认值：“localhost”此设置指定后端服务器的主机。
-52. **server.maxPayloadBytes**
-默认值：1048576传入服务器请求的最大有效负载大小（以字节为单位）。
-53. **server.name**
-默认值：“your-hostname”用于标识此Kibana实例的可读显示名称。
-54. **server.port**
-默认值：5601 Kibana由后端服务器提供服务。此设置指定要使用的端口。
-55. **server.ssl.enabled**
-默认值：“false”为从Kibana服务器到浏览器的传出请求启用SSL。设置为true，server.ssl.certificate并且server.ssl.key是必需的
-56. **server.ssl.certificate和server.ssl.key**
-分别是PEM格式SSL证书和SSL密钥文件的路径。
-57. **server.ssl.certificateAuthorities**
-应信任的PEM编码证书文件的路径列表。
-58. **server.ssl.cipherSuites**
-默认值：ECDHE-RSA-AES128-GCM-SHA256，ECDHE-ECDSA-AES128-GCM-SHA256，ECDHE-RSA-AES256-GCM-SHA384，ECDHE-ECDSA-AES256-GCM-SHA384，DHE-RSA-AES128-GCM- SHA256，ECDHE-RSA-AES128-SHA256，DHE-RSA-AES128-SHA256，ECDHE-RSA-AES256-SHA384，DHE-RSA-AES256-SHA384，ECDHE-RSA-AES256-SHA256，DHE-RSA-AES256-SHA256， HIGH，！aNULL，！eNULL，！EXPORT，！DES，！RC4，！MD5，！PSK，！SRP，！CAMELLIA。有关格式和有效选项的详细信息，请参见[OpenSSL密码列表格式文档]（ https://www.openssl.org/docs/man1.0.2/apps/ciphers.html#CIPHER-LIST-FORMAT）
-59. **server.ssl.keyPassphrase**
-用于解密私钥的密码。此值是可选的，因为密钥可能未加密。
-60. **server.ssl.redirectHttpFromPort**
-Kibana将绑定到此端口，并通过配置为的端口将所有http请求重定向到https server.port。
-61. **server.ssl.supportedProtocols**
-默认值：TLSv1，TLSv1.1，TLSv1.2包含版本的受支持协议的数组。有效协议：TLSv1，TLSv1.1，TLSv1.2
-62. **status.allowAnonymous**
-默认值：false如果启用了身份验证，则将此设置为true允许未经身份验证的用户访问Kibana服务器状态API和状态页面。
-63. **tilemap.options.attribution**
-默认值："© [Elastic Maps Service](https://www.elastic.co/elastic-maps-service)"地图属性字符串。在Elastic Cloud Enterprise上受支持。
-64. **tilemap.options.maxZoom**
-默认值：10最大缩放级别。在Elastic Cloud Enterprise上受支持。
-65. **tilemap.options.minZoom**
-默认值：1最小缩放级别。在Elastic Cloud Enterprise上受支持。
+49. **server.customResponseHeaders** 默认值：{}从Kibana服务器发送到客户端的所有响应的头名称和值。
+50. **server.defaultRoute** 默认值：“/ app / kibana”此设置指定打开Kibana时的默认路径。您可以使用此设置在打开Kibana时修改登录页面。
+51. **server.host** 默认值：“localhost”此设置指定后端服务器的主机。
+52. **server.maxPayloadBytes** 默认值：1048576传入服务器请求的最大有效负载大小（以字节为单位）。
+53. **server.name** 默认值：“your-hostname”用于标识此Kibana实例的可读显示名称。
+54. **server.port** 默认值：5601 Kibana由后端服务器提供服务。此设置指定要使用的端口。
+55. **server.ssl.enabled** 默认值：“false”为从Kibana服务器到浏览器的传出请求启用SSL。设置为true，server.ssl.certificate并且server.ssl.key是必需的
+56. **server.ssl.certificate和server.ssl.key** 分别是PEM格式SSL证书和SSL密钥文件的路径。
+57. **server.ssl.certificateAuthorities** 应信任的PEM编码证书文件的路径列表。
+58. **server.ssl.cipherSuites** 默认值：ECDHE-RSA-AES128-GCM-SHA256，ECDHE-ECDSA-AES128-GCM-SHA256，ECDHE-RSA-AES256-GCM-SHA384，ECDHE-ECDSA-AES256-GCM-SHA384，DHE-RSA-AES128-GCM- SHA256，ECDHE-RSA-AES128-SHA256，DHE-RSA-AES128-SHA256，ECDHE-RSA-AES256-SHA384，DHE-RSA-AES256-SHA384，ECDHE-RSA-AES256-SHA256，DHE-RSA-AES256-SHA256， HIGH，！aNULL，！eNULL，！EXPORT，！DES，！RC4，！MD5，！PSK，！SRP，！CAMELLIA。有关格式和有效选项的详细信息，请参见[OpenSSL密码列表格式文档]（ https://www.openssl.org/docs/man1.0.2/apps/ciphers.html#CIPHER-LIST-FORMAT）
+59. **server.ssl.keyPassphrase** 用于解密私钥的密码。此值是可选的，因为密钥可能未加密。
+60. **server.ssl.redirectHttpFromPort** Kibana将绑定到此端口，并通过配置为的端口将所有http请求重定向到https server.port。
+61. **server.ssl.supportedProtocols** 默认值：TLSv1，TLSv1.1，TLSv1.2包含版本的受支持协议的数组。有效协议：TLSv1，TLSv1.1，TLSv1.2
+62. **status.allowAnonymous** 默认值：false如果启用了身份验证，则将此设置为true允许未经身份验证的用户访问Kibana服务器状态API和状态页面。
+63. **tilemap.options.attribution** 默认值："© [Elastic Maps Service](https://www.elastic.co/elastic-maps-service)"地图属性字符串。在Elastic Cloud Enterprise上受支持。
+64. **tilemap.options.maxZoom** 默认值：10最大缩放级别。在Elastic Cloud Enterprise上受支持。
+65. **tilemap.options.minZoom** 默认值：1最小缩放级别。在Elastic Cloud Enterprise上受支持。
 66. **tilemap.options.subdomains** tile服务使用的子域阵列。在Elastic Cloud Enterprise上受支持。使用令牌指定子域的URL位置{s}。
 67. **tilemap.url** Kibana用于在tilemap可视化中显示地图图块的tileservice的URL。默认情况下，Kibana从外部元数据服务读取此URL，但用户仍可以覆盖此参数以使用自己的Tile Map Service。例如："https://tiles.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana"
-68. **vega.enableExternalUrls**默认值：false将此值设置为true以允许Vega使用任何URL访问外部数据源和图像。如果为false，Vega只能从Elasticsearch获取数据。
+68. **vega.enableExternalUrls** 默认值：false将此值设置为true以允许Vega使用任何URL访问外部数据源和图像。如果为false，Vega只能从Elasticsearch获取数据。
