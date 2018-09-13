@@ -24,3 +24,10 @@ iostat [ -c ] [ -d ] [ -h ] [ -N ] [ -k | -m ] [ -t ] [ -V ] [ -x ] [ -z ] [ dev
 3. `Blk_wrtn/s` 每秒写入的block数.
 4. `Blk_read`  读入的block总数.
 5. `Blk_wrtn`  写入的block总数.
+
+### 入门使用
+1. `tps`该设备每秒的传输次数（Indicate the number of transfers per second that were issued to the device.）。"一次传输"意思是"一次I/O请求"。多个逻辑请求可能会被合并为"一次I/O请求"。"一次传输"请求的大小是未知的。
+2. `kB_read/s` 每秒从设备（drive expressed）读取的数据量；
+3. `kB_wrtn/s` 每秒向设备（drive expressed）写入的数据量；
+4. `kB_read` 读取的总数据量；
+5. `kB_wrtn` 写入的总数量数据量；这些单位都为Kilobytes。
