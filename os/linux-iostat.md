@@ -1,4 +1,5 @@
 ## IO实时监控命令iostat详解
+iostat [ -c ] [ -d ] [ -h ] [ -N ] [ -k | -m ] [ -t ] [ -V ] [ -x ] [ -z ] [ device [...] | ALL ] [ -p [ device [,...] | ALL ] ] [ interval [ count ] ]
 
 ### iostat各个参数的说明
  1. `-c` 仅显示CPU统计信息.与-d选项互斥.
