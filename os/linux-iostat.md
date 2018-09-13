@@ -19,7 +19,7 @@
 
 #### Device段:
 1. `tps` 每秒钟发送到的I/O请求数.
-2. `Blk_read /s` 每秒读取的block数.
+2. `Blk_read/s` 每秒读取的block数.
 3. `Blk_wrtn/s` 每秒写入的block数.
 4. `Blk_read`  读入的block总数.
 5. `Blk_wrtn`  写入的block总数.
