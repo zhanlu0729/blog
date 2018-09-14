@@ -5,10 +5,10 @@
 3.ce.log  - 有关后台任务处理以及与这些任务相关的数据库和搜索引擎日志的信息。
 4.es.log - 来自搜索引擎的Ops信息，例如Elasticsearch启动，运行状况更改，群集，节点和索引级别操作等。
 
-| 一个普通标题 | 一个普通标题 | 一个普通标题 |
+### 服务器
+|      键      |       描述       |      默认值     |
 | ------ | ------ | ------ |
-| 短文本 | 中等文本 | 稍微长一点的文本 |
-| 稍微长一点的文本 | 短文本 | 中等文本 |
+| sonar.host.url | 服务器URL | http://localhost:9000/ |
 
 /sonar.sh { console | start | stop | restart | status | dump }
 mvn sonar:sonar   -Dsonar.host.url=http://127.0.0.1:9000   -Dsonar.login=758dbe85559a1ae8ac2bd03ce931c4cf65197b02
