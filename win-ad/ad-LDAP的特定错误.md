@@ -1,15 +1,17 @@
 ### LDAP的特定错误
-Error: com.macromedia.contribute.server.exception.DBException: Error in bind() from LDAP source: [server]:[port] 错误：com.macromedia.contribute.server.exception.DBException：绑定错误的（）从LDAP来源：[服务器]：[端口] 
+1. **Error:** com.macromedia.contribute.server.exception.DBException: Error in bind() from LDAP source: [server]:[port] **错误：com.macromedia.contribute.server.exception.DBException：**绑定错误的（）从LDAP来源：[服务器]：[端口] 
 
-Cause: This is a very general error, and it means something went wrong when trying to bind to LDAP/AD.原因：这是一个非常普遍的错误，它意味着出事时试图绑定到LDAP /广告。 Check to see if the LDAP/AD server name and/or port number you have specified is incorrect or an incorrect DN was specified as the administrator username.请检查是否在LDAP / AD服务器名称和/或您指定的端口号是不正确或不正确的DN作为管理员的用户名指定。 
+**Cause:** This is a very general error, and it means something went wrong when trying to bind to LDAP/AD.原因：这是一个非常普遍的错误，它意味着出事时试图绑定到LDAP /广告。 Check to see if the LDAP/AD server name and/or port number you have specified is incorrect or an incorrect DN was specified as the administrator username.请检查是否在LDAP / AD服务器名称和/或您指定的端口号是不正确或不正确的DN作为管理员的用户名指定。 
 
-Notes: For more detail look at the sub-exception, which can be 1,2,3,4 or 5 below. 注：如需例外的细节来看分，可1,2,3,4或5以下。
-Error: javax.naming.CommunicationException: [server]:[port] [Root exception is java.net.ConnectException: Connection refused: connect] 错误：javax.naming.CommunicationException：[服务器]：[端口] [根异常java.net.ConnectException：连接被拒绝：连接] 
+**Notes:** For more detail look at the sub-exception, which can be 1,2,3,4 or 5 below. 注：如需例外的细节来看分，可1,2,3,4或5以下。
 
-Cause: The port name you have specified for the LDAP/AD server is incorrect. 原因：你有服务器的端口名指定为LDAP / AD是不正确的。
-Error: javax.naming.CommunicationException: [server]:[port] [Root exception is java.net.UnknownHostException: [server]] 错误：javax.naming.CommunicationException：[服务器]：[端口] [根异常java.net.UnknownHostException：[服务器]] 
+2. **Error:** javax.naming.CommunicationException: [server]:[port] [Root exception is java.net.ConnectException: Connection refused: connect] **错误：javax.naming.CommunicationException：**[服务器]：[端口] [根异常java.net.ConnectException：连接被拒绝：连接] 
 
-Cause: The LDAP/AD server name you have specified is incorrect. 原因：的LDAP / AD服务器名称指定是不正确的。
+**Cause:** The port name you have specified for the LDAP/AD server is incorrect. 原因：你有服务器的端口名指定为LDAP / AD是不正确的。
+
+3. **Error:** javax.naming.CommunicationException: [server]:[port] [Root exception is java.net.UnknownHostException: [server]] **错误：javax.naming.CommunicationException：**[服务器]：[端口] [根异常java.net.UnknownHostException：[服务器]] 
+
+**Cause:** The LDAP/AD server name you have specified is incorrect. 原因：的LDAP / AD服务器名称指定是不正确的。
 Error: javax.naming.NamingException: Cannot parse url: [protocol]://[server]:[port] [Root exception is java.net.MalformedURLException: Not an LDAP URL: [protocol]://[server]:[port]] 错误：javax.naming.NamingException：无法解析网址：[协议]://[服务器]：[端口] [根异常java.net.MalformedURLException：不是一个LDAP网址：[协议]://[服务器]： [港口]] 
 
 Cause: The protocol you have specified is not correct. 原因：您指定的协议的，是不正确的。 
