@@ -1,10 +1,20 @@
-筛选条件	值
-用户	(&(objectCategory=person)(objectClass=user))
-计算机	(objectCategory=computer)
-组	(objectCategory=group)
-联系人	(objectCategory=contact)
-共享文件夹	(objectCategory=volume)
-打印机	(objectCategory=printQueue)
+## DirectorySearcher.Filter属性扩充说明
+	
+用户	
+	
+	
+	
+	
+	
+
+| 筛选条件 | 值 |
+| --------- | ------------ |
+| 用户       | (&(objectCategory=person)(objectClass=user)) |
+| 计算机     | (objectCategory=computer)                    |
+| 组         | (objectCategory=group)                       |
+| 联系人     | (objectCategory=contact)                   |
+| 共享文件夹 | (objectCategory=volume)                  |
+| 打印机     | (objectCategory=printQueue) |
 
 ## 用户属性扩充说明(含图文属性对照)
 ### 常项选项卡
