@@ -25,29 +25,4 @@ Pointed to a non administrator user指着一个非管理员用户
 Pointed to a valid admin but password is incorrect指出了一个有效的管理员密码是不正确的，但
 Error: com.macromedia.contribute.server.exception.DBException: Error in searchForUserList from LDAP plugin: [LDAP: error code 32 - No Such Object] 错误：com.macromedia.contribute.server.exception.DBException：插件错误的LDAP searchForUserList来自：[LDAP的：错误代码32 -没有这样的对象] 
 
-**Cause:** Very general error when there is a problem finding the users in LDAP/AD. 原因：很一般的错误，当发现有问题/ AD的用户的LDAP。 Could be that the DN pointing to the users is pointing to the wrong place or is just incorrect and does not exist.可能是因为用户的DN指向指向错误的地方，或只是不正确，不存在。 
-
-**Note:** For more detail look at the sub-exception, which can be 7 below. 注：如需例外的细节来看分，可7所示。
-**Error:** javax.naming.NameNotFoundException: [LDAP: error code 32 - No Such Object]; remaining name '[DN]' 错误：javax.naming.NameNotFoundException：[LDAP的：错误代码32 -没有这样的对象];余下的名字'[肾病]' 
-
-Cause: The DN path which points to where the users are located in the directory is invalid. 原因：DN路径指向的地方的用户目录位于无效。
-Error: com.macromedia.contribute.server.exception.DBException: Error in searchForUserList from LDAP plugin: [LDAP: error code 2 - Bad search filter] 错误：com.macromedia.contribute.server.exception.DBException：插件错误的LDAP searchForUserList来自：[LDAP的：错误代码2 -错误的搜索过滤器] 
-
-**Cause:** Invalid search filter passed to the LDAP/AD server. 原因：无效的搜索过滤器传递到LDAP / AD服务器。 
-
-**Note:** For more detail look at the sub-exception, which can be 9, or 10 below. 注：如需例外的细节来看分，它可以是9或10以下。
-**Error:** javax.naming.directory.InvalidSearchFilterException: Missing 'equals'; remaining name '[DN]' 错误：javax.naming.directory.InvalidSearchFilterException：缺少'等于';余下的名字'[肾病]' 
-
-**Cause:** The filter specified is wrong or CPS constructed a bad filter. 原因：指定的过滤器或过滤准则是错误的构造坏。
-**Error:** javax.naming.directory.InvalidSearchFilterException: Unbalanced parenthesis; remaining name [DN]错误：javax.naming.directory.InvalidSearchFilterException：括号不平衡;其余名称[肾病] 
-
-**Cause:** You did not have correct opening and closing of parenthesis in your search filter. 原因：您没有正确的开启和关闭括号在您的搜索过滤器。
-**Error:** Error in bind from LDAP source: [LDAP: error code 49 - Invalid Credentials] javax.naming.AuthenticationException 错误：源错误的LDAP绑定来自：[LDAP的：错误代码49 -无效凭据] javax.naming.AuthenticationException 
-
-**Cause:** Could not authenticate the user trying to login. 原因：无法验证的用户试图登录。 This can be the result of an incorrect username or password, or an incorrect prefix and/or suffix specified in the Settings tab, depending on the type of LDAP/AD system.这可以是一个不正确的用户名或密码，或不正确的前缀和结果/或后缀指定在设置选项卡，根据的LDAP /广告系统类型。 Could also mean the authentication type is incorrect.可能也意味着是不正确的身份验证类型。
-**Error:** Error in bind from LDAP source: [LDAP: error code 34 - invalid DN] javax.naming.InvalidNameException 错误：源错误的LDAP绑定来自：[LDAP的：错误代码34 -无效的DN] javax.naming.InvalidNameException 
-
-**Cause:** This is caused by a bad prefix specified in the Settings tab, on most LDAP/AD systems. 原因：这是系统设置造成坏指定前缀广告标签，大多数LDAP /。 This could mean you did not specify a prefix at all, which means the LDAP/AD server did not receive a full DN from CPS or that you did not specify a correct prefix, such as CN instead of UID, which results in the LDAP/AD server not receiving a correct DN from CPS.这可能意味着你没有在所有指定的前缀，这意味着在LDAP / AD服务器没有收到完整DN从准则，或者你没有指定，如不是的UID，它在LDAP结果架CN正确的前缀，/ AD服务器没有收到来自准则正确的DN。 Can also be caused by a missing comma at the beginning of the suffix or an extra comma at the end of the suffix.也可以是由一个在后缀或一个额外的逗号在后缀月底开始失踪逗号。 This error could also mean the authentication type is incorrect.此错误可能也意味着是不正确的身份验证类型。
-**Error:** NoSuchAttributeException 错误：NoSuchAttributeException 
-
-**Cause:** This is caused by providing a name for an attribute which is not correct or does not exist. 原因：这是由于不存在提供一个名称的属性是不正确或。
+https://blog.csdn.net/zdwzzu2006/article/details/8550910
