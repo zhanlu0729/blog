@@ -1,7 +1,12 @@
-### 域控制器
-**域控制器(Domain Controller|DC)**,域控制器是一台计算机,实现用户,计算机,目录的统一管理.
-### 活动目录
-**活动目录(Active Directory|AD)**是一种基于LDAP的存储协议.
+### 域控制器(DC)
+**域控制器(Domain Controller|DC)** 域控制器是一台计算机,实现用户,计算机,目录的统一管理.
+
+### 活动目录(AD)
+**活动目录(Active Directory|AD)** 是一种基于LDAP的存储协议.
+
+### 目录访问协议(LDAP)
+**LDAP**是轻量目录访问协议，英文全称是Lightweight Directory Access Protocol，一般都简称为LDAP。它是基于X.500标准的，但是简单多了并且可以根据需要定制。与X.500不同，LDAP支持TCP/IP，这对访问Internet是必须的。LDAP的核心规范在RFC中都有定义，所有与LDAP相关的RFC都可以在LDAPman RFC网页中找到。
+
 ### 域控制器和活动目录的区别
 **域控制器**和**活动目录**完全是两种概念,DC也可以不基于AD实现,比如基于数据库或文件.
 
