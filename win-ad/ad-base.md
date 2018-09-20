@@ -1,7 +1,8 @@
 ## 概念
 
 ### 域控制器(DC)
-**域控制器(Domain Controller|DC)** 域控制器是一台计算机,实现用户,计算机,目录的统一管理.
+1. **域控制器(Domain Controller|DC)** 域控制器是一台计算机,实现用户,计算机,目录的统一管理
+2. [百度百科](https://baike.baidu.com/item/%E5%9F%9F%E6%8E%A7%E5%88%B6%E5%99%A8/8656707)
 
 ### LDAP
 1. **LDAP** 是轻量目录访问协议，英文全称是Lightweight Directory Access Protocol，一般都简称为LDAP. 它是基于X.500标准的，但是简单多了并且可以根据需要定制。与X.500不同，LDAP支持TCP/IP，这对访问Internet是必须的。LDAP的核心规范在RFC中都有定义，所有与LDAP相关的RFC都可以在LDAPman RFC网页中找到
