@@ -1,3 +1,9 @@
+### 域控制器
+域控制器(Domain Controller),缩写为DC,Domain Controller是一台计算机,实现用户,计算机,目录的统一管理.
+### 活动目录
+活动目录(Active Directory|AD)是一种基于LDAP的存储协议.
+两者完全是两种概念,DC也可以不基于AD实现,比如基于数据库或文件,当然目前微软还没有这样的实现.
+
 ### 活动目录
 **活动目录（Active Directory）** 是面向Windows Standard Server、Windows Enterprise Server以及 Windows Datacenter Server的目录服务。Active Directory存储了有关网络对象的信息，并且让管理员和用户能够轻松地查找和使用这些信息。Active Directory使用了一种结构化的数据存储方式，并以此作为基础对目录信息进行合乎逻辑的分层组织，它为用户管理网络环境各个组成要素的标识和关系提供了一种有力的手段。
 
