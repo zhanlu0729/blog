@@ -5,10 +5,10 @@
 4. `/dump` GET 打印线程堆栈
 5. `/env` GET 查看所有环境变量
 6. `/env/{name}` GET 查看具体变量值
-7. `/health` GET 
-8. `/info` GET 
-9. `/mappings` GET 
-10. `/metrics` GET 
-11. `/metrics/{name}` GET 
-12. `/shutdown` POST  
-13. `/trace` GET 
+7. `/health` GET 查看应用健康指标
+8. `/info` GET 查看应用信息
+9. `/mappings` GET 查看所有URL映射
+10. `/metrics` GET 查看应用基本指标
+11. `/metrics/{name}` GET 查看具体指标
+12. `/shutdown` POST  关闭应用
+13. `/trace` GET 查看基本追踪信息
