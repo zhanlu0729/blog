@@ -11,9 +11,7 @@
 | 06:47:11 | 当前时间 | 
 | up  6:39 | 系统运行时间，格式为时：分 | 
 | 3 users  | 当前用户登录数 | 
-| load average: 0.00, 0.01, 0.05| 系统负载，即任务队列的平均长度，三个数值分别为1分钟，5分钟，15分钟前到现在的平均值| 
-
-一般来说，每个 CPU 内核当前活跃进程数不大于 3 ，则系统运行表现良好！也就是说主机是四核cpu的话，那么只要 uptime 最后输出的遗传数字数值小于 4*3=12 即表示系统负载不是很严重。
+| load average: 0.00, 0.01, 0.05| 系统负载，即任务队列的平均长度，三个数值分别为1分钟，5分钟，15分钟前到现在的平均值。一般来说，每个 CPU 内核当前活跃进程数不大于 3 ，则系统运行表现良好！也就是说主机是四核cpu的话，那么只要 uptime 最后输出的遗传数字数值小于 4*3=12 即表示系统负载不是很严重| 
 
 ### 2、第二行、三行为进程和 CPU 的信息。当有多个 CPU 时，内容可能超过两行。
 ### Tasks: 367 total,   2 running, 365 sleeping,   0 stopped,   0 zombie
@@ -43,7 +41,6 @@
 | 12 used| 使用交换空间呢总量|
 | 2097036 free|  可用交换空间|
  
-
 ### 二、进程信息
 ### PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
 ### 138 root      20   0       0      0      0 R  0.3  0.0   0:00.83 rcuos/0
@@ -64,68 +61,3 @@
 | TIME+| 进程使用CPU时间总计，单位  1/100s | 
 | COMMAND|  命令名/命令行| 
 top 快捷键：q  退出 M 按内存排序 P 按CPU 排序 <>  翻页
-
- 
-
-控制（关闭）进程：
-
-kill   给进程发送信号（停止进程）
-
-常用信号：
-
-1   HUP   重新加载配置文件。类似重启。
-
-2  INT     和ctrl + c 一样　　一般用于通知前台进程终止进程
-
-9  KILL    强行终端
-
-19  stop   和 ctrl+z 一样
-
- 
-
-pkill = killall
-
- 
-
-优先级控制：
-
-nice值  -20~19   越小优先级越高  普通用户0-19
-
-作用：以什么优先级运行进程。默认0
-
-语法：nice  -n  优先级数字
-
-[root@vmware ~]# nice -n 5 vim a.txt
-top -p 11755
-
- 
-
-renice 修改正在运行的进程的优先级
-
-#renice -n 5 PID  # 修改进程优先级
-
- 
-
-free  查看系统内存量
-
-[root@vmware ~]# free
-              total        used        free      shared  buff/cache   available
-Mem:        1001332      173436      338476        7144      489420      628508
-Swap:       2097148         112     2097036
-buffers  缓存从磁盘读出的内容
-
-cached  缓存需要写入磁盘的内容
-
- 
-
-[root@vmware ~]# dd if=/dev/zero of=a.txt bs=10M count=10
-记录了10+0 的读入
-记录了10+0 的写出
-104857600字节(105 MB)已复制，0.880418 秒，119 MB/秒
-然后在另一终端查看cache的增加速度
-
-[root@vmware ~]# free
-              total        used        free      shared  buff/cache   available
-Mem:        1001332      170800      235780        7144      594752      629724
-Swap:       2097148         112     2097036
- 
