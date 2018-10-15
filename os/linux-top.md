@@ -2,12 +2,10 @@
 1. top -p processID 查看进程的资源消耗情况
 2. top -H -p processID 查看进程下所有线程的资源消耗情况
 
-top 统计信息前五行是系统整体的统计信息
+## top 统计信息前五行是系统整体的统计信息
 
-1、第一行是任务队列信息 同uptime质性命令结果一样。
-
-06:47:11 up  6:39,  3 users,  load average: 0.00, 0.01, 0.05
-
+### 1、第一行是任务队列信息 同uptime质性命令结果一样。
+### 06:47:11 up  6:39,  3 users,  load average: 0.00, 0.01, 0.05
 | 06:47:11 | 当前时间| 
 | up  6:39| 系统运行时间，格式为时：分| 
 | 3 users| 当前用户登录数| 
@@ -15,27 +13,22 @@ top 统计信息前五行是系统整体的统计信息
 
 一般来说，每个 CPU 内核当前活跃进程数不大于 3 ，则系统运行表现良好！也就是说主机是四核cpu的话，那么只要 uptime 最后输出的遗传数字数值小于 4*3=12 即表示系统负载不是很严重。
 
- 
+### 2、第二行、三行为进程和 CPU 的信息。当有多个 CPU 时，内容可能超过两行。
+### Tasks: 367 total,   2 running, 365 sleeping,   0 stopped,   0 zombie
+### %Cpu(s):  0.0 us,  0.3 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+| Tasks: 367 total| 进程总数|
+| 2 running | 正在运行的进程数|
+| 365 sleeping| 睡眠的进程数|
+| 0 stopped | 停止的进程数|
+| 0 zombie  | 僵尸进程数|
+| %Cpu(s):  0.0 us| 系统用户进程使用 CPU 百分比。不包括调高优先级的进程。 CPU%是由每个核的 CPU 占用率之和算出来的。如果你是 4 核 CPU，核 1，CPU 使用率为100%，核 2，CPU 使用率为100%，则会CPU 高于100%的现象，最终为200%|
+| 0.3 sy |  内核中的进程占用 CPU 百分比|
+| 0.0 ni |  用户进程空间内改变过优先级的进程占用 CPU 百分比|
+| 99.7 id|  空闲 CPU 百分比|
 
-2、第二行、三行为进程和 CPU 的信息。当有多个 CPU 时，内容可能超过两行。
-
-Tasks: 367 total,   2 running, 365 sleeping,   0 stopped,   0 zombie
-%Cpu(s):  0.0 us,  0.3 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
-| Tasks: 367 total| 进程总数
-| 2 running | 正在运行的进程数| 
-| 365 sleeping| 睡眠的进程数| 
-| 0 stopped | 停止的进程数| 
-| 0 zombie  | 僵尸进程数|                                                                                                         
-| %Cpu(s):  0.0 us| 系统用户进程使用 CPU 百分比。不包括调高优先级的进程。 CPU%是由每个核的 CPU 占用率之和算出来的。如果你是 4 核 CPU，核 1，CPU 使用率为100%，核 2，CPU 使用率为100%，则会CPU 高于100%的现象，最终为200%| 
-| 0.3 sy |  内核中的进程占用 CPU 百分比|  
-| 0.0 ni |  用户进程空间内改变过优先级的进程占用 CPU 百分比|  
-| 99.7 id|  空闲 CPU 百分比| 
- 
-
-4、第四行行为内存信息。
-
-KiB Mem :  1001332 total,   340616 free,   171456 used,   489260 buff/cache
-KiB Swap:  2097148 total,  2097036 free,      112 used.   630508 avail Mem
+### 4、第四行行为内存信息。
+### KiB Mem :  1001332 total,   340616 free,   171456 used,   489260 buff/cache
+### KiB Swap:  2097148 total,  2097036 free,      112 used.   630508 avail Mem
 | Mem :  1001332 total| 物理内存总量|
 | 171456 used| 使用的物理内存总量|
 | 340616 free| 空闲物理内存|
@@ -45,10 +38,9 @@ KiB Swap:  2097148 total,  2097036 free,      112 used.   630508 avail Mem
 | 2097036 free|  可用交换空间|
  
 
-二、进程信息
-
-  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
-   138 root      20   0       0      0      0 R  0.3  0.0   0:00.83 rcuos/0
+### 二、进程信息
+### PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+### 138 root      20   0       0      0      0 R  0.3  0.0   0:00.83 rcuos/0
 | PID| 进程id| 
 | USER| 进程所有者的用户名| 
 | NI| 进程优先级。nce值。负值表示高优先级，正值表示低优先者。| 
