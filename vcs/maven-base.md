@@ -54,9 +54,9 @@ maven定义了这样一组规则：世界上任何一个构件都可以使用mav
   <packaging>jar</packaging>
 ```
 这是nexus-indexer项目的坐标，nexus-indexer是一个对maven仓库编纂索引并提供搜索功能的类库，它是Nexus项目的一个子模块。
-goupId: 定义了当前maven项目隶属的实际项目，一般是域名+项目名。比如：com.alibaba.taotao
-artifactId：该元素定义实际项目中的一个maven项目（模块，一般推荐项目名+子模块名。比如：taobao-web
-version： 定义maven项目当前所处版本。
-packaging：定义maven项目的打包方式，默认使用jar。
-classifier：该元素用来帮助定义构件输出的一些附属构件。
-上述5元素groupId、artifactId、version是必须的，packaging可选，默认jar，classifier不能直接定义。同时，项目构件的文件名是与坐标对应的，一般的规则为artificatId-version[-classifier].packaging。packing并非一定与构件扩展名对应，比如packing为maven-plugin的构件扩展名为jar。
+1. goupId: 定义了当前maven项目隶属的实际项目，一般是域名+项目名。比如：com.alibaba.taotao
+2. artifactId：该元素定义实际项目中的一个maven项目（模块，一般推荐项目名+子模块名。比如：taobao-web
+3. version： 定义maven项目当前所处版本。
+4. packaging：定义maven项目的打包方式，默认使用jar。
+5. classifier：该元素用来帮助定义构件输出的一些附属构件。
+6. 上述5元素groupId、artifactId、version是必须的，packaging可选，默认jar，classifier不能直接定义。同时，项目构件的文件名是与坐标对应的，一般的规则为artificatId-version[-classifier].packaging。packing并非一定与构件扩展名对应，比如packing为maven-plugin的构件扩展名为jar。
