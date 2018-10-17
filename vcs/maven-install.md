@@ -10,3 +10,16 @@
   2）Nexus默认的用户名密码是admin/admin123;
   3）当遇到奇怪问题时，重启nexus，启动时间会比较慢 要1分钟左右后才能访问;
   4）Nexus的工作目录是sonatype-work（路径一般在nexus同级目录下）.
+
+## 二、仓库介绍
+### 1、四种仓库类型介绍(默认仓库介绍)
+1. maven-central：      maven中央库，默认从https://repo1.maven.org/maven2/拉取jar
+2. maven-releases：   私库发行版jar
+3. maven-snapshots：私库快照（调试版本）jar
+4. maven-public：     仓库分组，把上面三个仓库组合在一起对外提供服务，在本地maven基础配置settings.xml中使用。
+### 2、Nexus默认的仓库类型有以下四种：（上面的名字可以随便取，关键是它对应的是什么仓库类型）
+1. group(仓库组类型)：又叫组仓库，用于方便开发人员自己设定的仓库；
+2. hosted(宿主类型)：内部项目的发布仓库（内部开发人员，发布上去存放的仓库）；
+3. proxy(代理类型)：  从远程中央仓库中寻找数据的仓库（可以点击对应的仓库的Configuration页签下Remote Storage Location属性的值即被代理的远程仓库的路径）；
+4. virtual(虚拟类型)： 虚拟仓库（这个基本用不到，重点关注上面三个仓库的使用）；
+5. Policy(策略):表示该仓库为发布(Release)版本仓库还是快照(Snapshot)版本仓库；
