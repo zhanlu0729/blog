@@ -72,9 +72,9 @@ gourpId、artifactId、version：依赖的基本坐标，对于任何一个依�
 
 ### 2、classpath
 classpath：用于指定.class文件存放的位置，类加载器会从该路径中加载所需的.class文件到内存中。maven在编译、执行测试、实际运行有着三套不同的classpath。
-1.1. 编译classpath：编译主代码有效
-1.2. 测试classpath：编译、运行测试代码有效
-1.3. 运行classpath：项目运行时有效
+1. 编译classpath：编译主代码有效
+2. 测试classpath：编译、运行测试代码有效
+3. 运行classpath：项目运行时有效
 
 ### 3、依赖范围scope
 1. compile：编译依赖范围。（默认方式），有效范围：编译classpath+测试classpath+运行classpath。
