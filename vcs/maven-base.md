@@ -74,9 +74,8 @@ gourpId、artifactId、version：依赖的基本坐标，对于任何一个依�
 1.1 编译classpath：编译主代码有效
 1.2 测试classpath：编译、运行测试代码有效
 1.3 运行classpath：项目运行时有效
-2. maven的依赖范围
-2.1. compile：编译依赖范围。（默认方式），有效范围：编译classpath+测试classpath+运行classpath。
-2.2. test：测试依赖范围。有效范围：测试classpath  比如：JUnit，只在测试时使用，在编译主代码和运行时不需要此依赖。
-2.3. provided：已提供依赖范围。有效范围：编译classpath+测试classpath。
-2.4. runtime：运行时依赖范围。有效范围：测试classpath+运行classpath。比如：JDBC驱动实现（mysql-connector-java）。
-2.5. system：系统依赖范围。有效范围：编译classpath+测试classpath。使用system范围的依赖时必须通过systemPath元素显示地指定依赖文件的路径，因为此类依赖不是通过maven仓库解析的，而且往往与本地及其系统绑定，可能造成构建的不可移植，慎用。systemPath元素可以引用环境变量。
+2. compile：编译依赖范围。（默认方式），有效范围：编译classpath+测试classpath+运行classpath。
+3. test：测试依赖范围。有效范围：测试classpath  比如：JUnit，只在测试时使用，在编译主代码和运行时不需要此依赖。
+4. provided：已提供依赖范围。有效范围：编译classpath+测试classpath。
+5. runtime：运行时依赖范围。有效范围：测试classpath+运行classpath。比如：JDBC驱动实现（mysql-connector-java）。
+6. system：系统依赖范围。有效范围：编译classpath+测试classpath。使用system范围的依赖时必须通过systemPath元素显示地指定依赖文件的路径，因为此类依赖不是通过maven仓库解析的，而且往往与本地及其系统绑定，可能造成构建的不可移植，慎用。systemPath元素可以引用环境变量。
