@@ -8,3 +8,9 @@ $ ExecStart=/usr/bin/dockerd --insecure-registry k8s-registry.banksteel.local
 $ systemctl daemon-reload
 $ systemctl restart docker
 ```
+
+### Harbor
+
+1. 错误描述：推送镜像时报：denied: requested access to the resource is denied
+2. 原因分析：
+3. 解决方案：harbor上没有对应的project，创新并公开即可
