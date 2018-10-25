@@ -9,3 +9,10 @@
 1. **v-if** 当数据值为true时，元素会被插入，为false时则会被移除
 2. **v-bind** 基本用途是动态更新HTML元素上的属性
 3. **v-on** 用来绑定事件监听器，可以做些交互
+4. **@click.stop** 阻止单击事件冒泡
+5. **@submit.prevent** 提交事件不再重载页面
+6. **@click.stop.prevent** 一修饰符可以串
+7. **@submit.prevent** 只有修饰符
+8. **@click.capture** 一添加事件侦听器时使用事件捕获模式
+9. **@click.self** 只当事件在该元素本身（而不是子元素）触发时触发回调
+10. **@click.once** 只触发 次，组件同样适用
