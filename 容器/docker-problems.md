@@ -8,6 +8,7 @@ $ ExecStart=/usr/bin/dockerd --insecure-registry k8s-registry.banksteel.local
 $ systemctl daemon-reload
 $ systemctl restart docker
 ```
+或者修改 `/etc/docker/daemon.json`文件`{"insecure-registries":["domain", "ip"]}`
 
 ### Harbor
 1. 错误描述：推送镜像时报：denied: requested access to the resource is denied
