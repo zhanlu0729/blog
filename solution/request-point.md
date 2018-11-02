@@ -3,7 +3,7 @@
 ```
 {
 	env: 环境,
-	host: 主机号,
+	hostName: 主机号,
 	appName: 应用名,
 	url: URL路径,
 	token: 授权Token,	
