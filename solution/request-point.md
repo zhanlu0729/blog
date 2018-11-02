@@ -7,6 +7,9 @@
 	appName: 应用名,
 	url: URL路径,
 	token: 授权Token,	
+	account: 账号,
+	username: 用户名,
+	deptName: 部门名,
 	startTime: 开始时间,
 	endTime: 结束时间,
 	cost: 总消耗时间
