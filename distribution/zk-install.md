@@ -60,7 +60,7 @@ zkServer.sh start [zoo.cfg]
 ```
 
 ### 客户端四字命令(zkCli.sh [-server ip:port] cmd args)
-1. ''zkCli.sh [-server ip:port]``
+1. ``zkCli.sh [-server ip:port]``
 2. ``conf`` 输出相关服务配置的详细信息。 
 3. ``cons`` 列出所有连接到服务器的客户端的完全的``连接/会话``的详细信息。包括``接受/发送``的包数量、会话id、操作延迟、最后的操作执行等等信息。 
 4. ``dump`` 列出未经处理的会话和临时节点。 
