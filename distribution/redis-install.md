@@ -39,13 +39,12 @@
 1. **下载** ``wget http://download.redis.io/releases/redis-3.2.2.tar.gz``
 2. **解压** ``tar -zxvf redis-3.2.2.tar.gz``
 3. **建立软链接,便于升级** ``ln -s redis-3.2.2 redis``
-4. **配置：可省略** ``./configure``
-5. **安装** ``make && make install``
-6. **启动：默认配置** ``./redis-server``
-7. **启动：运行配置** ``./redis-server --configKey1 value1 --configKey2 value2``
-8. **启动：配置文件** ``./redis-server /configFile``
-9. **关闭：粗暴关闭** ``kill -9 pid``
-10. **关闭：优雅关闭** ``redis-cli shundown nosave|save`` 关闭前是否生成持久化文件，默认生成
+4. **安装** ``make PREFIX=/usr/local/redis install``
+5. **启动：默认配置** ``./redis-server``
+6. **启动：运行配置** ``./redis-server --configKey1 value1 --configKey2 value2``
+7. **启动：配置文件** ``./redis-server /configFile``
+8. **关闭：粗暴关闭** ``kill -9 pid``
+9. **关闭：优雅关闭** ``redis-cli shundown nosave|save`` 关闭前是否生成持久化文件，默认生成
 
 ### 主从模式
 1. 
