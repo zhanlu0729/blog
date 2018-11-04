@@ -16,6 +16,7 @@
 8. ``server.A=B：C：D`` 其中``A``是一个数字，表示这个是第几号服务器；``B``是这个服务器的ip地址；``C``表示的是这个服务器与集群中的Leader服务器交换信息的端口；``D``表示的是万一集群中的Leader服务器挂了，需要一个端口来重新进行选举，选出一个新的``Leader``，而这个端口就是用来执行选举时服务器相互通信的端口。如果是伪集群的配置方式，由于``B``都是一样，所以不同的ZooKeeper实例通信端口号不能一样，所以要给它们分配不同的端口号
 8. ``minSessionTimeout`` 最小的会话超时时间，最小的会话超时时间默认情况下为2倍的tickTme时间
 9. ``maxSessionTimeout`` 最大的会话超时时间，最大的会话超时时间默认情况下为20倍的tickTme时间
+10. ``autopurge.purgeInterval``和``autopurge.snapRetainCount``从版本3.4.0 开始，Zookeeper提供了自动清理快照（snapshot）和事务日志的功能，需要在zoo.cfg配置文件中设置；其中，``autopurge.purgeInterval``这个参数制定了持久化日志清理频率，单位是小时，默认是``0``，表示不开启自动清理功能；``autopurge.snapRetainCount``这个参数和前面的参数搭配使用，用于指定需要保留的持久化日志的文件数目，默认是保留3个
 
 ### 单机模式
 1. **解压** ``tar -zxvf zookeeper-3.4.6.tar.gz``
