@@ -25,8 +25,8 @@
 14. ``masterauth`` 当主数据库连接需要密码验证时，在这里设定
 15. ``requirepass`` 设置客户端连接后进行任何其他指定前需要使用的密码
 16. ``maxclients`` 限制同时连接的客户端数量
-17. ``maxmemory：设置redis能够使用的最大内存
-18. ``appendonly：开启appendonly模式后，redis会把每一次所接收到的写操作都追加到appendonly.aof文件中，当redis重新启动时，会从该文件恢复出之前的状态
+17. ``maxmemory`` 设置redis能够使用的最大内存
+18. ``appendonly`` 开启appendonly模式后，redis会把每一次所接收到的写操作都追加到appendonly.aof文件中，当redis重新启动时，会从该文件恢复出之前的状态
 19. ``appendfsync`` 设置appendonly.aof文件进行同步的频率
 20. ``vm_enabled`` 是否开启虚拟内存支持
 21. ``vm_swap_file`` 设置虚拟内存的交换文件的路径
