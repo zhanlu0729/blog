@@ -23,8 +23,10 @@
 4. **配置：可省略** ``./configure``
 5. **安装** ``make && make install``
 6. **启动：默认配置** ``./redis-server``
-7. **启动** ``./redis-server --configKey1 value1 --configKey2 value2``
-8. **启动：指定默认** ``./redis-server /configFile``
+7. **启动：运行配置** ``./redis-server --configKey1 value1 --configKey2 value2``
+8. **启动：配置文件** ``./redis-server /configFile``
+9. **关闭：粗暴关闭** ``kill -9 pid``
+10. **关闭：优雅关闭** ``redis-cli shundown nosave|save`` 关闭前是否生成持久化文件，默认生成
 
 ### 主从模式
 1. 
