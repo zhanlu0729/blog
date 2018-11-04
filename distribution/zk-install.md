@@ -18,6 +18,10 @@
 9. ``maxSessionTimeout`` 最大的会话超时时间，最大的会话超时时间默认情况下为20倍的tickTme时间
 
 ### 单机模式
+1. **解压** ``tar -zxvf zookeeper-3.4.6.tar.gz``
+2. **建立软链接,便于升级** ``ln -s zookeeper-3.4.6 zookeeper``
+3. 拷贝ZooKeeper-3.4.6/conf中的zoo_sample.cfg为zoo.cfg
+4. 在``dataDir``目录下创建``myid``文件,内容为实例``编号``
 
 ### 伪集群模式
 
