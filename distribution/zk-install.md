@@ -1,11 +1,21 @@
-## 准备工作
+## 安装步骤
+### 准备工作
 1. 安装对应的JDK版本，建议安装JDK7+
 2. `export JAVA_HOME=/usr/local/jdk-version`
 3. `export ZOOKEEPER_HOME=/usr/local/zookeeper-version`
 4. `export PATH=$PATH:$JAVA_HOME/bin:$ZOOKEEPER_HOME/bin`
 
-## 单机模式
+### 配置项详解
+1. ``clientPort`` 监听客户端连接的端口
+2. ``dataDir`` 存储内存中数据库快照的位置
+3. ``dataLogDir`` 存储ZK日志的位置
+4. ``maxClientCnxns`` 限制连接到ZooKeeper客户端的数量，限制并发连接的数量，它通过IP来区分不同的客户端。此配置选项可以用来阻止某些类别的Dos攻击。将它设置为0或者忽略而不进行设置将会取消对并发连接的限制
+5. ``tickTime`` 基本事件单元，以毫秒为单位。这个时间是作为ZooKeeper服务器之间或客户端与服务器之间维持心跳的时间间隔，也就是每个tickTime时间就会发送一个心跳
+5. ``minSessionTimeout`` 最小的会话超时时间，最小的会话超时时间默认情况下为2倍的tickTme时间
+6. ``maxSessionTimeout`` 最大的会话超时时间，最大的会话超时时间默认情况下为20倍的tickTme时间
 
-## 伪集群模式
+### 单机模式
 
-## 集群模式
+### 伪集群模式
+
+### 集群模式
