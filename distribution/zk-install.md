@@ -28,8 +28,8 @@
   dataDir=/data/zk 
   clientPort=2181
 ```
-6. **启动** zkServer.sh {start|start-foreground|stop|restart|status|upgrade|print-cmd}
-7. **检查启动状态** zkServer.sh status
+6. **启动** ``zkServer.sh {start|start-foreground|stop|restart|status|upgrade|print-cmd}``
+7. **检查启动状态** ``zkServer.sh status``
 
 ### 伪集群模式
 1.安装参考单机模式
@@ -39,6 +39,12 @@
   server.2=IP:2888:3888 
   server.3=IP:2889:3889
 ```
+3. **启动**
+```
+zkServer.sh start zoo1.cfg 
+zkServer.sh start zoo2.cfg 
+zkServer.sh start zoo3.cfg
+```
 
 ### 集群模式
 1.安装参考单机模式
@@ -47,4 +53,8 @@
   server.1=IP1:2888:3888 
   server.2=IP2:2888:3888 
   server.3=IP3:2888:3888
+```
+3. **启动**
+```
+zkServer.sh start [zoo.cfg]
 ```
