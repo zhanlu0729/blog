@@ -19,7 +19,7 @@
 8. ``loglevel`` 等级分为4级，debug，revbose，notice和warning。生产环境下一般开启notice
 9. ``database`` 设置数据库的个数，默认使用的数据库是0
 10. ``save`` 设置redis进行数据库镜像的频率
-11. rdbcompression`` 在进行镜像备份时，是否进行压缩
+11. ``rdbcompression`` 在进行镜像备份时，是否进行压缩
 12. ``dbfilename`` 镜像备份文件的文件名
 13. ``slaveof`` 设置该数据库为其他数据库的从数据库
 14. ``masterauth`` 当主数据库连接需要密码验证时，在这里设定
