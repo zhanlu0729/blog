@@ -70,3 +70,4 @@ zkServer.sh start [zoo.cfg]
 8. ``wchs`` 列出服务器``watch``的详细信息。 
 9. ``wchc`` 通过session列出服务器``watch``的详细信息，它的输出是一个与watch相关的会话的列表
 10. ``wchp`` 通过路径列出服务器watch的详细信息。它输出一个与session相关的路径
+11. ''zkCli.sh [-server ip:port]``
