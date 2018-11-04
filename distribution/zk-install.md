@@ -14,8 +14,7 @@
 6. ``initLimit`` 这个配置项是用来配置ZooKeeper接受客户端（这里所说的客户端不是用户连接ZooKeeper服务器的客户端，而是ZooKeeper服务器集群中连接到``Leader``的``Follower``服务器）初始化连接时最长能忍受多少个心跳时间间隔数。当已经超过5个心跳的时间（也就是``tickTime``）长度后ZooKeeper服务器还没有收到客户端的返回信息，那么表明这个客户端连接失败。总的时间长度就是``5*2000=10``秒
 7. ``syncLimit`` 这个配置项标识``Leader``与``Follower``之间发送消息，请求和应答时间长度。如果``Follower``在设置时间内不能与``Leader``通信，那么此``Follower``将被丢弃。最长不能超过多少个tickTime的时间长度，总的时间长度就是``2*2000=4``秒
 8. ``server.A=B：C：D`` 其中``A``是一个数字，表示这个是第几号服务器；``B``是这个服务器的ip地址；``C``表示的是这个服务器与集群中的Leader服务器交换信息的端口；``D``表示的是万一集群中的Leader服务器挂了，需要一个端口来重新进行选举，选出一个新的``Leader``，而这个端口就是用来执行选举时服务器相互通信的端口。如果是伪集群的配置方式，由于``B``都是一样，所以不同的ZooKeeper实例通信端口号不能一样，所以要给它们分配不同的端口号
-8. ``minSessionTimeout`` 最小的会话超时时间，最小的会话超时时间默认情况下为2倍的tickTme时间
-9. ``maxSessionTimeout`` 最大的会话超时时间，最大的会话超时时间默认情况下为20倍的tickTme时间
+9. ``minSessionTimeout``和``maxSessionTimeout``最小的会话超时时间以及最大的会话超时时间。其中，最小的会话超时时间默认情况下为2倍的``tickTme``时间，最大的会话超时时间默认情况下为20倍的会话超时时间。在启动时，系统会显示相应信息，默认会话超时时间；在配置``minSessionTmeout``以及``maxSessionTimeout``的值的时候需要注意，如果将此值设置的太小的话，那么会话很可能刚刚建立便由于超时而不得不退出。一般情况下，不能将此值设置的``tickTime``的值还小
 10. ``autopurge.purgeInterval``和``autopurge.snapRetainCount``从版本3.4.0 开始，Zookeeper提供了自动清理快照（snapshot）和事务日志的功能，需要在zoo.cfg配置文件中设置；其中，``autopurge.purgeInterval``这个参数制定了持久化日志清理频率，单位是小时，默认是``0``，表示不开启自动清理功能；``autopurge.snapRetainCount``这个参数和前面的参数搭配使用，用于指定需要保留的持久化日志的文件数目，默认是保留3个
 
 ### 单机模式
