@@ -47,8 +47,8 @@
 9. **关闭：优雅关闭** ``redis-cli shundown nosave|save`` 关闭前是否生成持久化文件，默认生成
 
 ### 主从模式
-1. 
-2. 
+1. 安装参考``单机模式``
+2. slaveof masterIp masterPort
 
 ### 哨兵模式
 1. 
