@@ -20,9 +20,29 @@
 ### 单机模式
 1. **解压** ``tar -zxvf zookeeper-3.4.6.tar.gz``
 2. **建立软链接,便于升级** ``ln -s zookeeper-3.4.6 zookeeper``
-3. 拷贝ZooKeeper-3.4.6/conf中的zoo_sample.cfg为zoo.cfg
+3. 拷贝ZooKeeper-3.4.6/conf中的``zoo_sample.cfg``为``zoo.cfg``
 4. 在``dataDir``目录下创建``myid``文件,内容为实例``编号``
+5.最终配置文件内容：
+```
+  tickTime=2000 
+  dataDir=/data/zk 
+  clientPort=2181
+```
 
 ### 伪集群模式
+1.安装参考单机模式
+2.最终配置文件内容：
+```
+  server.1=IP:2887:3887 
+  server.2=IP:2888:3888 
+  server.3=IP:2889:3889
+```
 
 ### 集群模式
+1.安装参考单机模式
+2.最终配置文件内容：
+```
+  server.1=IP1:2888:3888 
+  server.2=IP2:2888:3888 
+  server.3=IP3:2888:3888
+```
