@@ -6,6 +6,7 @@
 4. ``redis-check-aof`` Redis AOF持久化文件检测和修复工具
 5. ``redis-check-rdb`` Redis RDB持久化文件检测和修复工具
 6. ``redis-sentinel`` 启动Redis Sentinel
+7. **启动错误：Error condition on socket for SYNC: No route to host** ``redis.conf``中``bind``不要绑本机
 
 ### 单机模式
 1. **下载** wget http://download.redis.io/releases/redis-3.2.2.tar.gz
