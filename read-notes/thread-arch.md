@@ -5,7 +5,7 @@
 4. ``wait``方法的执行必须在同步方法中进行，而``sleep``则不需要
 5. 线程在同步方法中执行``sleep``方法时，并不会释放``monitor``锁，而wait方法则会释放``monitor``锁，二者均会释放CPU
 6. ``sleep``短暂休眠之后则会主动退出阻塞，而``wait``方法(没有指定``wait``时间)则需要被其他线程中断后才能退出阻塞
-7. 线程调用wait方法后都被加入与该对象monitor关联的wait set中，并且释放monitor所有权；待另外一个线程调用该monitor的notify方法之后，其中一个线程从wait set弹出，而调用notifyAll方法则所有线程都会被弹出
+7. 线程调用``wait方法``后都被加入与该对象``monitor``关联的``wait set``中，并且释放``monitor``所有权；待另外一个线程调用该``monitor``的``notify方法``之后，其中一个线程从wait set弹出，而调用``notifyAll方法``则所有线程都会被弹出
 
 ### notify和notifyAll
 1. ``notify方法``和``notifyAll方法``都可以唤醒因调用``wait``方法而阻塞的线程
