@@ -25,3 +25,10 @@
 | ---------         | ---------------- |------------
 | ``sonar.projectKey``  | 该项目的独特关键。允许的字符是：字母，数字 - ， _ ， . 和 : ，与至少一个非数字字符|对于Maven项目，会自动设置为 <groupId>:<artifactId>
 | ``sonar.sources``    |  包含源文件的目录的逗号分隔路径  |从构建系统中读取Maven，Gradle，MSBuild项目
+
+### 项目标识：可选参数
+|    Key            |     描述         |    默认
+| ---------         | ---------------- |------------
+| ``sonar.projectName``    |  将在Web界面上显示的项目的名称  |<name> 对于Maven项目，否则为项目密钥。如果DB中已有名称，则不会覆盖该名称
+| ``ssonar.projectVersion``    |  项目版本  |<version> 对于Maven项目，否则“未提供”
+  
