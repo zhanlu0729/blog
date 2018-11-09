@@ -18,10 +18,10 @@
 ### 服务器配置：强制参数
 |    Key            |     描述         |    默认
 | ---------         | ---------------- |------------
-| sonar.host.url    |  服务器URL  |HTTP://localhost:9000
+| ``sonar.host.url``    |  服务器URL  |HTTP://localhost:9000
 
 ### 项目配置：强制参数
 |    Key            |     描述         |    默认
 | ---------         | ---------------- |------------
-| sonar.projectKey  | 该项目的独特关键。允许的字符是：字母，数字 - ， _ ， . 和 : ，与至少一个非数字字符|对于Maven项目，会自动设置为 <groupId>:<artifactId>
-| sonar.sources    |  包含源文件的目录的逗号分隔路径  |从构建系统中读取Maven，Gradle，MSBuild项目
+| ``sonar.projectKey``  | 该项目的独特关键。允许的字符是：字母，数字 - ， _ ， . 和 : ，与至少一个非数字字符|对于Maven项目，会自动设置为 <groupId>:<artifactId>
+| ``sonar.sources``    |  包含源文件的目录的逗号分隔路径  |从构建系统中读取Maven，Gradle，MSBuild项目
