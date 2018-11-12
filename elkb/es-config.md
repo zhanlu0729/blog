@@ -4,60 +4,59 @@ elasticsearch的config文件夹里面有两个配置文件：elasticsearch.yml�
 1. ``cluster.name: elasticsearch``
 配置es的集群名称，默认是elasticsearch，es会自动发现在同一网段下的es，如果在同一网段下有多个集群，就可以用这个属性来区分不同的集群。
 
-``node.name: "Franz Kafka"``
+2. ``node.name: "Franz Kafka"``
 节点名，默认随机指定一个name列表中名字，该列表在es的jar包中config文件夹里name.txt文件中，其中有很多作者添加的有趣名字。
 
-``node.master: true``
+3. ``node.master: true``
 指定该节点是否有资格被选举成为node，默认是true，es是默认集群中的第一台机器为master，如果这台机挂了就会重新选举master。
 
-``node.data: true``
+4. ``node.data: true``
 指定该节点是否存储索引数据，默认为true。
 
-``index.number_of_shards: 5``
+5. ``index.number_of_shards: 5``
 设置默认索引分片个数，默认为5片。
 
-``index.number_of_replicas: 1``
+6. ``index.number_of_replicas: 1``
 设置默认索引副本个数，默认为1个副本。
 
-``path.conf: /path/to/conf``
+7. ``path.conf: /path/to/conf``
 设置配置文件的存储路径，默认是es根目录下的config文件夹。
 
-path.data: /path/to/data``
+8. ``path.data: /path/to/data || /path/to/data1,/path/to/data2``
 设置索引数据的存储路径，默认是es根目录下的data文件夹，可以设置多个存储路径，用逗号隔开，例：
-``path.data: /path/to/data1,/path/to/data2``
 
-``path.work: /path/to/work``
+9. ``path.work: /path/to/work``
 设置临时文件的存储路径，默认是es根目录下的work文件夹。
 
-``path.logs: /path/to/logs``
+10. ``path.logs: /path/to/logs``
 设置日志文件的存储路径，默认是es根目录下的logs文件夹
 
-``path.plugins: /path/to/plugins``
+11. ``path.plugins: /path/to/plugins``
 设置插件的存放路径，默认是es根目录下的plugins文件夹
 
-``bootstrap.mlockall: true``
+12. ``bootstrap.mlockall: true``
 设置为true来锁住内存。因为当jvm开始swapping时es的效率会降低，所以要保证它不swap，可以把ES_MIN_MEM和ES_MAX_MEM两个环境变量设置成同一个值，并且保证机器有足够的内存分配给es。同时也要允许elasticsearch的进程可以锁住内存，Linux下可以通过`ulimit -l unlimited`命令。
 
-network.bind_host: 192.168.0.1``
+13. ``network.bind_host: 192.168.0.1``
 设置绑定的ip地址，可以是ipv4或ipv6的，默认为0.0.0.0。
 
 
-network.publish_host: 192.168.0.1
+14. ``network.publish_host: 192.168.0.1``
 设置其它节点和该节点交互的ip地址，如果不设置它会自动判断，值必须是个真实的ip地址。
 
-network.host: 192.168.0.1
+15. ``network.host: 192.168.0.1``
 这个参数是用来同时设置bind_host和publish_host上面两个参数。
 
-transport.tcp.port: 9300
+16. ``transport.tcp.port: 9300``
 设置节点间交互的tcp端口，默认是9300。
 
-transport.tcp.compress: true
+17. ``transport.tcp.compress: true``
 设置是否压缩tcp传输时的数据，默认为false，不压缩。
 
-http.port: 9200
+18. ``http.port: 9200``
 设置对外服务的http端口，默认为9200。
 
-http.max_content_length: 100mb
+19. ``http.max_content_length: 100mb``
 设置内容的最大容量，默认100mb
 
 ``http.enabled: false``
