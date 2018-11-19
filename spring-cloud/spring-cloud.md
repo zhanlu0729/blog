@@ -8,6 +8,16 @@
 5. Edgware版本基于``Spring Boot v1.5.x``构建,不兼容``SpringBoot v2.0.x``
 6. Finchley版本基于``Spring Boot v2.0.x``构建,不兼容``SpringBoot v1.x``
 
+###  Spring Cloud Eureka概念
+1. ``AvailabilityZone`` 理解成机房
+2. ``Region`` 理解为跨机房的Eureka集群
+3. ``Application Service`` 相当于服务提供者
+4. ``Application Client`` 相当于服务消费者
+5. ``Make Remote Call`` 可以理解成调用RESTful API的行为
+6. 
+7. 
+8. 
+
 ### spring-cloud-hystrix-config
 https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#configuration
 
