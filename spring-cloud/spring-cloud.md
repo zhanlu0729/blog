@@ -15,7 +15,7 @@
 4. ``Application Client`` 相当于服务消费者
 5. ``Make Remote Call`` 可以理解成调用RESTful API的行为
 6. ``Eureka Server`` 提供服务发现的能力，各个微服务启动时，会向Eureka Server注册自己的信息(例如IP、端口、微服务名称等)
-7. ``Eureka Client`` 是一个Java客户端，用于简化与EurekaServer的交互
+7. ``Eureka Client`` 是一个Java客户端，用于简化与EurekaServer的交互，微服务上报心跳周期默认``30``秒，注销无心跳微服务默认``90``秒
 8. 
 
 ### spring-cloud-hystrix-config
