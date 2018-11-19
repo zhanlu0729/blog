@@ -1,12 +1,12 @@
 ## Spring Cloud
 
 ### Spring Cloud/Spring Boot版本兼容性
-1. Angel版本基于SpringBoot-v1.2.x构建，在一些场景下与SpringBoot1.3.x及以上版本不兼容
-2. Brixton版本基于 SpringBoot-v1.3.x构建，也可使用1.4.x进行测试，与SpringBoot 1.2.x不兼容
-3. Camden版本基于SpringBoot-v1.4.x构建，也可使用1.5.x进行测试
-4. Dalston版本基于 SpringBoot-v1.5.x构建,不兼容SpringBoot 2.0.x
-5. Edgware版本基于 SpringBoot-v1.5.x构建,不兼容SpringBoot 2.0.x
-6. Finchley版本基于 SpringBoot-v2.0.x构建,不兼容SpringBoot l.x
+1. Angel版本基于``SpringBoot-v1.2.x``构建，在一些场景下与``SpringBoot1.3.x``及以上版本不兼容
+2. Brixton版本基于``SpringBoot-v1.3.x``构建，也可使用``1.4.x``进行测试，与``SpringBoot 1.2.x``不兼容
+3. Camden版本基于``SpringBoot-v1.4.x``构建，也可使用``1.5.x``进行测试
+4. Dalston版本基于``SpringBoot-v1.5.x``构建,不兼容``SpringBoot 2.0.x``
+5. Edgware版本基于``SpringBoot-v1.5.x``构建,不兼容``SpringBoot 2.0.x``
+6. Finchley版本基于``SpringBoot-v2.0.x``构建,不兼容``SpringBoot l.x``
 
 ### spring-cloud-hystrix-config
 https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#configuration
