@@ -33,3 +33,8 @@ https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#
 9. 更多的Instance配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.EurekalnstanceConfigBean``
 10. 更多的 Server配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.server.EurekaServerConfigBean``
 11. `eureka.instance.metadataMap.xxx` 用户自定义元数据
+
+### 开启基于HTTP basic的认证
+1. ``security.basic.enabled: true`` 开启基于HTTP basic的认证
+2. ``security.user.name:xxx`` 配直登录的账号
+3. ``security.user.password:xxx`` 配直登录的密码
