@@ -25,7 +25,7 @@ https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#
 1. ``eureka.client.registerWithEureka`` 表示是否将自己注册到Eureka Server，默认为``true``。 如果当前应用就是EurekaServer，可设为``false``
 2. ``eureka.client.fetchRegistry`` 表示是否从Eureka Server获取注册信息，默认为``true``。一个单点的EurekaServer，不需要同步其他的 EurekaServer节点的数据，可设为``false``
 3. ``eureka.client.serviceUrl.defaultZone`` 设置与EurekaServer交互的地址，查询服务和注册服务都需要依赖这个地址。默认是 ``http://localhost:8761/eureka``，多个地址间可使用``逗号``分隔
-4. ``eureka.instance.prefer-ip-address`` ``true``表示将自己的IP注册到Eureka Server。若不配置该属性或将其设置为``false``，则表示注册微服务所在操作系统的``hostname``到Eureka Server
+4. ``eureka.instance.prefer-ip-address`` ``true``表示将自己的IP注册到Eureka Server。若不配置该属性或将其设置为``false``，则表示注册微服务所在操作系统的``hostname``到Eureka Server，``eureka.instance.ip-address:127.0.0.1``手动指定IP地址
 5. 若不想将服务注册到EurekaServer，只需设置``spring.cloud.service-registry.auto-registration.enabled=false``或 ``@EnableDiscoveryClient(autoRegister=false)``即可
 6. ``eureka.server.enableSelfPreservation=false`` 关闭自我保护
 7. ``eureka.instance.lease-renewal-interval-in-seconds`` 表示Eureka Client发送心跳给server端的频率
@@ -34,6 +34,8 @@ https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#
 10. 更多的 Server配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.server.EurekaServerConfigBean``
 11. `eureka.instance.metadataMap.{xx:xx,yy:yy}` 用户自定义元数据
 12. ``spring.cloud.inetutils.ignored-interfaces: [docker0, veth.*]`` 多网卡环境下的 IP选择,如忽略``dockerO``网卡以及所有以``veth``开头的网卡
+13. ``spring.cloud.inetutils.preferredNetworks: [192.168, 10.0]`` 使用正则表达式，指定使用的网络地址
+14. ``spring.cloud.inetutils.useOnlySiteLocalInterfaces: true`` 只使用站点本地地址
 
 ### 开启基于HTTP basic的认证
 1. ``security.basic.enabled: true`` 开启基于HTTP basic的认证
