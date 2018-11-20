@@ -26,9 +26,10 @@ https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#
 2. ``eureka.client.fetchRegistry`` 表示是否从Eureka Server获取注册信息，默认为``true``。一个单点的EurekaServer，不需要同步其他的 EurekaServer节点的数据，可设为``false``
 3. ``eureka.client.serviceUrl.defaultZone`` 设置与EurekaServer交互的地址，查询服务和注册服务都需要依赖这个地址。默认是 ``http://localhost:8761/eureka``，多个地址间可使用``逗号``分隔
 4. ``eureka.instance.prefer-ip-address`` ``true``表示将自己的IP注册到Eureka Server。若不配置该属性或将其设置为``false``，则表示注册微服务所在操作系统的``hostname``到Eureka Server
-4. ``eureka.server.enableSelfPreservation=false`` 关闭自我保护
-5. ``eureka.instance.lease-renewal-interval-in-seconds`` 表示Eureka Client发送心跳给server端的频率
-6. ``eureka.instance.lease-expiration-duration-in-seconds`` 表示Eureka Server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则移除该Instance
-7. 更多的Instance配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.EurekalnstanceConfigBean``
-8. 更多的 Server配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.server.EurekaServerConfigBean``
-9. `eureka.instance.metadataMap.xxx` 用户自定义元数据
+5. 若不想将服务注册到EurekaServer，只需设置spring.cloud.service-registry.auto-registration.enabled=false，或 @EnableDiscoveryClient(autoRegister=false)即可
+6. ``eureka.server.enableSelfPreservation=false`` 关闭自我保护
+7. ``eureka.instance.lease-renewal-interval-in-seconds`` 表示Eureka Client发送心跳给server端的频率
+8. ``eureka.instance.lease-expiration-duration-in-seconds`` 表示Eureka Server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则移除该Instance
+9. 更多的Instance配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.EurekalnstanceConfigBean``
+10. 更多的 Server配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.server.EurekaServerConfigBean``
+11. `eureka.instance.metadataMap.xxx` 用户自定义元数据
