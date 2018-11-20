@@ -32,7 +32,8 @@ https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#
 8. ``eureka.instance.lease-expiration-duration-in-seconds`` 表示Eureka Server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则移除该Instance
 9. 更多的Instance配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.EurekalnstanceConfigBean``
 10. 更多的 Server配置信息可参考源码中的配置类: ``org.springframework.cloud.netflix.eureka.server.EurekaServerConfigBean``
-11. `eureka.instance.metadataMap.{}` 用户自定义元数据
+11. `eureka.instance.metadataMap.{xx:xx,yy:yy}` 用户自定义元数据
+12. ``spring.cloud.inetutils.ignored-interfaces: [docker0, veth.*]`` 多网卡环境下的 IP选择,如忽略``dockerO``网卡以及所有以``veth``开头的网卡
 
 ### 开启基于HTTP basic的认证
 1. ``security.basic.enabled: true`` 开启基于HTTP basic的认证
