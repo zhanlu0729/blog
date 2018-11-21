@@ -63,3 +63,14 @@ $ sudo systemctl start docker
 $ sudo docker run hello-world
 ```
 
+### Stopping Harbor:
+sudo docker-compose stop
+### Restarting Harbor after stopping:
+sudo docker-compose start
+### To change Harbor's configuration, first stop existing Harbor instance and update harbor.cfg. Then run prepare script to populate the configuration. Finally re-create and start Harbor's instance:
+```
+$ sudo docker-compose down -v
+$ vim harbor.cfg
+$ sudo prepare
+$ sudo docker-compose up -d
+```
