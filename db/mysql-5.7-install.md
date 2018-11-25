@@ -8,3 +8,4 @@ yum install net-tools``或者后面加上``--force --nodeps``
 5. ``mysqld --initialize`` 初始化数据库,初始化后会在``/var/log/mysqld.log``生成随机密码
 6. ``chown mysql:mysql /var/lib/mysql -R`` 修改mysql数据库目录的所属用户及其所属组，然后启动mysql数据库
 7. ``systemctl enable|start|stop|restart|status mysqld.service``
+8. ``mysql -uroot -p'xxxx' && set password=password('123456');`` 登录并更改密码
