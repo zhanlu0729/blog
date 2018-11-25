@@ -38,6 +38,14 @@ https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#
 14. ``spring.cloud.inetutils.useOnlySiteLocalInterfaces: true`` 只使用站点本地地址
 15. ``eureka.instance.virtual-host-name或者eureka.instance.secure-virtual-host-name指`` 指定虚拟主机名,在默认情况下，虚拟主机名和服务名称是一致的.虚拟主机名不能包含“一”之类的字符，否则Ribbon在调用时会报异常
 16. ``serviceName.ribbon.listOfServers=ip1:port1,ip2:port2...`` 脱离Eureka使用Ribbon的负载均衡功能
+17. ``ribbon.eu「eka.enabled=false`` 当EurekaClient依赖在项目的classpath下时，如果想单独使用Ribbon，而不使用Eurkea的服务发现功能
+18. 饥饿加载
+```
+ribbon:
+  eager-load:
+    enable: true
+    clients: client1,client2
+```
 16. 属性配置的方式比如a代码配置的方式优先级更高
 
 ### 开启基于HTTP basic的认证
