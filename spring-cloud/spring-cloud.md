@@ -36,7 +36,8 @@ https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#
 12. ``spring.cloud.inetutils.ignored-interfaces: [docker0, veth.*]`` 多网卡环境下的 IP选择,如忽略``dockerO``网卡以及所有以``veth``开头的网卡
 13. ``spring.cloud.inetutils.preferredNetworks: [192.168, 10.0]`` 使用正则表达式，指定使用的网络地址
 14. ``spring.cloud.inetutils.useOnlySiteLocalInterfaces: true`` 只使用站点本地地址
-15. ``eureka.instance.virtual-host-name或者eureka.instance.secure-virtual-host-name指`` 指定虚拟主机名,在默认情况下，虚拟主机名和服务名称是一致的
+15. ``eureka.instance.virtual-host-name或者eureka.instance.secure-virtual-host-name指`` 指定虚拟主机名,在默认情况下，虚拟主机名和服务名称是一致的.虚拟主机名不能包含“一”之类的字符，否则Ribbon在调用时会报异常
+16. 属性配置的方式比如a代码配置的方式优先级更高
 
 ### 开启基于HTTP basic的认证
 1. ``security.basic.enabled: true`` 开启基于HTTP basic的认证
