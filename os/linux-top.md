@@ -1,7 +1,7 @@
 ### TOP 命令详解
 1. ``top -p processID`` 查看进程的资源消耗情况(滚屏抓取)
-2. ``top -H -p processID`` 查看进程下所有线程的资源消耗情况(滚屏抓取)
-3. ``top -H -p processID -n num`` 查看进程下所有线程的资源消耗情况(抓取num屏)
+2. ``top -Hp processID`` 查看进程下所有线程的资源消耗情况(滚屏抓取)
+3. ``top -Hp processID -n num`` 查看进程下所有线程的资源消耗情况(抓取num屏)
 
 ## top 统计信息前五行是系统整体的统计信息
 
