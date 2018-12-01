@@ -19,25 +19,23 @@ CuratorFramework client = CuratorFrameworkFactory.newClient(connectionString, 50
 2. 使用链式编程(Fluent风格)的Api创建客户端
 ```
 RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
-        CuratorFramework client =
-        CuratorFrameworkFactory.builder()
-                .connectString(connectionString)
-                .sessionTimeoutMs(5000)
-                .connectionTimeoutMs(5000)
-                .retryPolicy(retryPolicy)
-                .build();
+CuratorFramework client = CuratorFrameworkFactory.builder()
+        .connectString(connectionString)
+        .sessionTimeoutMs(5000)
+        .connectionTimeoutMs(5000)
+        .retryPolicy(retryPolicy)
+        .build();
 ```
 3. 创建包含隔离命名空间(隔离业务)的会话
 ```
 RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
-        CuratorFramework client =
-        CuratorFrameworkFactory.builder()
-                .connectString(connectionInfo)
-                .sessionTimeoutMs(5000)
-                .connectionTimeoutMs(5000)
-                .retryPolicy(retryPolicy)
-                .namespace("namespace-name")
-                .build();
+CuratorFramework client = CuratorFrameworkFactory.builder()
+        .connectString(connectionInfo)
+        .sessionTimeoutMs(5000)
+        .connectionTimeoutMs(5000)
+        .retryPolicy(retryPolicy)
+        .namespace("namespace-name")
+        .build();
 ```
 
 ### leader选举
