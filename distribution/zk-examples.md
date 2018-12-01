@@ -7,18 +7,33 @@
 ### 创建客户端
 #### 1 参数说明
 | 参数名     |     说明     |
-| --------- | ------------ |
+| ---------  | ------------ |
 | connectionString    | 服务器列表，格式host1:port1, host2:port2, ... |
 | retryPolicy         | 重试策略,内建有四种重试策略,也可以自行实现RetryPolicy接口 |
 | sessionTimeoutMs    | 会话超时时间，单位毫秒，默认60000ms  |
 | connectionTimeoutMs | 连接创建超时时间，单位毫秒，默认60000ms  |
 
 | 节点类型     |     说明     |
-| --------- | ------------ |
+| ---------   | ------------ |
 | PERSISTENT            | 持久化 |
 | PERSISTENT_SEQUENTIAL | 持久化并且带序列号 |
 | EPHEMERAL             | 临时   |
 | EPHEMERAL_SEQUENTIAL  | 临时并且带序列号  |
+
+| 事件类型     |     对应CuratorFramework实例的方法     |
+| ---------   | ------------ |
+| CREATE      | #create()    |
+| DELETE      | #delete()    |
+| EXISTS      | #checkExists()    |
+| GET_DATA      | #getData()    |
+| SET_DATA      | #setData()    |
+| CHILDREN      | #getChildren()    |
+| SYNC         | #sync(String,Object)    |
+| GET_ACL      | #getACL()    |
+| SET_ACL      | #setACL()    |
+| WATCHED      | #Watcher(Watcher)    |
+| CLOSING      | #close()    |
+
 
 #### 2. 使用静态工厂方法创建客户端
 ```
