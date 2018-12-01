@@ -8,12 +8,7 @@
 1. 
 ```
 RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
-CuratorFramework client =
-CuratorFrameworkFactory.newClient(
-                        connectionInfo,
-                        5000,
-                        3000,
-                        retryPolicy);
+CuratorFramework client = CuratorFrameworkFactory.newClient(connectionString, 5000, 3000, retryPolicy);
 ```
 
 ### leader选举
