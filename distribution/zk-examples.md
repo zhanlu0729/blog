@@ -17,7 +17,7 @@
 RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
 CuratorFramework client = CuratorFrameworkFactory.newClient(connectionString, 5000, 3000, retryPolicy);
 ```
-#### 3. 使用链式编程(Fluent风格)的Api创建客户端
+#### 3. 使用链式编程(Fluent风格)的接口创建客户端
 ```
 RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
 CuratorFramework client = CuratorFrameworkFactory.builder()
@@ -27,7 +27,7 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
         .retryPolicy(retryPolicy)
         .build();
 ```
-#### 4. 创建包含隔离命名空间(隔离业务)的会话
+#### 4. 创建包含隔离命名空间(隔离业务)的客户端
 ```
 RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
 CuratorFramework client = CuratorFrameworkFactory.builder()
