@@ -20,20 +20,26 @@
 | EPHEMERAL             | 临时   |
 | EPHEMERAL_SEQUENTIAL  | 临时并且带序列号  |
 
-| 事件类型     |     对应CuratorFramework实例的方法     |
-| ---------   | ------------ |
-| CREATE      | #create()    |
-| DELETE      | #delete()    |
-| EXISTS      | #checkExists()    |
+| 事件类型(CuratorEventType)     |     对应CuratorFramework实例的方法     |
+| ---------     | ------------ |
+| CREATE        | #create()    |
+| DELETE        | #delete()    |
+| EXISTS        | #checkExists()    |
 | GET_DATA      | #getData()    |
 | SET_DATA      | #setData()    |
 | CHILDREN      | #getChildren()    |
-| SYNC         | #sync(String,Object)    |
-| GET_ACL      | #getACL()    |
-| SET_ACL      | #setACL()    |
-| WATCHED      | #Watcher(Watcher)    |
-| CLOSING      | #close()    |
+| SYNC          | #sync(String,Object)  |
+| GET_ACL       | #getACL()    |
+| SET_ACL       | #setACL()    |
+| WATCHED       | #Watcher(Watcher)    |
+| CLOSING       | #close()    |
 
+| 响应码(#getResultCode())     |     说明     |
+| ---------   | ------------ |
+| 0           | OK，即调用成功 |
+| -4          | ConnectionLoss，即客户端与服务端断开连接 |
+| -110        | NodeExists，即节点已经存在   |
+| -112        | SessionExpired，即会话过期  |
 
 #### 2. 使用静态工厂方法创建客户端
 ```
