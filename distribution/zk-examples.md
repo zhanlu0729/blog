@@ -5,7 +5,6 @@
 4. ``Extensions``：对curator-recipes的扩展实现，提供基于RESTful的Recipes WEB服务
 
 ### 创建客户端
-1. 参数说明
 | 参数名     |     说明     |
 | --------- | ------------ |
 | connectionString    | 服务器列表，格式host1:port1,host2:port2,... |
