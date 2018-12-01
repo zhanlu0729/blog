@@ -52,7 +52,8 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
 #### 6. 节点维护
 1. ``client.create().forPath(path)`` 创建一个内容为空的节点
 2. ``client.create().forPath(path, "init".getBytes())`` 创建附带内容的节点
-3. ```
+3. 
+```
 client.create().withMode(CreateMode.EPHEMERAL|
         EPHEMERAL_SEQUENTIAL|
         PERSISTENT|
