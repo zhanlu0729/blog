@@ -54,9 +54,7 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
 2. ``client.create().forPath(path, "init".getBytes())`` 创建附带内容的节点
 3. 
 ```
-client.create().withMode(CreateMode.EPHEMERAL|
-        EPHEMERAL_SEQUENTIAL|
-        PERSISTENT|
+client.create().withMode(CreateMode.EPHEMERAL| EPHEMERAL_SEQUENTIAL| PERSISTENT|
         PERSISTENT_SEQUENTIAL).forPath(path)``` 创建一个指定创建模式的临时节点
 
 
