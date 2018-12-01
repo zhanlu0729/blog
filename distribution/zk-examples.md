@@ -5,14 +5,14 @@
 4. ``Extensions``：对curator-recipes的扩展实现，提供基于RESTful的Recipes WEB服务
 
 ### 创建客户端
-#### 1. 参数说明
+#### 1 参数说明
 | 参数名     |     说明     |
 | --------- | ------------ |
 | connectionString    | 服务器列表，格式host1:port1,host2:port2,... |
 | retryPolicy         | 重试策略,内建有四种重试策略,也可以自行实现RetryPolicy接口 |
 | sessionTimeoutMs    | 会话超时时间，单位毫秒，默认60000ms  |
 | connectionTimeoutMs | 连接创建超时时间，单位毫秒，默认60000ms  |
-#### 2. 节点类型
+
 | 节点类型     |     说明     |
 | --------- | ------------ |
 | PERSISTENT            | 持久化 |
