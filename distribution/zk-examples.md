@@ -12,6 +12,14 @@
 | retryPolicy         | 重试策略,内建有四种重试策略,也可以自行实现RetryPolicy接口 |
 | sessionTimeoutMs    | 会话超时时间，单位毫秒，默认60000ms  |
 | connectionTimeoutMs | 连接创建超时时间，单位毫秒，默认60000ms  |
+#### 2. 节点类型
+| 节点类型     |     说明     |
+| --------- | ------------ |
+| PERSISTENT            | 持久化 |
+| PERSISTENT_SEQUENTIAL | 持久化并且带序列号 |
+| EPHEMERAL             | 临时   |
+| EPHEMERAL_SEQUENTIAL  | 临时并且带序列号  |
+
 #### 2. 使用静态工厂方法创建客户端
 ```
 RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
