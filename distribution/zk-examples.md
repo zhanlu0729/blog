@@ -55,7 +55,9 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
 3. 
 ```
 client.create().withMode(CreateMode.EPHEMERAL| EPHEMERAL_SEQUENTIAL| PERSISTENT|
-        PERSISTENT_SEQUENTIAL).forPath(path)``` 创建一个指定创建模式的临时节点
+        PERSISTENT_SEQUENTIAL).forPath(path)
+``` 
+创建一个指定创建模式的临时节点
 
 
 ### leader选举
