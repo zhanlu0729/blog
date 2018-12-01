@@ -52,12 +52,11 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
 #### 6. 节点维护
 1. ``client.create().forPath(path)`` 创建一个内容为空的节点
 2. ``client.create().forPath(path, bytes)`` 创建附带内容的节点
-3. 
+3. 创建一个指定创建模式的临时节点
 ```
 client.create().withMode(CreateMode.EPHEMERAL| EPHEMERAL_SEQUENTIAL| PERSISTENT|
         PERSISTENT_SEQUENTIAL).forPath(path)
 ``` 
-创建一个指定创建模式的临时节点
 4. ``client.create().creatingParentContainersIfNeeded().forPath(path)`` 创建一个能自动递归创建父节点的节点
 5. ``client.checkExists().forPath(path)`` 检查节点是否存在
 6. ``client.getData().forPath(path)`` 读取一个节点的数据内容
