@@ -51,7 +51,7 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
 2. ``client.close()`` 关闭客户端
 #### 6. 节点维护
 1. ``client.create().forPath(path)`` 创建一个内容为空的节点
-2. ``client.create().forPath(path, "init".getBytes())`` 创建附带内容的节点
+2. ``client.create().forPath(path, bytes)`` 创建附带内容的节点
 3. 
 ```
 client.create().withMode(CreateMode.EPHEMERAL| EPHEMERAL_SEQUENTIAL| PERSISTENT|
@@ -59,13 +59,17 @@ client.create().withMode(CreateMode.EPHEMERAL| EPHEMERAL_SEQUENTIAL| PERSISTENT|
 ``` 
 创建一个指定创建模式的临时节点
 4. ``client.create().creatingParentContainersIfNeeded().forPath(path)`` 创建一个能自动递归创建父节点的节点
-5. ``client.delete().forPath(path)`` 删除一个节点
+5. ``client.checkExists().forPath(path)`` 检查节点是否存在
 6. ``client.getData().forPath(path)`` 读取一个节点的数据内容
-7. ``Stat stat = new Stat(); client.getData().storingStatIn(stat).forPath(path)`` 读取一个节点的数据内容及该节点的stat
-6. ``guaranteed()`` 是一个保障接口，只要客户端会话有效，那么Curator会在后台持续进行删除操作，直到删除节点成功
-6. ``client.delete().deletingChildrenIfNeeded().forPath(path)`` 删除一个节点并且递归删除其所有的子节点
-7. ``client.delete().withVersion(10086).forPath(path)`` 强制指定版本进行节点删除节点
-8. ``client.delete().guaranteed().forPath(path)`` 强制保证删除节点
+7. ``client.getChildren().forPath(path)`` 获取节点的所有子节点路径
+8. ``Stat stat = new Stat();client.getData().storingStatIn(stat).forPath(path)`` 读取一个节点的数据内容及该节点的stat
+9. ``client.setData().forPath(path, bytes)`` 更新一个节点的数据内容
+10. ``client.setData().withVersion(1).forPath(path, bytes)`` 强制指定版本更新一个节点的数据内容
+11. ``guaranteed()`` 是一个保障接口，只要客户端会话有效，那么Curator会在后台持续进行删除操作，直到删除节点成功
+12. ``client.delete().forPath(path)`` 删除一个节点
+13. ``client.delete().deletingChildrenIfNeeded().forPath(path)`` 删除一个节点并且递归删除其所有的子节点
+14. ``client.delete().withVersion(1).forPath(path)`` 强制指定版本进行节点删除一个节点
+15. ``client.delete().guaranteed().forPath(path)`` 强制保证删除节点
 
 
 ### leader选举
