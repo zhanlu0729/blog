@@ -8,7 +8,7 @@
 #### 1 参数说明
 | 参数名     |     说明     |
 | --------- | ------------ |
-| connectionString    | 服务器列表，格式host1:port1,host2:port2,... |
+| connectionString    | 服务器列表，格式host1:port1, host2:port2, ... |
 | retryPolicy         | 重试策略,内建有四种重试策略,也可以自行实现RetryPolicy接口 |
 | sessionTimeoutMs    | 会话超时时间，单位毫秒，默认60000ms  |
 | connectionTimeoutMs | 连接创建超时时间，单位毫秒，默认60000ms  |
@@ -43,8 +43,16 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
         .sessionTimeoutMs(5000)
         .connectionTimeoutMs(5000)
         .retryPolicy(retryPolicy)
-        .namespace("namespace-name")
+        .namespace(namespace-name)
         .build();
 ```
+#### 5. 客户端管理
+1. ``client.start()`` 启动客户端
+2. ``client.close()`` 关闭客户端
+#### 6. 节点维护
+1. ``client.create().forPath(path)`` 创建一个内容为空的节点
+2. ``client.create().forPath(path, "init".getBytes())`` 创建附带内容的节点
+3. ``client.create().withMode(CreateMode.EPHEMERAL).forPath(path)`` 创建一个指定创建模式的临时节点
+
 
 ### leader选举
