@@ -16,3 +16,5 @@
 4. ``mv rabbitmq-server-3.6.16 rabbitmq``
 5. ``export RABBITMQ_HOME=/opt/rabbitmq``
 6. ``export PATH=$PATH:$RABBITMQ_HOME/sbin``
+7. ``rabbitmq-server -detached`` 以守护进程运行
+8. ``rabbitmqctl status`` 检查进程运行状态
