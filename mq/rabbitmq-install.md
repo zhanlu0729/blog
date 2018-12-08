@@ -5,3 +5,4 @@
 4. ``./configure --prefix=/opt/erlang``
 5. 如果报``configure: error: No curses library functions found``，则``yum -y install ncurses-level``
 6. ``make && make install``
+7. ``erl`` 验证是否安装成功
