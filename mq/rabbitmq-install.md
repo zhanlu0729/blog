@@ -8,3 +8,11 @@
 7. ``export ERLANG_HOME=/opt/erlang``
 8. ``export PATH=$PATH:$ERLANG_HOME/bin``
 9. ``erl`` 验证是否安装成功
+
+## 安装RabbitMQ
+1. 下载``rabbitmq-server-generic-unix-3.6.16.tar.xz``
+2. ``tar -xvf rabbitmq-server-generic-unix-3.6.16.tar.xz -C /opt``
+3. ``cd opt``
+4. ``mv rabbitmq-server-3.6.16 rabbitmq``
+5. ``export RABBITMQ_HOME=/opt/rabbitmq``
+6. ``export PATH=$PATH:$RABBITMQ_HOME/sbin``
