@@ -65,7 +65,7 @@
 1. svn cat http://文件全路径
 
 ### 新建一个分支copy
-1. svn copy branchA branchB -m "make B branch" //从branchA拷贝出一个新分支branchB
+1. svn cp/copy branchA branchB -m "make B branch" //从branchA拷贝出一个新分支branchB
 
 ### 合并内容到分支merge
 1. svn merge branchA branchB //把对branchA的修改合并到分支branchB
