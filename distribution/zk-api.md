@@ -48,6 +48,13 @@
 | WATCHED       | #Watcher(Watcher)    |
 | CLOSING       | #close()    |
 
+| Watcher事件类型    |     说明     |
+| ---------------   | ------------ |
+| NodeChildrenChanged | zNode的子节点创建或删除的时候|
+| NodeCreated         | 新的Znode节点被创建的时候    |
+| NodeDataChanged     | Znode节点的数据改变了的时候  |
+| NodeDeleted         | Znode节点被删除的时候        |
+
 | 响应码(#getResultCode())     |     说明     |
 | ---------   | ------------ |
 | 0           | OK，即调用成功 |
