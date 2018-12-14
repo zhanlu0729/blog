@@ -20,6 +20,20 @@
 | EPHEMERAL             | 临时   |
 | EPHEMERAL_SEQUENTIAL  | 临时并且带序列号  |
 
+| 节点状态     |     说明     |
+| ---------   | ------------ |
+| cZxid       | 节点被创建时候的事务ID |
+| mZxid       | 节点最后一次被修改时候的事务ID |
+| pZxid       | 该节点的子节点最后一次被修改时的事务ID。子节点删除或添加才会影响pZxid|
+| ctime       | 节点被创建的时间  |
+| mtime       | 节点被修改的世界 |
+| dataVersion | 这个节点数据改变的次数 |
+| cversion    | 子节点被改变的次数   |
+| aclVersion  | 节点的ACL(访问控制列表被改变的次数)  |
+| ephemeralOwner | 创建该临时节点的 session ID。如果是持久节点，设置为0 |
+| dataLength     | 数据内容长度 |
+| numChildren    | 当前节点子节点的个数   |
+
 | 事件类型(CuratorEventType)     |     对应CuratorFramework实例的方法     |
 | ---------     | ------------ |
 | CREATE        | #create()    |
