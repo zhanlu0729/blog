@@ -14,7 +14,7 @@
 
 ### 提交
 1. svn ci/commit -m　"提交备注信息文本" [-N]　[--no-unlock] 文件名
-2. svn ci/commit -m "提交备注信息文本" * ＜－ 注意这个*表示全部文件
+2. svn ci/commit -m "提交备注信息文本" * 注意这个*表示全部文件
 
 ### 更新文件
 1. svn up/update 后面没有目录，默认将当前目录以及子目录下的所有文件都更新到最新版本
@@ -71,8 +71,8 @@
 1. svn merge branchA branchB //把对branchA的修改合并到分支branchB
 
 ### SVN帮助
-1. svn help ＜－ 全部功能选项
-2. svn help ci ＜－ 具体功能的说明
+1. svn help 全部功能选项
+2. svn help ci 具体功能的说明
 
 
 注：svn status、svn diff和 svn revert这三条命令在没有网络的情况下也可以执行的，原因是svn在本地的.svn中保留了本地版本的原始拷贝
