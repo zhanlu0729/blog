@@ -64,21 +64,21 @@ maven定义了这样一组规则：世界上任何一个构件都可以使用mav
 ## 二、依赖详解
 ### 1、依赖的配置
 gourpId、artifactId、version：依赖的基本坐标，对于任何一个依赖来说，基本坐标是最重要的，maven根据坐标才能找到需要的依赖。
-1. type：依赖的类型，对于项目坐标定义的packing，大部分情况是不必声明，默认是jar。
-2. scope ：依赖的范围，参见``3、依赖范围scope``
-3. optional: 标记依赖是否可选，值为true或false，默认为false, 如果为可选依赖，则依赖不具有传递性。即B->X(可选依赖)，A->B。此时A的依赖中不包含X。
-4. exclusions：用来排除传递性依赖。
+1. ``type``：依赖的类型，对于项目坐标定义的packing，大部分情况是不必声明，默认是jar。
+2. ``scope``：依赖的范围，参见``3、依赖范围scope``
+3. ``optional``: 标记依赖是否可选，值为true或false，默认为false, 如果为可选依赖，则依赖不具有传递性。即B->X(可选依赖)，A->B。此时A的依赖中不包含X。
+4. ``exclusions``：用来排除传递性依赖。
 5. 大部分依赖声明只包含基本坐标，然而在一些特殊情况下，其他元素至关重要。
 
 ### 2、classpath
 classpath：用于指定.class文件存放的位置，类加载器会从该路径中加载所需的.class文件到内存中。maven在编译、执行测试、实际运行有着三套不同的classpath。
-1. 编译classpath：编译主代码有效
-2. 测试classpath：编译、运行测试代码有效
-3. 运行classpath：项目运行时有效
+1. ``编译classpath``：编译主代码有效
+2. ``测试classpath``：编译、运行测试代码有效
+3. ``运行classpath``：项目运行时有效
 
 ### 3、依赖范围scope
-1. compile：编译依赖范围。（默认方式），有效范围：编译classpath+测试classpath+运行classpath。
-2. test：测试依赖范围。有效范围：测试classpath  比如：JUnit，只在测试时使用，在编译主代码和运行时不需要此依赖。
-3. provided：已提供依赖范围。有效范围：编译classpath+测试classpath。
-4. runtime：运行时依赖范围。有效范围：测试classpath+运行classpath。比如：JDBC驱动实现（mysql-connector-java）。
-5. system：系统依赖范围。有效范围：编译classpath+测试classpath。使用system范围的依赖时必须通过systemPath元素显示地指定依赖文件的路径，因为此类依赖不是通过maven仓库解析的，而且往往与本地及其系统绑定，可能造成构建的不可移植，慎用。systemPath元素可以引用环境变量。
+1. ``compile``：编译依赖范围。（默认方式），有效范围：编译classpath+测试classpath+运行classpath。
+2. ``test``：测试依赖范围。有效范围：测试classpath 比如：JUnit，只在测试时使用，在编译主代码和运行时不需要此依赖。
+3. ``provided``：已提供依赖范围。有效范围：编译classpath+测试classpath。
+4. ``runtime``：运行时依赖范围。有效范围：测试classpath+运行classpath。比如：JDBC驱动实现（mysql-connector-java）。
+5. ``system``：系统依赖范围。有效范围：编译classpath+测试classpath。使用system范围的依赖时必须通过systemPath元素显示地指定依赖文件的路径，因为此类依赖不是通过maven仓库解析的，而且往往与本地及其系统绑定，可能造成构建的不可移植，慎用。systemPath元素可以引用环境变量。
