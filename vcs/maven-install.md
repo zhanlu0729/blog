@@ -2,10 +2,10 @@
 1. 创建文件夹并进入该目录 `cd /usr/local && mkdir nexus && cd nexus`
 2. 下载nexus安装包 `wget http://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.6.0-02-unix.tar.gz`
 3. 解压、重命名 `tar -zxvf nexus-3.6.0-02-unix.tar.gz`
-`mv nexus-3.6.0-02  nexus`
-4. 自定义配置虚拟机可打开 nexus.vmoptions 文件进行配置 `vim nexus/bin/nexus.vmoptions`
-5. 启动nexus：`/usr/local/nexus/nexus/bin/nexus {start|stop|run|run-redirect|status|restart|force-reload}`
-6. 其它说明：
+4. `mv nexus-3.6.0-02 nexus`
+5. 自定义配置虚拟机可打开 nexus.vmoptions 文件进行配置 `vim nexus/bin/nexus.vmoptions`
+6. 启动nexus：`/usr/local/nexus/nexus/bin/nexus {start|stop|run|run-redirect|status|restart|force-reload}`
+7. 其它说明：
   1）Nexus默认的端口是8081，可以在etc/nexus-default.properties配置中修改;
   2）Nexus默认的用户名密码是admin/admin123;
   3）当遇到奇怪问题时，重启nexus，启动时间会比较慢 要1分钟左右后才能访问;
@@ -13,10 +13,10 @@
 
 ## 二、仓库介绍
 ### 1、四种仓库类型介绍(默认仓库介绍)
-1. maven-central：      maven中央库，默认从https://repo1.maven.org/maven2/拉取jar
-2. maven-releases：   私库发行版jar
+1. maven-central： maven中央库，默认从https://repo1.maven.org/maven2/拉取jar
+2. maven-releases： 私库发行版jar
 3. maven-snapshots：私库快照（调试版本）jar
-4. maven-public：     仓库分组，把上面三个仓库组合在一起对外提供服务，在本地maven基础配置settings.xml中使用。
+4. maven-public： 仓库分组，把上面三个仓库组合在一起对外提供服务，在本地maven基础配置settings.xml中使用。
 
 ### 2、Nexus默认的仓库类型有以下四种：（上面的名字可以随便取，关键是它对应的是什么仓库类型）
 1. group(仓库组类型)：作用是将上面来个放到这个组里，进行统一管理,又叫组仓库，用于方便开发人员自己设定的仓库；
