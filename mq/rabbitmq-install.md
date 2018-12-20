@@ -1,3 +1,11 @@
+## 安装 openssl
+1. 下载 ``wget http://mirrors.ibiblio.org/openssl/source/old/1.0.2/openssl-1.0.2.tar.gz``
+2. ``tar -zvxf openssl-1.0.2.tar.gz``
+3. ``cd openssl-1.0.2``
+4. ``./config --prefix=/usr/local/openssl``
+5. ``vi Makefile``将原来的：``CFLAG= -DOPENSSL_THREADS``修改为： ``CFLAG= -fPIC -DOPENSSL_THREADS``
+6. ``make && make install``
+
 ## 安装erlang
 1. 下载``otp_src_19.3.tar.gz``
 2. ``tar -zxvf otp_src_19.3.tar.gz``
