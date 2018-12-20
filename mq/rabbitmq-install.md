@@ -1,5 +1,5 @@
 ## 安装 openssl
-1. 下载 ``wget http://mirrors.ibiblio.org/openssl/source/old/1.0.2/openssl-1.0.2.tar.gz``
+1. ``wget http://mirrors.ibiblio.org/openssl/source/old/1.0.2/openssl-1.0.2.tar.gz`` 下载
 2. ``tar -zvxf openssl-1.0.2.tar.gz``
 3. ``cd openssl-1.0.2``
 4. ``./config --prefix=/usr/local/openssl``
