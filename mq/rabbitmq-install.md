@@ -10,7 +10,7 @@
 1. 下载``otp_src_19.3.tar.gz``
 2. ``tar -zxvf otp_src_19.3.tar.gz``
 3. ``cd otp_src_19.3``
-4. ``./configure --prefix=/opt/erlang --with-ssl=/usr/local/openssl``
+4. ``./configure --prefix=/usr/local/erlang --with-ssl=/usr/local/openssl``
 5. 如果报``configure: error: No curses library functions found``，则``yum -y install ncurses-devel``
 6. ``make && make install``
 7. ``export ERLANG_HOME=/opt/erlang``
