@@ -26,3 +26,6 @@
 6. ``export PATH=$PATH:$RABBITMQ_HOME/sbin``
 7. ``rabbitmq-server -detached`` 以守护进程运行
 8. ``rabbitmqctl status`` 检查进程运行状态
+9. 
+iptables A INPUT -p tcp --dport 25672 -j DROP
+iptables -A OUTPUT -p tcp --dport 25672 -j DROP
