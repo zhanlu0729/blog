@@ -30,3 +30,22 @@
 10. 
 iptables A INPUT -p tcp --dport 25672 -j DROP
 iptables -A OUTPUT -p tcp --dport 25672 -j DROP
+
+## REST API监控接口
+|        URI       |HTTP 请求类型|            接口含义               |
+| ---------------- | ---------- | --------------------------------- |
+| /api/connections                      |    GET     | 获取当前RabbitMQ集群下所有打开的连接 |
+| /api/nodes                            |    GET     | 获取当前RabbitMQ集群下所有节点实例的状态信息 |
+| /api/vhosts/{vhost}/connections       |    GET     | 获取某一个虚拟机主机下的所有打开的connection连接 |
+| /api/connections/{name}/channels      |    GET     | 获取某一个连接下所有的管道信息 |
+| /api/vhosts/{vhost}/channels          |    GET     | 获取某一个虚拟机主机下的管道信息 |
+| /api/consumers/{vhost}                |    GET     | 获取某一个虚拟机主机下的所有消费者信息 |
+| /api/exchanges/{vhost}                |    GET     | 获取某一个虚拟机主机下面的所有交换器信息 |
+|/api/queues/{vhost}                    |        GET     | 获取某一个虚拟机主机下的所有队列信息 |
+| /api/users                            |        GET     | 获取集群中所有的用户信息 |
+| /api/users/{name}                     | GET/PUT/DELETE | 获取/更新/删除指定用户信息 |
+| /api/users/{user}/permissions         |     GET        | 获取当前指定用户的所有权限信息 |
+| /api/permissions/{vhost}/{user}       | GET/PUT/DELETE | 获取/更新/删除指定虚拟主机下特定用户的权限 |
+| /api/exchanges/{vhost}/{name}/publish |    POST     | 在指定的虚拟机主机和交换器上发布一个消息 |
+| /api/queues/{vhost}/{name}/get        |    POST     | 在指定虚拟机主机和队列名中获取消息，同时该动作会修改队列状态 |
+| /api/healthchecks/node/{node}         |    GET      | 获取指定节点的健康检查状态 |
