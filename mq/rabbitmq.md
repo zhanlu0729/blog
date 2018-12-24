@@ -81,7 +81,9 @@ force_reset命令和reset的区别是无条件重置节点，不管当前管理�
 01. 添加用户：rabbitmqctl add_user username password
 02. 删除用户：rabbitmqctl delete_user username
 03. 修改密码：rabbitmqctl change_password username newpassword
-04. 列出所有用户：rabbitmqctl list_users
+04. 授权：rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+05. rabbitmqctl set_user_tags admin administrator
+06. 列出所有用户：rabbitmqctl list_users
 
 ## 权限控制
 01. 创建虚拟主机：rabbitmqctl add_vhost vhostpath
