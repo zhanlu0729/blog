@@ -1,0 +1,19 @@
+#!/bin/bash
+#chkconfig:2345 10 90  
+#description:service zookeeper
+
+export JAVA_HOME=/usr/local/jdk1.8
+export ZK_HOME=/usr/local/zk3.4
+export PATH=$JAVA_HOME/bin:$ZK_HOME/bin:$PATH
+cd $ZK_HOME
+case "$1" in
+  start) su root ./bin/zkServer.sh start ./conf/zoo.cfg;;
+  start-foreground) su root ./bin/zkServer.sh start-foreground ./conf/zoo.cfg;;
+  stop) su root ./bin/zkServer.sh stop;;
+  status) su root ./bin/zkServer.sh status;;
+  restart) su root ./bin/zkServer.sh restart ./conf/zoo.cfg;;
+  upgrade) su root ./bin/zkServer.sh upgrade ./conf/zoo.cfg;;
+  print-cmd) su root ./bin/zkServer.sh print-cmd;;
+  *) echo "require start|start-foreground|stop|status|restart|upgrade|print-cmd";;
+esac
+cd -
