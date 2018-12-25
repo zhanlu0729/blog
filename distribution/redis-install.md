@@ -35,7 +35,7 @@
 24. ``vm_pages`` 设置交换文件的总的page数量
 25. ``vm_max_thrrads`` 设置vm IO同时使用的线程数量
 
-### 单机模式
+### 单机模式(3.2)
 1. **下载** ``wget http://download.redis.io/releases/redis-3.2.2.tar.gz``
 2. **解压** ``tar -zxvf redis-3.2.2.tar.gz``
 3. **建立软链接,便于升级** ``ln -s redis-3.2.2 redis``
@@ -43,6 +43,17 @@
 5. **启动：默认配置** ``./redis-server``
 6. **启动：运行配置** ``./redis-server --configKey1 value1 --configKey2 value2``
 7. **启动：配置文件** ``./redis-server /configFile``
+8. **关闭：粗暴关闭** ``kill -9 pid``
+9. **关闭：优雅关闭** ``redis-cli shundown nosave|save`` 关闭前是否生成持久化文件，默认生成
+
+### 单机模式(4.0)
+1. **下载** ``wget http://download.redis.io/releases/redis-4.0.11.tar.gz``
+2. **解压** ``tar -zxvf redis-4.0.11.tar.gz``
+3. **建立软链接,便于升级** ``ln -s redis-3.2.2 redis``
+4. **安装** ``make install | make PREFIX=/usr/local/redis install``
+5. **复制配置** ``cp /usr/local/redis/redis-4.0.6/redis.conf /usr/local/redis/conf``
+6. **编辑配置** ``vi /usr/local/redis/bin/redis.conf``
+5. **启动：默认配置** ``./redis-server ../conf/redis.conf``
 8. **关闭：粗暴关闭** ``kill -9 pid``
 9. **关闭：优雅关闭** ``redis-cli shundown nosave|save`` 关闭前是否生成持久化文件，默认生成
 
