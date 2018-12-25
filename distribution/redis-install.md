@@ -49,9 +49,9 @@
 ### 单机模式(4.0)
 1. **下载** ``wget http://download.redis.io/releases/redis-4.0.11.tar.gz``
 2. **解压** ``tar -zxvf redis-4.0.11.tar.gz``
-3. **建立软链接,便于升级** ``ln -s redis-3.2.2 redis``
+3. **建立软链接,便于升级** ``ln -s redis-4.0.11 redis``
 4. **安装** ``make install | make PREFIX=/usr/local/redis install``
-5. **复制配置** ``cp /usr/local/redis/redis-4.0.6/redis.conf /usr/local/redis/conf``
+5. **复制配置** ``cp /usr/local/redis-4.0.11/redis.conf /usr/local/redis/conf``
 6. **编辑配置** ``vi /usr/local/redis/bin/redis.conf``
 5. **启动：默认配置** ``./redis-server ../conf/redis.conf``
 8. **关闭：粗暴关闭** ``kill -9 pid``
