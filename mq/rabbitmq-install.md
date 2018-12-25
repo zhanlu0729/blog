@@ -27,9 +27,15 @@
 7. ``rabbitmq-plugins enable rabbitmq_management`` 开启管理后台插件
 8. ``rabbitmq-server -detached`` 以守护进程运行
 9. ``rabbitmqctl status`` 检查进程运行状态
-10. 
-iptables A INPUT -p tcp --dport 25672 -j DROP
-iptables -A OUTPUT -p tcp --dport 25672 -j DROP
+
+## 安装RabbitMQ集群
+1. 启动Master节点
+2. 复制Master节点的/{user}/.erlang.cookie到各从节点
+3. 停止从节点进程,再重启``rabbitmq-server -detached``
+4. rabbitmqctl stop_app
+5. rabbitmqctl reset
+6. rabbitmqctl join_cluster rabbit@master
+6. rabbitmqctl start_app
 
 ## REST API监控接口
 |        URI       |HTTP 请求类型|            接口含义               |
