@@ -58,7 +58,12 @@ zkServer.sh start zoo3.cfg
 ```
 zkServer.sh start [zoo.cfg]
 ```
-
+4. **开机启动**
+```
+cd /etc/rc.d/init.d/
+chmod +x zookeeper
+chkconfig --add zookeeper && chkconfig zookeeper on
+```
 ### 客户端四字命令(zkCli.sh [-server ip:port] cmd args)
 1. ``zkCli.sh [-server ip:port]``
 2. ``conf`` 输出相关服务配置的详细信息。 
