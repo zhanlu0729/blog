@@ -11,8 +11,10 @@
 * soft nofile 102400 #软限制
 * hard nofile 102400 #硬限制
 ```
-6. 调整系统用户的内存限制(查看`sysctl -a|grep vm.max_map_count`,永久生效)：`vim /etc/sysctl.conf`
+6. 调整系统用户的内存限制：`vim /etc/sysctl.conf`
 ```
-# 在文件最后添加一行
+执行命令：sysctl -w vm.max_map_count=262144
+查看：sysctl -a|grep vm.max_map_count
+# 在文件最后添加一行,永久生效
 vm.max_map_count=262144
 ```
