@@ -19,3 +19,10 @@
 vm.max_map_count=262144
 ```
 7. `su -c '$ES_HOME/bin/elasticsearch -d' elasticsearch` 启动
+
+
+## elasticsearch-head安装
+1. git clone git://github.com/mobz/elasticsearch-head.git
+2. cd elasticsearch-head
+3. npm install -g
+4. nohup npm run start &
