@@ -35,7 +35,7 @@ http.cors.allow-origin: "*"
 ```
 7. 更新elasticsearch-head配置
 ```
-$ES-HEAD_HOME/_site/app.js
+$ES-HEAD_HOME/_site/app.js 做如下更改
 this.base_uri = this.config.base_uri || this.prefs.get("app-base_uri") || "http://{ES实际IP}:9200";
 ```
 8. `nohup npm run start &` 启动
