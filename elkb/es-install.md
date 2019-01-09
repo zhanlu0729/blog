@@ -27,4 +27,13 @@ vm.max_map_count=262144
 3. `npm install -g grunt-cli` 安装grunt-cli
 4. `npm install grunt --save` 安装grunt
 5. `npm install -g cnpm --registry=https://registry.npm.taobao.org` 安装依赖的npm包
-6. `nohup npm run start &` 启动
+6. $ES_HOME/bin/elasticsearch/config/elasticsearch.yml文件添加：
+```
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+```
+7. `$ES-HEAD_HOME/_site/app.js` 更新
+```
+this.base_uri = this.config.base_uri || this.prefs.get("app-base_uri") || "http://{ES实际IP}:9200";
+```
+8. `nohup npm run start &` 启动
