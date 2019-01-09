@@ -25,22 +25,22 @@
 22. `rpm -e file.rpm`        [删除一个rpm包]--erase
 ### 常用参数：
 #### Install/Upgrade/Erase options:
-`-i, --install` install package(s)
-`-v, --verbose` provide more detailed output
-`-h, --hash`    print hash marks as package installs (good with -v)
-`-e, --erase`   erase (uninstall) package
-`-U, --upgrade=<packagefile>+` upgrade package(s)
-`－-replacepkge` 无论软件包是否已被安装，都强行安装软件包
-`--test`   安装测试，并不实际安装
-`--nodeps` 忽略软件包的依赖关系强行安装
-`--force`  忽略软件包及文件的冲突
+1. `-i, --install` install package(s)
+2. `-v, --verbose` provide more detailed output
+3. `-h, --hash`    print hash marks as package installs (good with -v)
+4. `-e, --erase`   erase (uninstall) package
+5. `-U, --upgrade=<packagefile>+` upgrade package(s)
+6. `－-replacepkge` 无论软件包是否已被安装，都强行安装软件包
+7. `--test`   安装测试，并不实际安装
+8. `--nodeps` 忽略软件包的依赖关系强行安装
+9. `--force`  忽略软件包及文件的冲突
 #### Query options (with -q or --query):
-`-a, --all`      query/verify all packages
-`-p, --package`  query/verify a package file
-`-l, --list`     list files in package
-`-d, --docfiles` list all documentation files
-`-f, --file`     query/verify package(s) owning file
+1. `-a, --all`      query/verify all packages
+2. `-p, --package`  query/verify a package file
+3. `-l, --list`     list files in package
+4. `-d, --docfiles` list all documentation files
+5. `-f, --file`     query/verify package(s) owning file
 #### RPM源代码包装安装
 .src.rpm结尾的文件，这些文件是由软件的源代码包装而成的，用户要安装这类RPM软件包，必须使用命令：
-`rpm --recompile path/file.rpm` ＃这个命令会把源代码解包并编译、安装它，如果用户使用命令：
-`rpm --rebuild path/file.rpm` ＃在安装完成后，还会把编译生成的可执行文件重新包装成i386.rpm 的RPM软件包。
+1. `rpm --recompile path/file.rpm` ＃这个命令会把源代码解包并编译、安装它，如果用户使用命令：
+2. `rpm --rebuild path/file.rpm` ＃在安装完成后，还会把编译生成的可执行文件重新包装成i386.rpm 的RPM软件包。
