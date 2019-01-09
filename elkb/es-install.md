@@ -27,4 +27,5 @@ vm.max_map_count=262144
 3. `npm install -g grunt-cli` 安装grunt-cli
 4. `npm install grunt --save` 安装grunt
 5. `npm install` 安装依赖的npm包
+npm install -g cnpm --registry=https://registry.npm.taobao.org
 4. `nohup npm run start &`
