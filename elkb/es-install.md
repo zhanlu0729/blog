@@ -22,7 +22,9 @@ vm.max_map_count=262144
 
 
 ## elasticsearch-head安装
-1. git clone git://github.com/mobz/elasticsearch-head.git
-2. cd elasticsearch-head
-3. npm install -g
-4. nohup npm run start &
+1. `git clone git://github.com/mobz/elasticsearch-head.git` 下载
+2. `cd elasticsearch-head`
+3. `npm install -g grunt-cli` 安装grunt-cli
+4. `npm install grunt --save` 安装grunt
+5. `npm install` 安装依赖的npm包
+4. `nohup npm run start &`
