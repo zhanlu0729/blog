@@ -18,3 +18,4 @@
 # 在文件最后添加一行,永久生效
 vm.max_map_count=262144
 ```
+7. `su -c '$ES_HOME/bin/elasticsearch -d' elasticsearch` 启动
