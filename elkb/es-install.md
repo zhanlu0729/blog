@@ -26,16 +26,17 @@ vm.max_map_count=262144
 2. `cd elasticsearch-head`
 3. 安装grunt-cli `npm install -g grunt-cli`
 4. 安装grunt `npm install grunt --save`
-5. 安装依赖的npm包 `npm install -g cnpm --registry=https://registry.npm.taobao.org`
-6. 更改ES配置
+5. 安装依赖的npm包 `npm install`
+6. 安装依赖的npm包 `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+7. 更改ES配置
 ```
 $ES_HOME/bin/elasticsearch/config/elasticsearch.yml 添加如下配置
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 ```
-7. 更新elasticsearch-head配置
+8. 更新elasticsearch-head配置
 ```
 $ES-HEAD_HOME/_site/app.js 做如下更改
 this.base_uri = this.config.base_uri || this.prefs.get("app-base_uri") || "http://{ES实际IP}:9200";
 ```
-8. `nohup npm run start &` 启动
+9. `nohup npm run start &` 启动
