@@ -109,4 +109,4 @@ classpath：用于指定.class文件存放的位置，类加载器会从该路�
 23. `mvn -emp –encrypt-master-password1` 加密主安全密码,存储到Maven settings文件里;
 24. `mvn -ep –encrypt-password1` 加密服务器密码,存储到Maven settings文件里;
 25. `mvn -npr –no-plugin-registry1` 对插件版本不使用~/.m2/plugin-registry.xml(插件注册表)里的配置
-26. `mvn -Dmaven.test.skip=true -Dmaven.repo.local=repoPath` 仓库地址
+26. `mvn -Dmaven.repo.local=repoPath` 仓库地址
