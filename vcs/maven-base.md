@@ -7,15 +7,15 @@
 06. **-U** 强制去远程更新snapshot的插件或依赖，默认每天只更新一次。
 
 ### 常用Maven命令
-01. 创建maven项目：`mvn archetype:create `
-02. 指定group： `-DgroupId=packageName `
-03. 指定artifact：`-DartifactId=projectName`
-04. 创建web项目：`-DarchetypeArtifactId=maven-archetype-webapp  `
-05. 创建maven项目：`mvn archetype:generate`
-06. 验证项目是否正确：`mvn validate`
-07. maven打包：`mvn package`
-08. 只打jar包：`mvn jar:jar`
-09. 生成源码jar包：`mvn source:jar`
+1. 创建maven项目：`mvn archetype:create `
+2. 指定group： `-DgroupId=packageName `
+3. 指定artifact：`-DartifactId=projectName`
+4. 创建web项目：`-DarchetypeArtifactId=maven-archetype-webapp  `
+5. 创建maven项目：`mvn archetype:generate`
+6. 验证项目是否正确：`mvn validate`
+7. maven打包：`mvn package`
+8. 只打jar包：`mvn jar:jar`
+9. 生成源码jar包：`mvn source:jar`
 10. 产生应用需要的任何额外的源代码：`mvn generate-sources`
 11. 编译源代码： `mvn compile`
 12. 编译测试代码：`mvn test-compile`
