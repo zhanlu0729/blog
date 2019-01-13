@@ -27,7 +27,7 @@
 18. 生成idea项目：`mvn idea:idea`
 19. 安装项目到本地仓库：`mvn install`
 20. 发布项目到远程仓库：`mvn:deploy`
-21 在集成测试可以运行的环境中处理和发布包：`mvn integration-test`
+21. 在集成测试可以运行的环境中处理和发布包：`mvn integration-test`
 22. 显示maven依赖树：`mvn dependency:tree`
 23. 显示maven依赖列表：`mvn dependency:list`
 24. 下载依赖包的源码：`mvn dependency:sources`
