@@ -32,7 +32,8 @@
 23. 显示maven依赖列表：`mvn dependency:list`
 24. 下载依赖包的源码：`mvn dependency:sources`
 25. 安装本地jar到本地仓库：`mvn install:install-file -DgroupId=packageName -DartifactId=projectName -Dversion=version -Dpackaging=jar -Dfile=path`
-26. 下载包：`mvn dependency:get -DremoteRepositories=http://repoPath/ -DgroupId=packageName -DartifactId=projectName -Dversion=version`
+26. 部署包：`mvn deploy:deploy-file -DgroupId=packageName -DartifactId=projectName -Dversion=version -Dpackaging=jar -Dfile=filePath -Durl=http://repositoryPath -DrepositoryId=repositoryId`
+27. 下载包：`mvn dependency:get -DremoteRepositories=http://repoPath/ -DgroupId=packageName -DartifactId=projectName -Dversion=version`
 
 ### web项目相关命令
 01. 启动tomcat：`mvn tomcat:run`
