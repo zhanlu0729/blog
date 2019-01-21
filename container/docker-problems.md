@@ -1,6 +1,6 @@
 ### 镜像拉取失败
 1. 错误描述：`Error response from daemon: Get https://k8s-registry.banksteel.local/v`
-2. 原因分析：
+2. 原因分析：类似问题都是权限问题
 3. 解决方案：
 ```
 $ vi /usr/lib/systemd/system/docker.service
@@ -12,8 +12,8 @@ $ systemctl restart docker
 
 ### Harbor
 1. 错误描述：推送镜像时报：denied: requested access to the resource is denied
-2. 原因分析：
-3. 解决方案：harbor上没有对应的project，创新并公开即可
+2. 原因分析：harbor上没有对应的【Project】
+3. 解决方案：对应的【Project】创新并公开即可
 
 
 ### pod-infrastructure:latest镜像下载失败，镜像又真实存在
