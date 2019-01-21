@@ -16,6 +16,13 @@
   - 为RC的nginx创建service，并通过Service的80端口转发至容器的8000端口上`kubectl expose rc nginx --port=80 --target-port=8000`
   - 由“nginx-controller.yaml”中指定的type和name标识的RC创建Service，并通过Service的80端口转发至容器的8000端口上。`kubectl expose -f nginx-controller.yaml --port=80 --target-port=8000`
 
+### kubectl annotate
+1. 更新一个或多个资源的Annotations信息
+  - Annotations由key/value组成
+  - Annotations的目的是存储辅助数据，特别是通过工具和系统扩展操作的数据，更多介绍在这里
+  - 如果--overwrite为true，现有的annotations可以被覆盖，否则试图覆盖annotations将会报错
+  - 如果设置了--resource-version，则更新将使用此resource version，否则将使用原有的resource version
+  
 ## Node
 01. **添加标签** kubectl label no/nodeName labelKey=labelValue
 02. **删除标签** kubectl label no/nodeName labelKey-
