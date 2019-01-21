@@ -22,7 +22,15 @@
   - Annotations的目的是存储辅助数据，特别是通过工具和系统扩展操作的数据，更多介绍在这里
   - 如果--overwrite为true，现有的annotations可以被覆盖，否则试图覆盖annotations将会报错
   - 如果设置了--resource-version，则更新将使用此resource version，否则将使用原有的resource version
-  
+2. **语法** `annotate [--overwrite] (-f FILENAME | TYPE NAME) KEY_1=VAL_1 ... KEY_N=VAL_N [--resource-version=version]`
+3. 示例
+  - 更新Pod“foo”，设置annotation “description”的value “my frontend”，如果同一个annotation多次设置，则只使用最后设置的value值。`kubectl annotate pods foo description='my frontend'`
+  - 根据“pod.json”中的type和name更新pod的annotation`kubectl annotate -f pod.json description='my frontend'`
+  - 更新Pod"foo"，设置annotation“description”的value“my frontend running nginx”，覆盖现有的值。`kubectl annotate --overwrite pods foo description='my frontend running nginx'`
+  - 更新namespace中的所有pod`kubectl annotate pods --all description='my frontend running nginx'`
+  - 只有当resource-version为1时，才更新pod ' foo '。`kubectl annotate pods foo description='my frontend running nginx' --resource-version=1`
+
+
 ## Node
 01. **添加标签** kubectl label no/nodeName labelKey=labelValue
 02. **删除标签** kubectl label no/nodeName labelKey-
