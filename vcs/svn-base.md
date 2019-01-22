@@ -4,8 +4,8 @@
 2. svn co/checkout svn://路径(目录或文件的全路径)　[本地目录全路径] --username 用户名 --password 密码
 
 ### 导出(导出一个干净的不带.svn文件夹的目录树)
-1. svn export [-r 版本号] http://路径(目录或文件的全路径) [本地目录全路径]　--username　用户名
-2. svn export [-r 版本号] svn://路径(目录或文件的全路径) [本地目录全路径]　--username　用户名
+1. svn export [-r 版本号] http://路径(目录或文件的全路径) [本地目录全路径] --username 用户名
+2. svn export [-r 版本号] svn://路径(目录或文件的全路径) [本地目录全路径] --username 用户名
 3. svn export 本地检出的(即带有.svn文件夹的)目录全路径 要导出的本地目录全路径
 
 ### 添加新文件
@@ -13,12 +13,12 @@
 2. svn ci/commit -m "提交备注信息文本"
 
 ### 提交
-1. svn ci/commit -m　"提交备注信息文本" [-N]　[--no-unlock] 文件名
+1. svn ci/commit -m "提交备注信息文本" [-N]　[--no-unlock] 文件名
 2. svn ci/commit -m "提交备注信息文本" * 注意这个*表示全部文件
 
 ### 更新文件
 1. svn up/update 后面没有目录，默认将当前目录以及子目录下的所有文件都更新到最新版本
-2. svn up/update　-r 修正版本 文件名
+2. svn up/update -r 修正版本 文件名
 3. svn up/update 文件名
 
 ### 删除文件
@@ -26,12 +26,12 @@
 2. svn ci/commit -m "提交备注信息文本"
 
 ### 加锁/解锁
-1. svn lock -m　"提交备注信息文本"　[--force]　文件名 
+1. svn lock -m　"提交备注信息文本" [--force] 文件名 
 2. svn unlock 文件名
 
 ### 比较差异
 1. svn diff 文件名
-2. svn diff -r　修正版本号m:修正版本号n　文件名
+2. svn diff -r 修正版本号m:修正版本号n 文件名
 
 ### 查看文件或者目录状态
 1. svn st/status 目录路径/文件名 目录下的文件和子目录的状态，正常状态不显示【?：不在svn的控制中；M：内容被修改；C：发生冲突；A：预定加入到版本库；K：被锁定】
@@ -45,12 +45,12 @@
 1. svn info 文件名
 
 ### 查看版本库下的文件和目录列表
-1. svn ls/list　svn://路径(目录或文件的全路径)
+1. svn ls/list svn://路径(目录或文件的全路径)
 
 ### 创建纳入版本控制下的新目录
 1. svn mkdir 目录名
 2. svn mkdir -m　"提交备注信息文本"　http://目录全路径
-3. 注：添加完子目录后，一定要回到根目录更新一下，不然在该目录下提交文件会提示"提交失败"
+3. 注：添加完子目录后,一定要回到根目录更新一下,不然在该目录下提交文件会提示"提交失败"
 
 ### 恢复本地修改
 1. svn revert [--recursive] 文件名 注意: 本子命令不会存取网络，并且会解除冲突的状况。但是它不会恢复被删除的目录
@@ -73,6 +73,5 @@
 ### SVN帮助
 1. svn help 全部功能选项
 2. svn help ci 具体功能的说明
-
 
 注：svn status、svn diff和 svn revert这三条命令在没有网络的情况下也可以执行的，原因是svn在本地的.svn中保留了本地版本的原始拷贝
