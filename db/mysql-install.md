@@ -10,3 +10,4 @@ yum install net-tools`或者后面加上`--force --nodeps`
 7. `chown mysql:mysql /var/lib/mysql -R`` 修改mysql数据库目录的所属用户及其所属组，然后启动mysql数据库
 8. `systemctl enable|start|stop|restart|status mysqld.service`
 9. `mysql -uroot -p'xxxx' && set password=password('123456');` 登录并更改密码
+10. `skip-grant-tables` 忘记密码时，修改/etc/my.cnf添加这个参数，可以免登录
