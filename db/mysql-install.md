@@ -9,5 +9,6 @@ yum install net-tools`或者后面加上`--force --nodeps`
 6. `mysqld --initialize --user=mysql --datadir=/data/mysql` 初始化数据库,初始化后会在`/var/log/mysqld.log`生成随机密码
 7. `chown mysql:mysql /var/lib/mysql -R` 修改mysql数据库目录的所属用户及其所属组，然后启动mysql数据库
 8. `systemctl enable|start|stop|restart|status mysqld.service`
-9. `mysql -uroot -p'xxxx' && set password=password('123456');` 登录并更改密码
-10. `skip-grant-tables` 忘记密码时，修改/etc/my.cnf添加这个参数，可以免登录
+9. `mysql -uroot -p'xxxx'` 登录
+10. `set password=password('123456');` 更改密码
+11. `skip-grant-tables` 忘记密码时，修改/etc/my.cnf添加这个参数，可以免登录
