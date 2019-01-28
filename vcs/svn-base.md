@@ -1,6 +1,6 @@
 ## SVN常用命令
 ### 检出
-1. svn co/checkout http://路径(目录或文件的全路径)　[本地目录全路径] --username 用户名 --password 密码
+1. svn co/checkout http://路径(目录或文件的全路径)　[本地目录全路径] --username 用户名 --password 密码 [--non-interactive：非交互式]
 2. svn co/checkout svn://路径(目录或文件的全路径)　[本地目录全路径] --username 用户名 --password 密码
 
 ### 导出(导出一个干净的不带.svn文件夹的目录树)
