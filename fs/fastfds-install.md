@@ -38,3 +38,20 @@ cp /etc/fdfs/client.conf.sample /etc/fdfs/client.conf #客户端文件，测试�
 cp /usr/local/src/fastdfs/conf/http.conf /etc/fdfs/ #供nginx访问使用
 cp /usr/local/src/fastdfs/conf/mime.types /etc/fdfs/ #供nginx访问使用
 ```
+
+## 安装fastdfs-nginx-module
+1. `cd ../` #返回上一级目录
+2. `git clone https://github.com/happyfish100/fastdfs-nginx-module.git --depth 1` #下载
+3. `cp /usr/local/src/fastdfs-nginx-module/src/mod_fastdfs.conf /etc/fdfs/`
+
+## 安装nginx
+1. `cd ../` #返回上一级目录
+2. `wget http://nginx.org/download/nginx-1.15.4.tar.gz` #下载nginx压缩包
+3. `tar -zxvf nginx-1.15.4.tar.gz` #解压
+4. `cd nginx-1.15.4/`
+5. 添加fastdfs-nginx-module模块
+```
+./configure --add-module=/usr/local/src/fastdfs-nginx-module/src/ 
+make && make install #编译安装
+```
+
