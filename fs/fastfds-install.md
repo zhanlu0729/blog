@@ -65,6 +65,16 @@ port=22122  # tracker服务器端口（默认22122,一般不修改）
 base_path=/data/fastdfs  # 存储日志和数据的根目录
 ```
 ### storage配置
+1. `vim /etc/fdfs/storage.conf`
+2. 需要修改的内容如下：
+```
+port=23000  # storage服务端口（默认23000,一般不修改）
+base_path=/data/fastdfs  # 数据和日志文件存储根目录
+store_path0=/data/fastdfs  # 第一个存储目录
+tracker_server=tracker_ip:22122  # tracker服务器IP和端口
+http.server_port=8888  # http访问文件的端口(默认8888,看情况修改,和nginx中保持一致)
+```
+### client测试
 1. `vim /etc/fdfs/client.conf`
 2. 需要修改的内容如下：
 ```
@@ -72,3 +82,123 @@ base_path=/data/fastdfs
 tracker_server=tracker_ip:22122 #tracker服务器IP和端口
 ```
 3. `fdfs_upload_file /etc/fdfs/client.conf /etc/fdfs/client.conf` #保存后测试,返回ID表示成功 如：group1/M00/00/00/xx.conf
+### 配置nginx访问
+```
+vim /etc/fdfs/mod_fastdfs.conf
+#需要修改的内容如下
+tracker_server=tracker_ip:22122  #tracker服务器IP和端口
+url_have_group_name=true
+store_path0=/home/dfs
+#配置nginx.config
+vim /usr/local/nginx/conf/nginx.conf
+#添加如下配置
+server {
+    listen       8888;    ## 该端口为storage.conf中的http.server_port相同
+    server_name  localhost;
+    location ~/group[0-9]/ {
+        ngx_fastdfs_module;
+    }
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+    root   html;
+    }
+}
+#测试下载，用外部浏览器访问刚才已传过的nginx安装包,引用返回的ID
+http://192.168.52.1:8888/group1/M00/00/00/wKgAQ1pysxmAaqhAAA76tz-dVgg.tar.gz
+#弹出下载单机部署全部跑通
+```
+
+## 分布式部署
+### tracker配置
+1. `vim /etc/fdfs/tracker.conf`
+2. 需要修改的内容如下：
+```
+bind_addr=ip
+port=22122  # tracker服务器端口（默认22122,一般不修改）
+base_path=/data/fastdfs  # 存储日志和数据的根目录
+```
+### storage配置
+1. `vim /etc/fdfs/storage.conf`
+2. 需要修改的内容如下：
+```
+port=23000  # storage服务端口（默认23000,一般不修改）
+base_path=/data/fastdfs  # 数据和日志文件存储根目录
+store_path0=/data/fastdfs  # 第一个存储目录
+tracker_server=tracker1_ip:22122  # 服务器1
+tracker_server=tracker2_ip:22122  # 服务器2
+tracker_server=tracker3_ip:22122  # 服务器3
+http.server_port=8888  # http访问文件的端口(默认8888,看情况修改,和nginx中保持一致)
+```
+### client测试
+1. `vim /etc/fdfs/client.conf`
+2. 需要修改的内容如下：
+```
+base_path=/data/fastdfs
+tracker_server=tracker1_ip:22122  # 服务器1
+tracker_server=tracker2_ip:22122  # 服务器2
+tracker_server=tracker3_ip:22122  # 服务器3
+```
+3. `fdfs_upload_file /etc/fdfs/client.conf /etc/fdfs/client.conf` #保存后测试,返回ID表示成功 如：group1/M00/00/00/xx.conf
+### 配置nginx访问
+```
+vim /etc/fdfs/mod_fastdfs.conf
+#需要修改的内容如下
+tracker_server=tracker1_ip:22122  # 服务器1
+tracker_server=tracker2_ip:22122  # 服务器2
+tracker_server=tracker3_ip:22122  # 服务器3
+url_have_group_name=true
+store_path0=/home/dfs
+#配置nginx.config
+vim /usr/local/nginx/conf/nginx.conf
+#添加如下配置
+server {
+    listen       8888;    ## 该端口为storage.conf中的http.server_port相同
+    server_name  localhost;
+    location ~/group[0-9]/ {
+        ngx_fastdfs_module;
+    }
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+    root   html;
+    }
+}
+#测试下载，用外部浏览器访问刚才已传过的nginx安装包,引用返回的ID
+http://192.168.52.1:8888/group1/M00/00/00/wKgAQ1pysxmAaqhAAA76tz-dVgg.tar.gz
+#弹出下载单机部署全部跑通
+```
+
+## 启动
+### 防火墙
+1. 不关闭防火墙的话无法使用
+2. systemctl stop firewalld.service #关闭
+3. systemctl restart firewalld.service #重启
+### tracker
+1. `/etc/init.d/fdfs_trackerd start` #启动tracker服务
+2. `/etc/init.d/fdfs_trackerd restart` #重启动tracker服务
+3. `/etc/init.d/fdfs_trackerd stop` #停止tracker服务
+4. `chkconfig fdfs_trackerd on` #自启动tracker服务
+### storage
+1. `/etc/init.d/fdfs_storaged start` #启动storage服务
+2. `/etc/init.d/fdfs_storaged restart` #重动storage服务
+3. `/etc/init.d/fdfs_storaged stop` #停止动storage服务
+4. `chkconfig fdfs_storaged on` #自启动storage服务
+### nginx
+1. `/usr/local/nginx/sbin/nginx` #启动nginx
+2. `/usr/local/nginx/sbin/nginx -s reload` #重启nginx
+3. `/usr/local/nginx/sbin/nginx -s stop` #停止nginx
+### 检测集群
+1. `/usr/bin/fdfs_monitor /etc/fdfs/storage.conf` #会显示会有几台服务器 有3台就会 显示 Storage 1-Storage 3的详细信息
+
+## 说明
+### 配置文件
+1. `tracker_server` #有几台服务器写几个
+2. `group_name` #地址的名称的命名
+3. `bind_addr` #服务器ip绑定
+4. `store_path_count` #store_path(数字)有几个写几个
+5. `store_path(数字)` #设置几个储存地址写几个 从0开始
+### 可能遇到的问题
+1. 如果不是root用户,你必须在除了cd的命令之外,全部加sudo
+2. 如果不是root用户,编译和安装分开进行,先编译再安装
+3. 如果上传成功,但是nginx报错404 先检查mod_fastdfs.conf文件中的store_path0是否一致
+4. 如果nginx无法访问,先检查防火墙 和 mod_fastdfs.conf文件tracker_server是否一致
+5. 如果不是在/usr/local/src文件夹下安装,可能会编译出错
