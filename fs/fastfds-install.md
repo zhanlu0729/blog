@@ -15,3 +15,26 @@ yum install git gcc gcc-c++ make automake autoconf libtool pcre pcre-devel zlib 
 | ---------  | ------------   |
 | /usr/local/src | 所有安装包  |
 | /data/fastdfs/ | 数据存储位置|
+```
+mkdir /data/fastdfs #创建数据存储目录
+cd /usr/local/src #切换到安装目录准备下载安装包
+```
+
+## 安装libfatscommon
+1. `git clone https://github.com/happyfish100/libfastcommon.git --depth 1` #下载
+2. `cd libfastcommon/`
+3. `./make.sh && ./make.sh install` #编译安装
+
+## 安装FastDFS
+1. `cd ../` #返回上一级目录
+2. `git clone https://github.com/happyfish100/fastdfs.git --depth 1` #下载
+3. `cd fastdfs/`
+4. `./make.sh && ./make.sh install` #编译安装
+5. 配置文件准备
+```
+cp /etc/fdfs/tracker.conf.sample /etc/fdfs/tracker.conf
+cp /etc/fdfs/storage.conf.sample /etc/fdfs/storage.conf
+cp /etc/fdfs/client.conf.sample /etc/fdfs/client.conf #客户端文件，测试用
+cp /usr/local/src/fastdfs/conf/http.conf /etc/fdfs/ #供nginx访问使用
+cp /usr/local/src/fastdfs/conf/mime.types /etc/fdfs/ #供nginx访问使用
+```
