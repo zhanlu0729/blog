@@ -55,3 +55,20 @@ cp /usr/local/src/fastdfs/conf/mime.types /etc/fdfs/ #供nginx访问使用
 make && make install #编译安装
 ```
 
+## 单机部署
+### tracker配置
+1. `vim /etc/fdfs/tracker.conf`
+2. 需要修改的内容如下：
+```
+bind_addr=ip
+port=22122  # tracker服务器端口（默认22122,一般不修改）
+base_path=/data/fastdfs  # 存储日志和数据的根目录
+```
+### storage配置
+1. `vim /etc/fdfs/client.conf`
+2. 需要修改的内容如下：
+```
+base_path=/data/fastdfs
+tracker_server=tracker_ip:22122 #tracker服务器IP和端口
+```
+3. `fdfs_upload_file /etc/fdfs/client.conf /etc/fdfs/client.conf` #保存后测试,返回ID表示成功 如：group1/M00/00/00/xx.conf
