@@ -202,3 +202,9 @@ http://192.168.52.1:8888/group1/M00/00/00/wKgAQ1pysxmAaqhAAA76tz-dVgg.tar.gz
 3. 如果上传成功,但是nginx报错404 先检查mod_fastdfs.conf文件中的store_path0是否一致
 4. 如果nginx无法访问,先检查防火墙 和 mod_fastdfs.conf文件tracker_server是否一致
 5. 如果不是在/usr/local/src文件夹下安装,可能会编译出错
+6. 安装时报错：`/usr/include/fastdfs/fdfs_define.h:15:27: fatal error: common_define.h: No such file or directory`
+```
+`vim /usr/local/src/fastdfs-nginx-module/src/config` #改变的文件内容：
+ngx_module_incs="/usr/include/fastdfs /usr/include/fastcommon/"
+CORE_INCS="$CORE_INCS /usr/include/fastdfs /usr/include/fastcommon/"
+```
