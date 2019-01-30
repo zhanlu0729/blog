@@ -73,7 +73,7 @@ cp /usr/local/src/fastdfs/conf/mime.types /etc/fdfs/ #供nginx访问使用
 4. `cd nginx-1.15.4/`
 5. 添加fastdfs-nginx-module模块
 ```
-./configure --add-module=/usr/local/src/fastdfs-nginx-module/src/ 
+./configure --prefix=/usr/local/nginx --add-module=/usr/local/src/fastdfs-nginx-module/src/ 
 make && make install #编译安装
 ```
 
@@ -117,7 +117,7 @@ vim /usr/local/nginx/conf/nginx.conf
 server {
     listen       8888;    ## 该端口为storage.conf中的http.server_port相同
     server_name  localhost;
-    location ~/group[0-9]/ {
+    location ~/group1/M00 {
         ngx_fastdfs_module;
     }
     error_page   500 502 503 504  /50x.html;
@@ -176,7 +176,7 @@ vim /usr/local/nginx/conf/nginx.conf
 server {
     listen       8888;    ## 该端口为storage.conf中的http.server_port相同
     server_name  localhost;
-    location ~/group[0-9]/ {
+    location ~/group1/M00 {
         ngx_fastdfs_module;
     }
     error_page   500 502 503 504  /50x.html;
