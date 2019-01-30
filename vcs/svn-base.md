@@ -69,7 +69,7 @@
 
 ### 合并内容到分支merge
 1. svn merge branchA branchB //把对branchA的修改合并到分支branchB
-2. svn merge srcBanch --username xxx --password xxx --no-auth-cache
+2. svn merge srcBanch --username xxx --password xxx --no-auth-cache #将源分支的代码merge到当前分支
 
 ### SVN帮助
 1. svn help 全部功能选项
