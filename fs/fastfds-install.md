@@ -42,7 +42,6 @@ FastDFS是一款开源的轻量级分布式文件系统纯C实现,支持Linux、
 meta data：文件相关属性,键值对(Key Value Pair)方式,如：width=1024,heigth=768
 ```
 
-
 ## 安装libfatscommon
 1. `git clone https://github.com/happyfish100/libfastcommon.git --depth 1` #下载
 2. `cd libfastcommon/`
