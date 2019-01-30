@@ -21,6 +21,6 @@
 
 ## 部署结构
 1. 多Storage server部署
-![](https://github.com/zhanlu0729/blog/tree/master/fs/images/fastdfs-deploy-one-storage-server.png)
+![问题现象](https://github.com/zhanlu0729/blog/tree/master/fs/images/fastdfs-deploy-one-storage-server.png)
 2. 单Storage server部署
-![](https://github.com/zhanlu0729/blog/tree/master/fs/images/fastdfs-deploy-threee-storage-servers.png)
+![问题现象](https://github.com/zhanlu0729/blog/tree/master/fs/images/fastdfs-deploy-threee-storage-servers.png)
