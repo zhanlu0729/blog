@@ -1,5 +1,4 @@
-## iostat IO实时监控
-
+## iostat IO实时监控 [yum install sysstat]
 ### iostat [-c|-d] [-k|-m] [-t] [间隔秒数] [侦测次数]
 1. `iostat`各个参数的说明
 - `-c` 仅显示`CPU`统计信息.与`-d`选项互斥
