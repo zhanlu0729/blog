@@ -1,3 +1,19 @@
+### Mongo Install
+1. `mkdir -p /data/db && chmod -R 777 /data/db`
+2. `wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-3.4.17.tgz`
+3. `tar -zxvf mongodb-linux-x86_64-rhel70-3.4.4.tgz`
+4. `cd mongodb-linux-x86_64-rhel70-3.4.4/`
+5. `cd bin`
+6. `vi mongodb.cnf`
+```
+dbpath=/data/db/                   
+logpath=/data/db/mongo.log
+logappend=true
+fork=true
+port=27017
+```
+7. `./mongod -f ./mongodb.cnf`
+
 ### 参数说明
 1. 参数说明（参考使用）
 - `--quiet` # 安静输出
