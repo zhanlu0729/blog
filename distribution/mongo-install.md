@@ -6,8 +6,8 @@
 5. `cd bin`
 6. `vi mongodb.cnf`
 ```
-dbpath=/data/db/                   
-logpath=/data/db/mongo.log
+dbpath=/data/mongo/                   
+logpath=/data/mongolog/mongo.log
 logappend=true
 fork=true
 port=27017
