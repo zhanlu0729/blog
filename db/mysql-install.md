@@ -19,4 +19,9 @@ mysql> use mysql;
 mysql> update user set authentication_string=password('pwd') where user='root';
 mysql> flush privileges;
 mysql> quit
+
+mysql -uroot -ppwd
+mysql> set password=password("pwd");
+mysql> flush privileges;
+mysql> quit
 ```
