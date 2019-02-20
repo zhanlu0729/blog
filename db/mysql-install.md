@@ -13,7 +13,7 @@ yum install net-tools`或者后面加上`--force --nodeps`
 10. `systemctl enable|start|stop|restart|status mysqld.service`
 11. `mysql -uroot -p'xxxx'` 登录
 12. `set password=password('123456');` 更改密码
-13. `skip-grant-tables` 忘记密码时，修改`/etc/my.cnf`添加这个参数，可以免登录：
+13. `skip-grant-tables` 忘记密码时,修改`/etc/my.cnf`添加这个参数,可以免登录(修改完后删除此参数,重启mysqld)：
 ```
 mysql> use mysql;
 mysql> update user set authentication_string=password('pwd') where user='root';
