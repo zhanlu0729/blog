@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: bone-eureka01
-          image: k8s-registry.banksteel.local/baseplatform/bone-eureka:v1.9.9
+          image: k8s-registry.xxx.local/baseplatform/bone-eureka:v1.9.9
           env:
             - name: AUTHOR
               value: eureka
@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
         - name: bone-eureka02
-          image: k8s-registry.banksteel.local/baseplatform/bone-eureka:v1.9.9
+          image: k8s-registry.xxx.local/baseplatform/bone-eureka:v1.9.9
           env:
             - name: AUTHOR
               value: eureka
