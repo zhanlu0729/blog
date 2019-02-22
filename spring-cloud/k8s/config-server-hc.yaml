@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bone-config-server01
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bone-config-server01
+    spec:
+      containers:
+        - name: bone-config-server01
+          image: k8s-registry.banksteel.local/baseplatform/bone-config-server:v1.9.9
+          env:
+            - name: AUTHOR
+              value: eureka
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bone-config-server01
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: bone-config-server01
