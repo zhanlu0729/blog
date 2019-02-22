@@ -14,7 +14,7 @@ spec:
           image: 9f.k8s-registry.xxx.local/baseplatform/bone-config-server:v1.9.9
           env:
             - name: AUTHOR
-              value: eureka
+              value: config-server
           ports:
             - containerPort: 8080
 ---
