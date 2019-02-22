@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: bone-eureka01
+  name: eureka01
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: bone-eureka01
+        app: eureka01
     spec:
       containers:
-        - name: bone-eureka01
-          image: 9f.k8s-registry.xxx.local/baseplatform/bone-eureka:v1.9.9
+        - name: eureka01
+          image: 9f.k8s-registry.xxx.local/baseplatform/eureka:v1.9.9
           env:
             - name: AUTHOR
               value: eureka
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bone-eureka01
+  name: eureka01
 spec:
   type: ClusterIP
   ports:
@@ -29,23 +29,23 @@ spec:
       protocol: TCP
       targetPort: 8080
   selector:
-    app: bone-eureka01
+    app: eureka01
 
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: bone-eureka02
+  name: eureka02
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: bone-eureka02
+        app: eureka02
     spec:
       containers:
-        - name: bone-eureka02
-          image: 9f.k8s-registry.xxx.local/baseplatform/bone-eureka:v1.9.9
+        - name: eureka02
+          image: 9f.k8s-registry.xxx.local/baseplatform/eureka:v1.9.9
           env:
             - name: AUTHOR
               value: eureka
@@ -55,7 +55,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bone-eureka02
+  name: eureka02
 spec:
   type: ClusterIP
   ports:
@@ -63,4 +63,4 @@ spec:
       protocol: TCP
       targetPort: 8080
   selector:
-    app: bone-eureka02
+    app: eureka02
