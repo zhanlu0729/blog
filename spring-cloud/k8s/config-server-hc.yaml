@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: config-server01
+  name: config-server
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: config-server01
+        app: config-server
     spec:
       containers:
-        - name: bone-config-server01
+        - name: config-server
           image: k8s-registry.xxx.local/baseplatform/config-server:v1.9.9
           env:
             - name: AUTHOR
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: config-server01
+  name: config-server
 spec:
   type: ClusterIP
   ports:
@@ -29,4 +29,4 @@ spec:
       protocol: TCP
       targetPort: 8080
   selector:
-    app: config-server01
+    app: config-server
