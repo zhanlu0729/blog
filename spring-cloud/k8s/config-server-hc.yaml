@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: bone-config-server01
-          image: k8s-registry.banksteel.local/baseplatform/bone-config-server:v1.9.9
+          image: k8s-registry.xxx.local/baseplatform/bone-config-server:v1.9.9
           env:
             - name: AUTHOR
               value: eureka
