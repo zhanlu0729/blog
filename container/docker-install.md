@@ -21,6 +21,7 @@ $ sudo yum install -y yum-utils \
 ```
 安装这一步如果出现大量的`[Errno 12] Timeout on http`异常，安装如下包：
 ```
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum provides '*/applydeltarpm'
 yum install deltarpm -y
 如果安装依然失败，手工安装deltarpm,然后yum provides '*/applydeltarpm'
