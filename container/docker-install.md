@@ -23,6 +23,7 @@ $ sudo yum install -y yum-utils \
 ```
 yum provides '*/applydeltarpm'  
 yum install deltarpm -y
+如果安装依然失败，手工安装deltarpm
 ```
 02. Use the following command to set up the `stable` repository. You always need the `stable` repository, even if you want to install builds from the `edge` or `test` repositories as well.
 ```
