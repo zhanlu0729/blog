@@ -19,7 +19,7 @@ $ sudo yum install -y yum-utils \
   device-mapper-persistent-data \
   lvm2
 ```
-安装这一步如果出现大量的Timeout异常，安装如下包：
+安装这一步如果出现大量的`[Errno 12] Timeout on http`异常，安装如下包：
 ```
 yum provides '*/applydeltarpm'  
 yum install deltarpm -y
