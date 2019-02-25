@@ -72,6 +72,19 @@ $ sudo systemctl start docker
 $ sudo docker run hello-world
 ```
 
+### install Docker-Compose
+1. curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose #下载并安装compose
+2. sudo chmod +x /usr/local/bin/docker-compose #修改文件的可执行权限
+3. docker-compose --version #查看是否安装成功
+### install harbor
+1. 配置harbor.cfg
+2. sudo ./install.sh #安装
+3. sudo ./install.sh [Step 0]: checking installation environment … Note: docker version: 17.06.0 ✖ Need to install docker-compose(1.7.1+) by yourself first and run this script again.
+```
+需要换成另外一种安装方法：sudo ./prepare，然后在执行：docker-compose up -d
+```
+4. 默认用户名：admin 密码：Harbor12345
+    
 ### Stopping Harbor:
 sudo docker-compose stop
 ### Restarting Harbor after stopping:
