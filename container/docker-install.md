@@ -24,6 +24,8 @@ $ sudo yum install -y yum-utils \
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum provides '*/applydeltarpm'
 yum install deltarpm -y
+yum clean all
+yum makecache
 如果安装依然失败，手工安装deltarpm,然后yum provides '*/applydeltarpm'
 ```
 02. Use the following command to set up the `stable` repository. You always need the `stable` repository, even if you want to install builds from the `edge` or `test` repositories as well.
