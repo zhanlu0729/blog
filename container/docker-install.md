@@ -19,6 +19,11 @@ $ sudo yum install -y yum-utils \
   device-mapper-persistent-data \
   lvm2
 ```
+安装这一步如果出现大量的Timeout异常，安装如下包：
+```
+yum provides '*/applydeltarpm'  
+yum install deltarpm -y
+```
 02. Use the following command to set up the `stable` repository. You always need the `stable` repository, even if you want to install builds from the `edge` or `test` repositories as well.
 ```
 $ sudo yum-config-manager \
