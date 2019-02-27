@@ -20,3 +20,8 @@ $ systemctl restart docker
 1. 错误描述：Error syncing pod, skipping: failed to "StartContainer" for "POD" with ImagePullBackOff: Back-off pulling image "registry.access.redhat.com/rhel7/pod-infrastructure:latest"
 2. 原因分析：Node节点环境问题
 3. 解决方案：yum install \*rhsm\* -y
+
+### 镜像拉取失败
+1. too many links
+2. 
+3. 解决方案：docker images|grep none|awk '{print $3}'|xargs docker rmi
