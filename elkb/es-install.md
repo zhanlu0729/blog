@@ -10,6 +10,10 @@
 * hard noproc 201400 #硬限制
 * soft nofile 102400 #软限制
 * hard nofile 102400 #硬限制
+或者如下：
+# 主要是内存限制
+elasticsearch soft memlock unlimited 
+elasticsearch hard memlock unlimited 
 ```
 6. 调整系统用户的内存限制：`vim /etc/sysctl.conf`
 ```
