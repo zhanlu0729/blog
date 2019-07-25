@@ -31,7 +31,9 @@ vm.max_map_count=262144
 3. 安装grunt-cli `npm install -g grunt-cli`
 4. 安装grunt `npm install grunt --save`
 5. 安装依赖的npm包 `npm install`
-6. 安装依赖的npm包 `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+6. 安装依赖的npm包 
+  - `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+  - `cnpm install`
 7. 更改ES配置
 ```
 $ES_HOME/bin/elasticsearch/config/elasticsearch.yml 添加如下配置
