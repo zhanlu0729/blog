@@ -31,7 +31,7 @@ vm.max_map_count=262144
 3. 安装grunt-cli `npm install -g grunt-cli`
 4. 安装grunt `npm install grunt --save`
 5. 安装依赖的npm包 `npm install`
-6. 安装依赖的npm包(国内:阿里) 
+6. 安装依赖的npm包(下载失败时改用[国内:阿里]) 
   - `npm install -g cnpm --registry=https://registry.npm.taobao.org`
   - `cnpm install`
 7. 更改ES配置
