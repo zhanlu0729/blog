@@ -45,4 +45,4 @@ http.cors.allow-origin: "*"
 $ES-HEAD_HOME/_site/app.js 做如下更改
 this.base_uri = this.config.base_uri || this.prefs.get("app-base_uri") || "http://{ES实际IP}:9200";
 ```
-9. `nohup npm run start &` 启动
+9. `nohup npm run start & 或 nohup grunt server &` 启动
