@@ -73,7 +73,7 @@ $ sudo docker run hello-world
 ```
 
 ### install Docker-Compose
-1. curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose #下载并安装compose
+1. curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose #下载并安装compose
 2. sudo chmod +x /usr/local/bin/docker-compose #修改文件的可执行权限
 3. docker-compose --version #查看是否安装成功
 ### install harbor
