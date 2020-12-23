@@ -21,7 +21,7 @@
 1. `resource`(资源)：限流保护的最基本元素,比如一个方法
 2. `grade`(限流阈值类型)：0=并发线程数模式,1=QPS模式
 3. `count`(限流阈值)：
-4. `limitApp`(来源)：是否需要针对调用来源进行限流,默认是false,即不区分调用来源,资源生效顺序：{some_origin_name}->other-default
+4. `limitApp`(来源)：是否需要针对调用来源进行限流,默认是false,即不区分调用来源,资源生效顺序：`{some_origin_name}->other-default`
 5. `strategy`(调用关系限流策略)：直接、链路、关联
 6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式,默认是直接拒绝
 7. `clusterMode`(是否集群限流)：默认false
