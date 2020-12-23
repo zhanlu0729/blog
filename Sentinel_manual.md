@@ -26,8 +26,19 @@
 6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式、默认是直接拒绝
 7. `clusterMode`(是否集群限流)：默认false
 ### 2.4 流控日志
-1. 格式：`timestamp|yyyy-MM-dd HH:mm:ss.SSS|resource|passQPS|blockQPS|sucessQPS|exceptionQPS|RT|occupiedPassQPS|concurrency|classification`
-3. 例子：`1608688315000|2020-12-23 09:51:55|HelloWorld|1|0|1|0|8|0|0|1`
+1. 例子：`1608688315000|2020-12-23 09:51:55|HelloWorld|1|0|1|0|8|0|0|1`
+2. 格式：`timestamp|yyyy-MM-dd HH:mm:ss.SSS|resource|passQPS|blockQPS|sucessQPS|exceptionQPS|RT|occupiedPassQPS|concurrency|classification`
+3. `timestamp`：时间戳
+4. `yyyy-MM-dd HH:mm:ss.SSS`：格式化的时间戳
+5. `resource`：资源
+6. `passQPS`：通过的请求数
+7. `blockQPS`：被阻止的请求数
+8. `sucessQPS`：成功执行完成的请求数
+9. `exceptionQPS`：用户自定义的异常
+10. `RT`：平均响应时间
+11. `occupiedPassQPS`：优先通过的请求
+12. `concurrency`：并发量
+13. `classification`：资源类型
 ## 三、降级
 ```
 服务熔断是实现服务降级的方案之一.
