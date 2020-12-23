@@ -17,14 +17,17 @@
 1. 转到错误页面
 2. 排队等待
 3. 降级(快速失败)
-### 2.3 流控规则(FlowRule)
-1. resource(资源)：限流保护的最基本元素,比如一个方法
-2. grade(限流阈值类型)：0为并发线程数,1为QPS
-3. count(限流阈值)：
-4. limitApp(来源)：是否需要针对调用来源进行限流,默认是false,即不区分调用来源
-5. strategy(调用关系限流策略)：直接、链路、关联
-6. controlBehavior(流控行为)：包括直接拒绝、排队等待、慢启动模式、默认是直接拒绝
-7. clusterMode(是否集群限流)：默认false
+### 2.3 流控规则(FlowRule)：时间单位(秒)
+1. `resource`(资源)：限流保护的最基本元素,比如一个方法
+2. `grade`(限流阈值类型)：0=并发线程数模式,1=QPS模式
+3. `count`(限流阈值)：
+4. `limitApp`(来源)：是否需要针对调用来源进行限流,默认是false,即不区分调用来源
+5. `strategy`(调用关系限流策略)：直接、链路、关联
+6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式、默认是直接拒绝
+7. `clusterMode`(是否集群限流)：默认false
+### 2.4 流控日志
+1. 格式：`timestamp|yyyy-MM-dd HH:mm:ss.SSS|resource|passQPS|blockQPS|sucessQPS|exceptionQPS|RT|occupiedPassQPS|concurrency|classification`
+3. 例子：`1608688315000|2020-12-23 09:51:55|HelloWorld|1|0|1|0|8|0|0|1`
 ## 三、降级
 ```
 服务熔断是实现服务降级的方案之一.
