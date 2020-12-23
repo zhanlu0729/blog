@@ -26,10 +26,10 @@
 6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式,默认是直接拒绝
 7. `clusterMode`(是否集群限流)：默认false
 ### 2.4 流控行为(ControlBehavior)：当QPS超过阈值时就会触发流控行为
-1. 直接拒绝(CONTROL_BEHAVIOR_DEFAULT)：请求流量超出阈值,直接抛出FlowException
-2. 预热(CONTROL_BEHAVIOR_WARM_UP)：当流量突然增大时(系统由空闲状态突然切换到繁忙状态),有可能瞬间把系统压垮,此方式是在一定时间内逐渐增加阈值
-3. 匀速排队(CONTROL_BEHAVIOR_RATE_LIMITER)：控制请求在时间间隔内以均匀的速度通过,即为漏桶算法
-4. 预热+匀速排队(CONTROL_BEHAVIOR_WARM_UP_RATE_LIMITER)
+1. 直接拒绝(`CONTROL_BEHAVIOR_DEFAULT`)：请求流量超出阈值,直接抛出FlowException
+2. 预热(`CONTROL_BEHAVIOR_WARM_UP`)：当流量突然增大时(系统由空闲状态突然切换到繁忙状态),有可能瞬间把系统压垮,此方式是在一定时间内逐渐增加阈值
+3. 匀速排队(`CONTROL_BEHAVIOR_RATE_LIMITER`)：控制请求在时间间隔内以均匀的速度通过,即为漏桶算法
+4. 预热+匀速排队(`CONTROL_BEHAVIOR_WARM_UP_RATE_LIMITER`)
 ### 2.5 流控日志：每秒一条
 1. 例子：`1608688315000|2020-12-23 09:51:55|HelloWorld|1|0|1|0|8|0|0|1`
 2. 格式：`timestamp|yyyy-MM-dd HH:mm:ss.SSS|resource|passQPS|blockQPS|sucessQPS|exceptionQPS|RT|occupiedPassQPS|concurrency|classification`
