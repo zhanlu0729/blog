@@ -23,9 +23,9 @@
 3. `count`(限流阈值)：
 4. `limitApp`(来源)：是否需要针对调用来源进行限流,默认是false,即不区分调用来源
 5. `strategy`(调用关系限流策略)：直接、链路、关联
-6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式、默认是直接拒绝
+6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式,默认是直接拒绝
 7. `clusterMode`(是否集群限流)：默认false
-### 2.4 流控日志
+### 2.4 流控日志：每秒一条
 1. 例子：`1608688315000|2020-12-23 09:51:55|HelloWorld|1|0|1|0|8|0|0|1`
 2. 格式：`timestamp|yyyy-MM-dd HH:mm:ss.SSS|resource|passQPS|blockQPS|sucessQPS|exceptionQPS|RT|occupiedPassQPS|concurrency|classification`
 3. `timestamp`：时间戳
