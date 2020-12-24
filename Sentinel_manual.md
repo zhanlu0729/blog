@@ -18,14 +18,17 @@
 2. 排队等待
 3. 降级(快速失败)
 ### 2.3 流控规则(FlowRule)：时间单位(秒)
-1. `resource`(资源名)：限流保护的最基本元素,比如一个方法
+1. `resource`(资源名)：必填,限流保护的最基本元素,比如一个方法
 2. `grade`(限流阈值类型)：0=并发线程数模式,1=QPS模式,默认是QPS模式
-3. `count`(限流阈值)：
+3. `count`(限流阈值)：必填
 4. `limitApp`(调用来源)：默认是default(不区分调用来源),资源生效顺序：`{some_origin_name}->other-default`
 5. `strategy`(调用关系限流策略)：直接、链路、关联,默认是
 6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式,默认是直接拒绝
-7. `maxQueueingTimeMs`：最大排队等待时长(仅在匀速排队模式生效)
-7. `clusterMode`(是否集群限流)：默认false
+7. `maxQueueingTimeMs`(最大排队等待时长)：仅在匀速排队模式生效
+8. `paramIdx`(热点参数索引)：对应`SphU.entry(xxx, args)`中的参数索引位置
+9. `paramFlowItemList`(参数例外项)：可以针对指定的参数值单独设置限流阈值,不受前面`count`阈值的限制.仅支持基本类型
+10. `clusterMode`(是否集群限流)：默认false
+11. `clusterConfig`：集群流控相关配置
 ### 2.4 流控行为(ControlBehavior)：当QPS超过阈值时就会触发流控行为
 1. 直接拒绝(`CONTROL_BEHAVIOR_DEFAULT`)：请求流量超出阈值,直接抛出FlowException
 2. 预热(`CONTROL_BEHAVIOR_WARM_UP`)：当流量突然增大时(系统由空闲状态突然切换到繁忙状态),有可能瞬间把系统压垮,此方式是在一定时间内逐渐增加阈值
@@ -60,8 +63,8 @@
 2. 异常比例：
 3. 异常数：
 ### 3.3 降级规则(DegradeRule)：时间单位(秒)
-1. `resource`(资源名)：熔断的最基本元素,比如一个方法
+1. `resource`(资源名)：必填,熔断的最基本元素,比如一个方法
 2. `grade`(熔断策略)：支持秒级RT、秒级异常比例、分钟级异常数.默认是秒级RT
-3. `count`(熔断阈值)：
+3. `count`(熔断阈值)：必填
 4. `timeWindow`(熔断降级的时间窗口)：触发熔断降级后多长时间内自动熔断
 5. `minRequestAmount`(触发异常熔断的最小请求数)：请求数小于该值时即使比例超出阈值也不会触发熔断
