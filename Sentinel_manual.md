@@ -24,6 +24,7 @@
 4. `limitApp`(调用来源)：默认是default(不区分调用来源),资源生效顺序：`{some_origin_name}->other-default`
 5. `strategy`(调用关系限流策略)：直接、链路、关联,默认是
 6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式,默认是直接拒绝
+7. `maxQueueingTimeMs`：最大排队等待时长(仅在匀速排队模式生效)
 7. `clusterMode`(是否集群限流)：默认false
 ### 2.4 流控行为(ControlBehavior)：当QPS超过阈值时就会触发流控行为
 1. 直接拒绝(`CONTROL_BEHAVIOR_DEFAULT`)：请求流量超出阈值,直接抛出FlowException
