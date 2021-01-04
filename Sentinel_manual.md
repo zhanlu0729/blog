@@ -59,13 +59,14 @@ Sentinel以流量为切入点，从流量控制、熔断降级、系统负载保
 ### 3.3 流控规则(FlowRule)
 1. `resource`(资源名)：必填，限流保护的最基本元素
 2. `limitApp`(调用来源)：默认是default(不区分调用来源),资源生效顺序：`{some_origin_name}->other-default`
-2. `grade`(限流阈值类型)：0=并发线程数模式，1=QPS模式,默认是QPS模式
-3. `count`(限流阈值)：必填
+3. `grade`(限流阈值类型)：0=并发线程数模式，1=QPS模式,默认是QPS模式
+4. `count`(限流阈值)：必填
 5. `strategy`(调用关系限流策略)：直接、链路、关联，默认是直接
-6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、慢启动模式,默认是直接拒绝
+6. `controlBehavior`(流控行为)：包括直接拒绝、排队等待、预热(慢启动)模式,默认是直接拒绝
 7. `maxQueueingTimeMs`(最大排队等待时长)：仅在匀速排队模式生效
-10. `clusterMode`(是否集群限流)：默认false
-11. `clusterConfig`：集群流控相关配置
+8. `warmUpPeriodSec`(预热间隔时长)：仅在预热(慢启动)模式生效
+9. `clusterMode`(是否集群限流)：默认false
+10. `clusterConfig`：集群流控相关配置
 ### 3.4 调用关系限流策略
 ```
 调用关系包括调用方、被调用方；一个方法又可能会调用其它方法,形成一个调用链路的层次关系.
